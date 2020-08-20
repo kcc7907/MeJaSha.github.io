@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-hang">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            border: 5px solid red;
+            height: 80px;
+            background-color: #5676BB;
+            font-size: 0px;
+            color: black;
+            text-align: center;
+            display: inline-block;
+            padding: 10px 0px;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+
+        div.logo {
+            border: 5px solid purple;
+            width: 50px;
+            height: 50px;
+            background-image: url("./img/logo.gif");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+        }
+
+        footer {
+            width: 100%;
+            border: 5px solid #3700ffc2;
+            height: 100px;
+            background-image: url("img/footer_bg.png");
+            background-color: #F3ECE0;
+        }
+
+        a {
+            border: 5px solid #1eff1e;
+            font-size: 1.5rem;
+            margin: 5px 0px 0px 3rem;
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        nav {
+            display: FLEX;
+            border: 5px solid #2fdf9e;
+            width: 100%;
+            height: 50px;
+            justify-content: center;
+        }
+
+        .icon {
+            font-size: 1rem;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+
+        }
+
+        .container {
+            border: 5px solid orange;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        main {
+            border: 5px solid orchid;
+            width: 80%;
+            text-align: center;
+            font-size: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            border-bottom: 5px dotted black;
+        }
+
+        div.img1 {
+            background-image: url();
+            border: 5px solid red;
+            width: 500px;
+            height: 500px;
+            display: inline-block;
+            margin-right: 100px;
+        }
+
+        .img2 {
+            background-image: url();
+            border: 5px solid red;
+            width: 500px;
+            height: 500px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        div.part1 {
+            display: inline-block;
+            width: 500px;
+            border: 5px solid black;
+            font-size: 1.5rem;
+            vertical-align: top;
+            position: relative;
+            transform: translatey(30px);
+        }
+
+        div.part2 {
+            display: inline-block;
+            width: 500px;
+            border: 5px solid black;
+            font-size: 1.5rem;
+            margin-right: 100px;
+            position: relative;
+            transform: translatey(30px);
+        }
+
+        .top {
+            border: 5px solid yellow;
+        }
+
+        .middle {
+            border: 5px solid yellow;
+        }
+
+        .map {
+            border: 5px solid yellow;
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <a href="#">最新消息</a>
+            <a href="#">菜單</a>
+            <a href="#">餐點介紹</a>
+            <a href="#">關於我們</a>
+            <div class="icon">
+                <span class="user">1</span>
+                <span class="menu">2</span>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main>
+            <h1>關於我們</h1>
+            <div class="top">
+                <div class="img1"></div>
+                <div class="part1">
+                    <h2>hi1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam, sit autem, obcaecati,
+                        temporibus necessitatibus maxime voluptatem nesciunt libero esse nam tenetur laboriosam officia
+                        nostrum atque voluptate ex? Dolore, fugiat Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quas eligendi atque perferendis distinctio asperiores unde exercitationem ratione
+                        inventore hic dolorem laboriosam, ullam eos, fugit ad itaque minus accusantium quod aspernatur.
+                    </p>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="part2">
+                    <h2>hi2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ipsam, sit autem, obcaecati,
+                        temporibus necessitatibus maxime voluptatem nesciunt libero esse nam tenetur laboriosam officia
+                        nostrum atque voluptate ex? Dolore, fugiat Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Quas eligendi atque perferendis distinctio asperiores unde exercitationem ratione
+                        inventore hic dolorem laboriosam, ullam eos, fugit ad itaque minus accusantium quod aspernatur.
+                    </p>
+
+                </div>
+                <div class="img2"></div>
+            </div>
+            <div class="map"></div>
+        </main>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
