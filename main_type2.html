@@ -18,28 +18,13 @@
             box-sizing: border-box;
         }
 
-        div.logo {
-            border: 5px solid purple;
-            width: 50px;
-            height: 50px;
-            background-image: url("./img/logo.gif");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            /* z-index: 3; */
-            display: inline-block;
-            /* text-align: left; */
-            position: absolute;
-            left: 0;
-        }
-
         header {
             width: 100%;
-            border: 5px solid red;
+            /* border: 5px solid red; */
             height: 80px;
-            /* background-image: url("img/menu_bg_bar.jpg"); */
             background-color: #5676BB;
             font-size: 0px;
-            color: black;
+            /* color: ; */
             text-align: center;
             display: inline-block;
             padding: 10px 0px;
@@ -47,65 +32,44 @@
             vertical-align: baseline;
         }
 
-        .banner {
-            width: 60%;
-            height: 500px;
-            border: 5px solid blue;
-            margin: auto;
-            background-image: url("img/banner4.jpg");
+
+        div.logo {
+            /* border: 5px solid purple; */
+            width: 70px;
+            height: 70px;
+            background-image: url("img/logo2.svg");
             background-size: 100%;
             background-repeat: no-repeat;
-        }
-
-        div.container {
-            width: 100%;
-            border: 5px solid yellow;
-            display: flex;
-            justify-content: center;
-            background-image: url("img/contents_bg.jpg");
-        }
-
-        main {
-            width: 60%;
-            height: 3200px;
-            border: 5px solid black;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         footer {
             width: 100%;
-            border: 5px solid #3700ffc2;
+            /* border: 5px solid #3700ffc2; */
             height: 100px;
             background-image: url("img/footer_bg.png");
             background-color: #F3ECE0;
         }
 
         a {
-            border: 5px solid #1eff1e;
+            /* border: 5px solid #1eff1e; */
             font-size: 1.5rem;
-            /* text-align: center; */
-            /* display: inline-block; */
-            /* height: 5px; */
             margin: 5px 0px 0px 3rem;
             text-decoration: none;
-            /* display: list-item; */
-            /* text-align: -webkit-match-parent; */
             list-style: none;
-            color: black;
+            color: white;
         }
 
         nav {
             display: FLEX;
-            border: 5px solid #2fdf9e;
-            /* text-align: center; */
+            /* border: 5px solid #2fdf9e; */
             width: 100%;
             height: 50px;
             justify-content: center;
-            /* flex-flow: row nowrap; */
-            /* margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      padding-inline-start: 40px; */
+            margin-top: 10px;
         }
 
         .icon {
@@ -115,12 +79,66 @@
             right: 0;
 
         }
-        .process{
-            width: 1150px;
+
+        .banner {
+            width: 60%;
+            height: 500px;
+            /* border: 5px solid blue; */
+            margin: auto;
+            background-image: url("img/banner05.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            /* min-width: 1200px; */
+        }
+
+        div.container {
+            width: 100%;
+            /* border: 5px solid yellow; */
+            display: flex;
+            justify-content: center;
+            background-image: url("img/contents_bg.jpg");
+        }
+
+        main {
+            width: 60%;
+            /* height: 3200px; */
+            /* border: 5px solid black; */
+        }
+
+        .process {
+            width: 100%;
             background-image: url("img/text_op.svg");
+            background-size: 100% 100%;
             border: 5px solid pink;
             height: 500px;
+            background-repeat: no-repeat;
         }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: orangered;
+            /* border-bottom: 5px dotted black; */
+        }
+
+        .top{
+            /* border: 5px solid red; */
+            background-image: url("img/contents_bg.jpg");
+
+        }
+        .news{
+            border: 3px dashed black;
+            width: 80%;
+            height: 300px;
+            margin: 20px auto 20px;
+        }
+
+        .rank{
+            border: 5px solid red;
+            width: 100%;
+            height: 300px;
+        }
+
     </style>
 </head>
 
@@ -138,10 +156,15 @@
             </div>
         </nav>
     </header>
-    <div class="banner"></div>
+    <div class="top"><div class="banner"></div></div>
     <div class="container">
         <main>
+            <h1>點餐流程</h1>
             <div class="process"></div>
+            <h1>最新消息</h1>
+            <div class="news"></div>
+            <h1>熱門餐點</h1>
+            <div class="rank"></div>
 
 
 
