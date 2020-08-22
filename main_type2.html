@@ -33,7 +33,7 @@
         }
 
 
-        div.logo {
+        .logo {
             /* border: 5px solid purple; */
             width: 70px;
             height: 70px;
@@ -42,17 +42,53 @@
             background-repeat: no-repeat;
             display: inline-block;
             position: absolute;
-            left: 0;
-            top: 0;
+            left: 20px;
+            top: 5px;
         }
 
         footer {
             width: 100%;
             /* border: 5px solid #3700ffc2; */
             height: 100px;
-            background-image: url("img/footer_bg.png");
-            background-color: #F3ECE0;
+            /* background-image: url("img/footer_bg.png"); */
+            background-color: #455164;
+            color: white;
+            font-size: 1rem;
+            position: relative;
         }
+
+        div.name {
+            /* border: 5px solid purple; */
+            display: inline-block;
+            position: absolute;
+            bottom: 5px;
+            text-align: center;
+            left: 500px;
+        }
+
+        div.zh {
+            font-size: 35px;
+        }
+
+        span.en {
+            font-size: 21px;
+            text-align: center;
+        }
+
+        p.addr {
+            /* border: 5px solid purple; */
+            position: absolute;
+            bottom: 30px;
+            left: 630px;
+        }
+
+        p.copyright {
+            /* border: 5px solid purple; */
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+        }
+
 
         a {
             /* border: 5px solid #1eff1e; */
@@ -61,6 +97,7 @@
             text-decoration: none;
             list-style: none;
             color: white;
+            font-weight: bold;
         }
 
         nav {
@@ -77,7 +114,27 @@
             display: inline-block;
             position: absolute;
             right: 0;
+            bottom: 10px;
 
+        }
+
+        .user {
+            /* border: 5px solid red; */
+            background-image: url("img/user_ic.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50px;
+            width: 50px;
+            display: inline-block;
+        }
+
+        .menu {
+            /* border: 5px solid red; */
+            background-image: url("img/food_ic.svg");
+            background-repeat: no-repeat;
+            height: 50px;
+            width: 50px;
+            display: inline-block;
         }
 
         .banner {
@@ -108,7 +165,7 @@
         .process {
             width: 100%;
             background-image: url("img/text_op.svg");
-            background-size: 100% 100%;
+            background-size: 100%;
             border: 5px solid pink;
             height: 500px;
             background-repeat: no-repeat;
@@ -121,24 +178,24 @@
             /* border-bottom: 5px dotted black; */
         }
 
-        .top{
+        .top {
             /* border: 5px solid red; */
             background-image: url("img/contents_bg.jpg");
 
         }
-        .news{
+
+        .news {
             border: 3px dashed black;
             width: 80%;
             height: 300px;
             margin: 20px auto 20px;
         }
 
-        .rank{
+        .rank {
             border: 5px solid red;
             width: 100%;
             height: 300px;
         }
-
     </style>
 </head>
 
@@ -151,12 +208,14 @@
             <a href="#">餐點介紹</a>
             <a href="#">關於我們</a>
             <div class="icon">
-                <span class="user">1</span>
-                <span class="menu">2</span>
+                <span class="user"></span>
+                <span class="menu"></span>
             </div>
         </nav>
     </header>
-    <div class="top"><div class="banner"></div></div>
+    <div class="top">
+        <div class="banner"></div>
+    </div>
     <div class="container">
         <main>
             <h1>點餐流程</h1>
@@ -171,7 +230,14 @@
 
         </main>
     </div>
-    <footer></footer>
+    <footer>
+        <div class="name">
+            <div class="zh">咩呷蝦</div>
+            <span class="en">BreakFast</span>
+        </div>
+        <p class="addr">台北市中正區青島東路25號</p>
+        <p class="copyright">copyright(c)All Rights Reserved</p>
+    </footer>
 </body>
 
 </html>
