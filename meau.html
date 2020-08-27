@@ -4,18 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title></title>
     <style>
-        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-
-        html {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
         * {
             margin: 0;
             box-sizing: border-box;
+            /* font-size: 0; */
         }
 
         header {
@@ -137,64 +131,46 @@
             display: inline-block;
         }
 
-        .banner {
-            width: 60%;
-            height: 500px;
-            /* border: 5px solid blue; */
-            margin: auto;
-            background-image: url("img/banner05.jpg");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            /* min-width: 1200px; */
+        article {
+            width: 100%;
+            font-size: 0;
         }
 
-        div.container {
-            width: 100%;
-            /* border: 5px solid yellow; */
-            display: flex;
-            justify-content: center;
-            background-image: url("img/contents_bg.jpg");
+        div.breakfast {
+            border: 5px solid red;
+            width: 50%;
+            height: 100px;
+            display: inline-block;
+            /* margin-right: 0; */
+        }
+
+        div.brunch {
+            border: 5px solid red;
+            width: 50%;
+            height: 100px;
+            display: inline-block;
+            /* margin-left: 0; */
         }
 
         main {
-            width: 60%;
-            /* height: 3200px; */
-            /* border: 5px solid black; */
-        }
-
-        .process {
             width: 100%;
-            background-image: url("img/text_op.svg");
-            background-size: 100%;
-            border: 5px solid pink;
-            height: 500px;
-            background-repeat: no-repeat;
+            height: 800px;
+            border: 5px solid green;
+            font-size: 0;
         }
 
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            color: orangered;
-            /* border-bottom: 5px dotted black; */
+        .img_breakfast {
+            border: 5px solid black;
+            height: 800px;
+            width: 50%;
+            display: inline-block;
         }
 
-        .top {
-            /* border: 5px solid red; */
-            background-image: url("img/contents_bg.jpg");
-
-        }
-
-        .news {
-            border: 3px dashed black;
-            width: 80%;
-            height: 300px;
-            margin: 20px auto 20px;
-        }
-
-        .rank {
-            border: 5px solid red;
-            width: 100%;
-            height: 300px;
+        .img_brunch {
+            border: 5px solid black;
+            height: 800px;
+            width: 50%;
+            display: inline-block;
         }
     </style>
 </head>
@@ -213,23 +189,15 @@
             </div>
         </nav>
     </header>
-    <div class="top">
-        <div class="banner"></div>
-    </div>
-    <div class="container">
-        <main>
-            <h1>點餐流程</h1>
-            <div class="process"></div>
-            <h1>最新消息</h1>
-            <div class="news"></div>
-            <h1>熱門餐點</h1>
-            <div class="rank"></div>
+    <article>
+        <div class="breakfast"></div>
+        <div class="brunch"></div>
+    </article>
+    <main>
+        <div class="img_breakfast"></div>
+        <div class="img_brunch"></div>
+    </main>
 
-
-
-
-        </main>
-    </div>
     <footer>
         <div class="name">
             <div class="zh">咩呷蝦</div>
