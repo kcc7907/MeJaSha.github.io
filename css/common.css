@@ -1,0 +1,130 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+html {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    /* border: 5px solid red; */
+    height: 80px;
+    background-color: #5676BB;
+    font-size: 0px;
+    /* color: ; */
+    text-align: center;
+    display: inline-block;
+    padding: 10px 0px;
+    position: relative;
+    vertical-align: baseline;
+}
+
+div.logo {
+    /* border: 5px solid purple; */
+    width: 70px;
+    height: 70px;
+    background-image: url("img/logo2.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+nav {
+    display: FLEX;
+    /* border: 5px solid #2fdf9e; */
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+a {
+    /* border: 5px solid #1eff1e; */
+    font-size: 1.5rem;
+    margin: 5px 0px 0px 3rem;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.icon {
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+
+}
+
+.user {
+    /* border: 5px solid red; */
+    background-image: url("img/user_ic.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+.menu {
+    /* border: 5px solid red; */
+    background-image: url("img/food_ic.svg");
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    /* border: 5px solid #3700ffc2; */
+    height: 100px;
+    background-image: url("img/footer_bg.png");
+    background-color: #F3ECE0;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+}
+
+div.name {
+    /* border: 5px solid purple; */
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    left: 500px;
+}
+
+div.zh {
+    font-size: 35px;
+}
+
+span.en {
+    font-size: 21px;
+    text-align: center;
+}
+
+p.addr {
+    /* border: 5px solid purple; */
+    position: absolute;
+    bottom: 30px;
+    left: 630px;
+}
+
+p.copyright {
+    /* border: 5px solid purple; */
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
