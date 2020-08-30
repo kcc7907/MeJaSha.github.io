@@ -1,21 +1,26 @@
 .top{
   width: 100%;
-  height: 300px;
-  border: 5px solid red;
+  /* height: 300px; */
+  /* border: 5px solid red; */
+  /* background-image: url("../img/inner_top.jpg"); */
+  /* background-size: 100% 100%; */
+  /* background-repeat: no-repeat; */
 }
 .container{
   width: 100%;
   /* height: 900px; */
-  border: 5px solid black;
+  /* border: 5px solid black; */
+  background-image: url("../img/contents_bg.jpg");
 }
 main{
   width: 80%;
   /* height: 500px; */
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
   margin: 0 auto;
   display: flex;
   flex-wrap:wrap;
   justify-content: space-around;
+  max-width: 1300px;
 }
 
 .card{

@@ -1,0 +1,40 @@
+article {
+    width: 100%;
+    font-size: 0;
+}
+
+div.breakfast {
+    border: 5px solid red;
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+    /* margin-right: 0; */
+}
+
+div.brunch {
+    border: 5px solid red;
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+    /* margin-left: 0; */
+}
+
+main {
+    width: 100%;
+    border: 5px solid green;
+    font-size: 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px 0px 50px 0px;
+    background-image: url("../img/contents_bg.jpg");
+}
+
+.img_breakfast {
+    /* border: 5px solid black; */
+    width: 48%;
+}
+
+.img_brunch {
+    /* border: 5px solid black; */
+    width: 48%;
+}

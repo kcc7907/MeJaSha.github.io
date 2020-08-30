@@ -6,212 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title></title>
-    <style>
-        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-
-        html {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            width: 100%;
-            /* border: 5px solid red; */
-            height: 80px;
-            background-color: #5676BB;
-            /* background: linear-gradient(to right, rgba(0,0,0,0.05), #154733, rgba(0,0,0,0.05)); */
-            font-size: 0px;
-            /* color: ; */
-            text-align: center;
-            display: inline-block;
-            padding: 10px 0px;
-            position: relative;
-            vertical-align: baseline;
-        }
 
 
-        .logo {
-            /* border: 5px solid purple; */
-            width: 70px;
-            height: 70px;
-            background-image: url("img/logo2.svg");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            display: inline-block;
-            position: absolute;
-            left: 20px;
-            top: 5px;
-        }
-
-        footer {
-            width: 100%;
-            /* border: 5px solid #3700ffc2; */
-            height: 100px;
-            background-image: url("img/footer_bg.png");
-            background-color: #F3ECE0;
-            color: white;
-            font-size: 1rem;
-            position: relative;
-        }
-
-        div.name {
-            /* border: 5px solid purple; */
-            display: inline-block;
-            position: absolute;
-            bottom: 5px;
-            text-align: center;
-            left: 500px;
-        }
-
-        div.zh {
-            font-size: 35px;
-        }
-
-        span.en {
-            font-size: 21px;
-            text-align: center;
-        }
-
-        p.addr {
-            /* border: 5px solid purple; */
-            position: absolute;
-            bottom: 30px;
-            left: 630px;
-        }
-
-        p.copyright {
-            /* border: 5px solid purple; */
-            position: absolute;
-            bottom: 0px;
-            right: 20px;
-        }
-
-
-        a {
-            /* border: 5px solid #1eff1e; */
-            font-size: 1.5rem;
-            margin: 5px 0px 0px 3rem;
-            text-decoration: none;
-            list-style: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        nav {
-            display: FLEX;
-            /* border: 5px solid #2fdf9e; */
-            width: 100%;
-            height: 50px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .icon {
-            font-size: 1rem;
-            display: inline-block;
-            position: absolute;
-            right: 0;
-            bottom: 10px;
-
-        }
-
-        .user {
-            /* border: 5px solid red; */
-            background-image: url("img/user_ic.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 50px;
-            width: 50px;
-            display: inline-block;
-        }
-
-        .menu {
-            /* border: 5px solid red; */
-            background-image: url("img/food_ic.svg");
-            background-repeat: no-repeat;
-            height: 50px;
-            width: 50px;
-            display: inline-block;
-        }
-
-        .banner {
-            width: 60%;
-            height: 500px;
-            /* border: 5px solid blue; */
-            margin: auto;
-            background-image: url("img/banner05.jpg");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
-            /* min-width: 1200px; */
-        }
-
-        div.container {
-            width: 100%;
-            /* border: 5px solid yellow; */
-            display: flex;
-            justify-content: center;
-            background-image: url("img/contents_bg.jpg");
-        }
-
-        main {
-            width: 60%;
-            /* height: 3200px; */
-            /* border: 5px solid black; */
-        }
-
-        .process {
-            width: 100%;
-            background-image: url("img/text_op.svg");
-            background-size: 100%;
-            border: 5px solid pink;
-            height: 500px;
-            background-repeat: no-repeat;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 3rem;
-            color: orangered;
-            /* border-bottom: 5px dotted black; */
-        }
-
-        .top {
-            /* border: 5px solid red; */
-            background-image: url("img/contents_bg.jpg");
-
-        }
-
-        .news {
-            border: 3px dashed rgb(0, 0, 0,0.5);
-            border-radius: 50px;
-            width: 80%;
-            height: 300px;
-            margin: 20px auto 20px;
-        }
-
-        .rank {
-            border: 5px solid red;
-            width: 100%;
-            height: 300px;
-        }
-
-        /* .calendar{
-            border: 5px solid green;
-            width: 100%;
-            text-align: center;
-        }
-
-        iframe{
-            width: 80%;
-            height: 500px;
-           
-            border: 5px solid black;
-        } */
-    </style>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main_type2.css">
 </head>
 
 <body>
@@ -223,8 +21,8 @@
             <a href="#">餐點介紹</a>
             <a href="#">關於我們</a>
             <div class="icon">
-                <span class="user"></span>
-                <span class="menu"></span>
+                <span class="user"><a href="#"></a></span>
+                <span class="menu"><a href="#"></a></span>
             </div>
         </nav>
     </header>
@@ -234,7 +32,7 @@
     <div class="container">
         <main>
             <h1>點餐流程</h1>
-            <div class="process"></div>
+            <div class="process"><img src="./img/order.png" alt=""></div>
             <h1>最新消息</h1>
             <div class="news"></div>
             <h1>熱門餐點</h1>
@@ -250,8 +48,13 @@
             <div class="zh">咩呷蝦</div>
             <span class="en">BreakFast</span>
         </div>
-        <p class="addr">台北市中正區青島東路25號</p>
-        <p class="copyright">copyright(c)All Rights Reserved</p>
+        <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
+        <p class="copyright">CopyRight(c)All Rights Reserved</p>
+        <div class="outweb">
+            <span class="fb"><a href="#"></a></span>
+            <span class="fp"><a href="#"></a></span>
+            <span class="ue"><a href="#"></a></span>
+        </div>
     </footer>
 </body>
 

@@ -5,179 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <style>
-        @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
-
-        html {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        header {
-            width: 100%;
-            /* border: 5px solid red; */
-            height: 80px;
-            background-color: #5676BB;
-            font-size: 0px;
-            /* color: ; */
-            text-align: center;
-            display: inline-block;
-            padding: 10px 0px;
-            position: relative;
-            vertical-align: baseline;
-        }
-
-
-        .logo {
-            /* border: 5px solid purple; */
-            width: 70px;
-            height: 70px;
-            background-image: url("img/logo2.svg");
-            background-size: 100%;
-            background-repeat: no-repeat;
-            display: inline-block;
-            position: absolute;
-            left: 20px;
-            top: 5px;
-        }
-
-        footer {
-            width: 100%;
-            /* border: 5px solid #3700ffc2; */
-            height: 100px;
-            background-image: url("img/footer_bg.png");
-            background-color: #F3ECE0;
-            color: white;
-            font-size: 1rem;
-            position: relative;
-        }
-
-        div.name {
-            /* border: 5px solid purple; */
-            display: inline-block;
-            position: absolute;
-            bottom: 5px;
-            text-align: center;
-            left: 500px;
-        }
-
-        div.zh {
-            font-size: 35px;
-        }
-
-        span.en {
-            font-size: 21px;
-            text-align: center;
-        }
-
-        p.addr {
-            /* border: 5px solid purple; */
-            position: absolute;
-            bottom: 30px;
-            left: 630px;
-        }
-
-        p.copyright {
-            /* border: 5px solid purple; */
-            position: absolute;
-            bottom: 0px;
-            right: 20px;
-        }
-
-
-        a {
-            /* border: 5px solid #1eff1e; */
-            font-size: 1.5rem;
-            margin: 5px 0px 0px 3rem;
-            text-decoration: none;
-            list-style: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        nav {
-            display: FLEX;
-            /* border: 5px solid #2fdf9e; */
-            width: 100%;
-            height: 50px;
-            justify-content: center;
-            margin-top: 10px;
-        }
-
-        .icon {
-            font-size: 1rem;
-            display: inline-block;
-            position: absolute;
-            right: 0;
-            bottom: 10px;
-
-        }
-
-        .user {
-            /* border: 5px solid red; */
-            background-image: url("img/user_ic.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 50px;
-            width: 50px;
-            display: inline-block;
-        }
-
-        .menu {
-            /* border: 5px solid red; */
-            background-image: url("img/food_ic.svg");
-            background-repeat: no-repeat;
-            height: 50px;
-            width: 50px;
-            display: inline-block;
-        }
-
-        article {
-            width: 100%;
-            font-size: 0;
-        }
-
-        div.breakfast {
-            border: 5px solid red;
-            width: 50%;
-            height: 100px;
-            display: inline-block;
-            /* margin-right: 0; */
-        }
-
-        div.brunch {
-            border: 5px solid red;
-            width: 50%;
-            height: 100px;
-            display: inline-block;
-            /* margin-left: 0; */
-        }
-
-        main {
-            width: 100%;
-            height: 800px;
-            border: 5px solid green;
-            font-size: 0;
-        }
-
-        .img_breakfast {
-            border: 5px solid black;
-            height: 800px;
-            width: 50%;
-            display: inline-block;
-        }
-
-        .img_brunch {
-            border: 5px solid black;
-            height: 800px;
-            width: 50%;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/meau.css">
 </head>
 
 <body>
@@ -189,18 +19,19 @@
             <a href="#">餐點介紹</a>
             <a href="#">關於我們</a>
             <div class="icon">
-                <span class="user"></span>
-                <span class="menu"></span>
+                <span class="user"><a href="#"></a></span>
+                <span class="menu"><a href="#"></a></span>
             </div>
         </nav>
     </header>
+    <div class="top"><img src="./img/inner_top.jpg" alt=""></div>
     <article>
         <div class="breakfast"></div>
         <div class="brunch"></div>
     </article>
     <main>
-        <div class="img_breakfast"></div>
-        <div class="img_brunch"></div>
+        <div class="img_breakfast"><img src="./img/menu_m.jpg" alt=""></div>
+        <div class="img_brunch"><img src="./img/menu_b.jpg" alt=""></div>
     </main>
 
     <footer>
@@ -208,8 +39,13 @@
             <div class="zh">咩呷蝦</div>
             <span class="en">BreakFast</span>
         </div>
-        <p class="addr">台北市中正區青島東路25號</p>
-        <p class="copyright">copyright(c)All Rights Reserved</p>
+        <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
+        <p class="copyright">CopyRight(c)All Rights Reserved</p>
+        <div class="outweb">
+            <span class="fb"><a href="#"></a></span>
+            <span class="fp"><a href="#"></a></span>
+            <span class="ue"><a href="#"></a></span>
+        </div>
     </footer>
 </body>
 
