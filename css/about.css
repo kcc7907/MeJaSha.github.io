@@ -1,0 +1,85 @@
+.container {
+    /* border: 5px solid orange; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/contents_bg.jpg");
+
+}
+
+main {
+    /* border: 5px solid orchid; */
+    width: 1200px;
+    text-align: center;
+    font-size: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    border-bottom: 5px dotted black;
+    margin: 0px auto 60px;
+    padding: 30px;
+    width: 70%;
+}
+
+div.img1 {
+    background-image: url("../img/in1.jpg");
+    border: 5px solid white;
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    margin-right: 100px;
+    background-size: 100% 110%;
+    background-repeat: no-repeat;
+}
+
+.img2 {
+    background-image: url("../img/banner4.jpg");
+    border: 5px solid white;
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    vertical-align: top;
+    background-size: 100% 110%;
+}
+
+div.part1 {
+    display: inline-block;
+    width: 450px;
+    /* border: 5px solid black; */
+    font-size: 1.5rem;
+    vertical-align: top;
+    position: relative;
+    transform: translatey(40px);
+    padding: 15px;
+}
+
+div.part2 {
+    display: inline-block;
+    width: 450px;
+    /* border: 5px solid black; */
+    font-size: 1.5rem;
+    margin-right: 100px;
+    position: relative;
+    transform: translatey(60px);
+    padding: 15px;
+}
+
+/* 
+.top {
+     border: 5px solid yellow; 
+}
+
+.middle {
+    border: 5px solid yellow; 
+     margin-top: 60px; 
+}  */
+
+.map {
+    /* border: 5px solid ; */
+    width: 900px;
+    height: 450px;
+    margin: 100px auto 50px;
+    background-image: url("../img/MAP02.svg");
+}

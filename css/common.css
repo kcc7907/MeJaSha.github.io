@@ -61,6 +61,7 @@ nav a {
     text-decoration: none;
     list-style: none;
     color: white;
+    white-space: nowrap;
 }
 
 .icon {
