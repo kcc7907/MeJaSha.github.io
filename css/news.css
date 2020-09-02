@@ -45,7 +45,7 @@ h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 120px;
+  /* width: 120px; */
   height: 35px;
   margin: auto;
   font-weight: bold;
