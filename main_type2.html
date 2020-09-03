@@ -10,6 +10,81 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main_type2.css">
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        #hidebg {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: #002;
+            width: 100%;
+            /*寬度設定為100%，這樣才能使隱藏背景層覆蓋原頁面*/
+            filter: alpha(opacity=30);
+            /*設定透明度為60%*/
+            opacity: 0.3;
+            /*非IE瀏覽器下設定透明度為60%*/
+            display: none;
+            /* http://www.jb51.net */
+            z-Index: 2;
+
+        }
+
+        #hidebox {
+            position: absolute;
+            border: 1px solid #99CCFF;
+            width: 400px;
+            height: 150px;
+            top: 200px;
+            left: 30%;
+            background-color: #fff;
+            display: none;
+            z-Index: 3;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            /* right: 0; */
+            /* bottom: 0; */
+            transform: translateX(-50%) translateY(-50%);
+            display: none;
+        }
+
+        #content1 {
+            text-align: center;
+            cursor: pointer;
+            z-Index: 1;
+            /* display: none; */
+        }
+
+        .button1 {
+            float: right;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            background-color: #c75050;
+            color: white;
+        }
+
+        .button2 {
+            background-color: #6a9f3f;
+            font-size: 18px;
+        }
+
+        #hidebox .p1 {
+            background-color: #336699;
+            width: 100%;
+            border: 1px solid silver;
+            float: left;
+            margin-top: 0px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -95,6 +170,14 @@
 
         </main>
     </div>
+    <div id="hidebg"></div>
+    <div id="hidebox">
+        <p class="p1"><input class="button1" type="button" value="×" onClick="hide();"></p>
+        <p>是否繼續？</p>
+        <input class="button2" type="button" value="取消" onClick="hide()">
+        <input class="button2" type="button" value="確定" onClick="open_()">
+    </div>
+    <div id="content1" onClick="show();">點選試試</div>
     <footer>
         <div class="name">
             <div class="zh">咩呷蝦</div>
@@ -108,6 +191,26 @@
             <span class="ue"><a href="#"></a></span>
         </div>
     </footer>
+
+    <script>
+        function show() //顯示隱藏層和彈出層 
+        {
+            var hideobj = document.getElementById("hidebg");
+            hidebg.style.display = "block"; //顯示隱藏層 
+            hidebg.style.height = document.body.clientHeight + "px"; //設定隱藏層的高度為當前頁面高度   px是字尾
+            document.getElementById("hidebox").style.display = "block"; //顯示彈出層 
+        }
+
+        function hide() //去除隱藏層和彈出層 
+        {
+            document.getElementById("hidebg").style.display = "none";
+            document.getElementById("hidebox").style.display = "none";
+        }
+
+        function open_() {
+            window.location.href = "http://www.hpu.edu.cn";
+        }
+    </script>
 </body>
 
 </html>
