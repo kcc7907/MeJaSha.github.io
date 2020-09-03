@@ -56,7 +56,7 @@ nav {
 
 nav a {
     /* border: 5px solid #1eff1e; */
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 5px 0px 0px 3rem;
     text-decoration: none;
     list-style: none;
@@ -172,7 +172,8 @@ span.ue a {
 div.outweb {
     position: absolute;
     bottom: 10px;
-    left: 1150px;
+    right: 500px;
+    /* left: 1150px; */
     /* border: 5px solid purple; */
     /* display: inline-block; */
 

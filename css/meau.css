@@ -2,6 +2,7 @@ article {
     width: 100%;
     font-size: 0;
     text-align: center;
+    display: flex;
 
 }
 
@@ -9,7 +10,7 @@ div.breakfast {
     /* border: 5px solid red; */
     width: 50%;
     height: 100px;
-    display: inline-block;
+    display: flex;
     padding: auto;
     /* margin-right: 0; */
     background-image: url("../img/contents_bg.jpg");
@@ -20,7 +21,7 @@ div.brunch {
     /* border: 5px solid red; */
     width: 50%;
     height: 100px;
-    display: inline-block;
+    display: flex;
     /* margin-left: 0; */
     background-image: url("../img/contents_bg.jpg");
 
@@ -57,7 +58,7 @@ h1 {
     margin: auto;
     font-weight: bold;
     white-space: nowrap;
-    font-size: 2em;
+    font-size: 2rem;
     height: 40px;
     line-height: normal;
     text-transform: uppercase;
@@ -80,7 +81,11 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin: auto 0;
-    line-height: 100px;
-    /* display: none; */
+    margin: auto;
+    color: white;
+    background-color: #ee772b;
+    width: 135px;
+    border-radius: 20px;
+    padding: 0.7rem 0.1rem;
+    font-weight: bold;
 }
