@@ -31,3 +31,33 @@ h1 {
     /* display: inline; */
     vertical-align: middle;
 }
+
+.container {
+    border: 5px solid red;
+    width: 100%;
+    background-image: url("../img/contents_bg.jpg");
+
+
+}
+
+main {
+    margin: auto;
+    border: 5px solid #000;
+    width: 80%;
+    height: 900px;
+    font-size: 0;
+}
+
+aside {
+    width: 20%;
+    border: 5px solid rgb(110, 17, 218);
+    height: 100%;
+    display: inline-block;
+}
+
+article {
+    width: 80%;
+    border: 5px solid rgb(13, 214, 114);
+    height: 100%;
+    display: inline-block;
+}
