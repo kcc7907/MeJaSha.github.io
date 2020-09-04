@@ -4,6 +4,7 @@ html {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
+
 }
 
 * {
@@ -48,7 +49,7 @@ header {
 
 
 nav {
-    display: FLEX;
+    display: flex;
     /* border: 5px solid #2fdf9e; */
     width: 100%;
     height: 50px;
