@@ -24,7 +24,7 @@
             <a href="./food.html">餐點介紹</a>
             <a href="./about.html">關於我們</a>
             <div class="icon">
-                <span class="user"><a href="#"></a></span>
+                <span class="user"><a href="#" onClick="show();"></a></span>
                 <span class="menu"><a href="#"></a></span>
             </div>
         </nav>
@@ -111,7 +111,44 @@
             <span class="fp"><a href="#"></a></span>
             <span class="ue"><a href="#"></a></span>
         </div>
+        <div id="content" onClick="show()">點選試試</div>
     </footer>
+    <div class="hidebg"></div>
+    <div class="hidebox">
+        <div class="hgtop">
+            <div class="login">登入</div>
+            <div class="signin">註冊</div>
+        </div>
+        <div class="box 1"></div>
+        <div class="box 2"><input type="text"></div>
+        <div class="box 3"></div>
+        <div class="box 4"><input type="password"></div>
+        <div class="btn box">
+            <input type="button" value="返回" onClick="hide()">
+            <input type="button" value="登入">
+        </div>
+    </div>
+
+    <script>
+        // function show() {
+        //     let hidebg1 = document.getElementsByClassName("hidebg");
+        //     hidebg.style.display = "block";
+        //     hidebg.style.height = document.body.clientHeight + "px";
+        //     document.getElementsByClassName("hidebox").style.display = "block";
+        // }
+        function show() //顯示隱藏層和彈出層 
+        {
+            var hideobj = document.querySelectorAll(".hidebg")[0];
+            hideobj.style.display = "block"; //顯示隱藏層 
+            hideobj.style.height = document.body.clientHeight + "px"; //設定隱藏層的高度為當前頁面高度   px是字尾
+            document.getElementsByClassName("hidebox")[0].style.display = "block"; //顯示彈出層 
+        }
+
+        function hide() //去除隱藏層和彈出層    
+        {
+            document.getElementsByClassName("hidebg")[0].style.display = "none";
+            document.getElementsByClassName("hidebox")[0].style.display = "none";
+        }
     </script>
 </body>
 
