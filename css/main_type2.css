@@ -17,6 +17,10 @@
             background-image: url("../img/contents_bg.jpg");
         }
 
+        body {
+            font-size: 0;
+        }
+
         main {
             width: 60%;
             /* height: 3200px; */
@@ -95,7 +99,8 @@
 
         iframe {
             width: 90%;
-            height: 25vw;
+            /* height: 25vw; */
+            height: 500px;
             min-height: 300px;
             min-width: 300px;
             /* margin: 0 auto 0; */
@@ -152,7 +157,7 @@
             /* background-image: url("../img/toast.png"); */
             /* background-size: 100% 100%; */
             position: fixed;
-            transform: translateX(-50%) ;
+            transform: translateX(-50%);
             background-color: #fff;
             border-radius: 20px 20px 0 0;
         }
@@ -192,7 +197,7 @@
             height: 50px;
             /* outline: 1px solid red; */
             font-size: 0;
-            
+
 
 
         }
@@ -248,7 +253,7 @@
             /* background-image: url("../img/toast.png"); */
             /* background-size: 100% 100%; */
             position: fixed;
-            transform: translateX(-50%) ;   
+            transform: translateX(-50%);
             border-radius: 20px 20px 0 0;
             cursor: pointer;
 
@@ -276,9 +281,9 @@
             cursor: pointer;
         }
 
-        .box input{
+        .box input {
             width: 90%;
-            border:1px solid black;
+            border: 1px solid black;
             height: 30px;
             cursor: pointer;
             /* margin:  auto; */
