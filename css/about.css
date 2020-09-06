@@ -49,6 +49,9 @@ div.part1 {
     position: relative;
     transform: translatey(40px);
     padding: 15px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    letter-spacing: 3px;
 }
 
 div.part2 {
@@ -60,6 +63,9 @@ div.part2 {
     position: relative;
     transform: translatey(60px);
     padding: 15px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    letter-spacing: 3px;
 }
 
 /* 

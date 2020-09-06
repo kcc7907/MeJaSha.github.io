@@ -99,3 +99,7 @@ h2 {
   color: #154733;
   font-weight: bold;
 }
+
+main a {
+  text-decoration: none;
+}
