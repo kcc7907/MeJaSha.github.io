@@ -37,6 +37,13 @@ main {
   /* display: flex; */
   /* align-items: flex-start; */
   box-shadow: 3px 3px 5px 6px #cccccc;
+  transform: translateY(0px);
+  transition: 0.5s;
+
+}
+
+.card:hover {
+  transform: translateY(-20px);
 }
 
 h1 {

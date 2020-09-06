@@ -93,10 +93,6 @@
             justify-content: space-evenly;
         }
 
-        img {
-            max-width: 100%;
-        }
-
         iframe {
             width: 90%;
             /* height: 25vw; */
@@ -114,6 +110,42 @@
             background-color: rgba(255, 255, 255, 0.25);
             /* background-color: rgba(128, 128, 128, 0.3); */
             box-shadow: 3px 3px 5px 6px rgba(204, 204, 204, 0.589);
+            position: relative;
+
+        }
+
+        .food img {
+            vertical-align: middle;
+        }
+
+        .ftxt {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 20px;
+            background-color: rgb(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .ftxt:hover {
+            opacity: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #fff;
+
+        }
+
+        .ftxt p {
+            font-size: 1.5rem;
+            color: #fff;
         }
 
         div.event p.sale {

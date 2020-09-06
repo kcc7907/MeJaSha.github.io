@@ -70,6 +70,19 @@ nav a {
     white-space: nowrap;
 }
 
+nav>a::after {
+    content: '';
+    display: block;
+    background-color: #b54800;
+    height: 5px;
+    transition: width .3s .2s;
+    width: 0px;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
 .icon {
     font-size: 1rem;
     display: inline-block;
