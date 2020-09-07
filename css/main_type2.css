@@ -35,6 +35,15 @@
             /* border: 5px solid pink; */
             /* height: 500px; */
             background-repeat: no-repeat;
+            /* position: absolute; */
+            /* width: REM(480);
+            height: REM(206); */
+            /* left: 50%; */
+            /* margin-left: REM(-240); */
+            opacity: 0;
+            bottom: REM(778);
+            animation: bounceInLeft 1s 0s linear forwards;
+
         }
 
         h1 {
@@ -71,12 +80,23 @@
             justify-content: space-around;
             /* align-content: flex-start; */
             /* align-items: start; */
-
             padding: 0px 80px 0px 80px;
-
+            left: 50%;
+            margin-left: REM(-240);
+            opacity: 0;
+            bottom: REM(314);
+            animation: bounceInRight 1s 0s linear forwards;
         }
 
-        .event {
+        .calendar {
+            left: 50%;
+            margin-left: REM(-240);
+            opacity: 0;
+            bottom: REM(314);
+            animation: bounceInDown 1.2s 0s forwards;
+        }
+
+        .news .event {
             width: 100%;
             /* background-color: red; */
             margin: 40px auto;
@@ -148,22 +168,22 @@
             color: #fff;
         }
 
-        div.event p.sale {
+        .news .event p.sale {
             font-size: 1.8rem;
             color: rgba(21, 71, 51, 0.8);
             font-weight: bold;
         }
 
-        div.event p.date {
+        .news .event p.date {
             font-size: 1.1rem;
             color: #ee772b;
         }
 
-        .event a {
+        .news .event a {
             text-decoration: none;
         }
 
-        .more {
+        .news .more {
             font-size: 1.8rem;
             background-color: rgba(21, 71, 51);
             color: white;
@@ -172,7 +192,7 @@
             margin: 0 0 -0.5px 0;
         }
 
-        a.show_more {
+        .news a.show_more {
             text-decoration: none;
         }
 
@@ -188,7 +208,6 @@
             /* height: 500px; */
             /* background-image: url("../img/toast.png"); */
             /* background-size: 100% 100%; */
-            position: fixed;
             transform: translateX(-50%);
             background-color: #fff;
             border-radius: 20px 20px 0 0;
@@ -284,7 +303,6 @@
             font-size: 0;
             /* background-image: url("../img/toast.png"); */
             /* background-size: 100% 100%; */
-            position: fixed;
             transform: translateX(-50%);
             border-radius: 20px 20px 0 0;
             cursor: pointer;
@@ -320,4 +338,129 @@
             cursor: pointer;
             /* margin:  auto; */
             /* border-radius: 20px; */
+        }
+
+        @keyframes bounceInLeft {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(-3000px, 0, 0);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(25px, 0, 0);
+            }
+
+            75% {
+                transform: translate3d(-10px, 0, 0);
+            }
+
+            90% {
+                transform: translate3d(5px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes bounceInRight {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(3000px, 0, 0);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(-25px, 0, 0);
+            }
+
+            75% {
+                transform: translate3d(10px, 0, 0);
+            }
+
+            90% {
+                transform: translate3d(-5px, 0, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        @keyframes bounceInDown {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(0, 3000px, 0);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(0, -25px, 0);
+            }
+
+            75% {
+                transform: translate3d(0, 10px, 0);
+            }
+
+            90% {
+                transform: translate3d(0, -5px, 0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* .ggwp,
+        .ggwp p {
+            font-size: 1.5rem;
+            position: fixed;
+            left: 0;
+            top: 50%;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            color: #fff;
+        } */
+
+        .gotop,
+        .gotop a {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            background-color: green;
+            bottom: 30px;
+            right: 20px;
         }

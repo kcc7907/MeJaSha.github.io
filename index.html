@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main_type2.css">
 
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
 </head>
 
@@ -36,9 +36,9 @@
         <div class="container">
             <main>
                 <h1>點餐流程</h1>
-                <div class="process"><img src="./img/order.png" alt=""> </div>
+                <div id="process"><img src="./img/order.png" alt=""> </div>
                 <h1>最新消息</h1>
-                <div class="news">
+                <div id="news">
                     <div class="event">
                         <a href="./news/news_01.html">
                             <p class="sale">109年9月-10月活動【金芒勁辣雞腿堡套餐】$79元起</p>
@@ -105,7 +105,7 @@
 
                 <h1>營業時間</h1>
 
-                <iframe
+                <iframe id="calendar"
                     src="https://calendar.google.com/calendar/embed?src=1e05s183isv45k9crpbf6u1bmk%40group.calendar.google.com&ctz=Asia%2FTaipei"
                     style="border: 0" frameborder="0" scrolling="no">
                 </iframe>
@@ -152,9 +152,16 @@
             <div class="signin_2">
                 <p class="signin_text">註冊</p>
             </div>
-
         </div>
     </div>
+    <div id="gotop">
+        <img src="" alt="">
+        <a href="#"></a>
+    </div>
+    <!-- <div class="ggwp">
+        <p> 1kwjefoj</p>
+    </div> -->
+
     <script>
         function show() //顯示隱藏層和彈出層 
         {
@@ -182,6 +189,47 @@
             document.getElementsByClassName("signin_page")[0].style.display = "none";
 
         }
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            if (document.documentElement.scrollTop > 600) {
+                document.getElementById("process").className = "process";
+            };
+            if (document.documentElement.scrollTop > 1200) {
+                document.getElementById("news").className = "news";
+            };
+            if (document.documentElement.scrollTop > 2800) {
+                document.getElementById("calendar").className = "calendar";
+            };
+            if (document.documentElement.scrollTop > 1000) {
+                document.getElementById("gotop").className = "gotop";
+            };
+            if (document.documentElement.scrollTop < 2000) {
+                document.getElementById("gotop").className = "";
+            };
+        }
+
+        //顯示元素高度
+
+        // var header_active = function () {
+        //     // 取得使用者滑了多少 px
+        //     var scroll_top = $(window).scrollTop();
+        //     // 將 scroll_top 數值放到 p.-pos 內容
+        //     $(".ggwp p").html(scroll_top);
+        //     if (scroll_top >= 100) {
+        //         $("div.fixed_top").addClass("-on");
+        //     } else {
+        //         $("div.fixed_top").removeClass("-on");
+        //     }
+        // };
+        // $(function () {
+        //     // 第三步：偵測頁面滑動時會觸發
+        //     $(window).scroll(function () {
+        //         header_active();
+        //     });
+        // });
     </script>
 </body>
 
