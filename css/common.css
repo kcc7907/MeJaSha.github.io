@@ -127,13 +127,21 @@ footer {
     position: relative;
 }
 
+footer article {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 div.name {
     /* border: 5px solid purple; */
     display: inline-block;
-    position: absolute;
-    bottom: 5px;
+    /* position: absolute; */
+    /* bottom: 5px; */
     /* text-align: center; */
-    left: 650px;
+    /* left: 650px; */
 }
 
 div.zh {
@@ -145,18 +153,24 @@ span.en {
     text-align: center;
 }
 
-p.addr {
+footer p.addr {
     /* border: 5px solid purple; */
-    position: absolute;
-    bottom: 30px;
-    left: 830px;
+    /* position: absolute; */
+    /* bottom: 30px; */
+    /* left: 830px; */
+    display: inline-block;
+    /* line-height: 100%; */
+    margin: 0 60px;
+    font-size: 1.2rem;
 }
 
-p.copyright {
+footer p.copyright {
     /* border: 5px solid purple; */
     position: absolute;
     bottom: 0px;
     right: 20px;
+    font-size: 1rem;
+
 }
 
 
@@ -167,7 +181,7 @@ span.fb a {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 span.fp a {
@@ -176,7 +190,7 @@ span.fp a {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 span.ue a {
@@ -185,14 +199,17 @@ span.ue a {
     display: inline-block;
     width: 60px;
     height: 60px;
-    margin-left: 20px;
+    margin-right: 20px;
 }
 
 div.outweb {
-    position: absolute;
-    bottom: 10px;
-    right: 500px;
+    /* position: absolute; */
+    /* bottom: 10px; */
+    /* right: 500px; */
     /* left: 1150px; */
     /* border: 5px solid purple; */
-    /* display: inline-block; */
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding-top: 10px;
 }
