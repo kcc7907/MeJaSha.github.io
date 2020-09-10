@@ -13,149 +13,231 @@
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 
+
+    <style>
+        @media screen and (max-width: 900px) {
+            header {
+                display: none;
+            }
+
+            .hide_header {
+                /* border: 5px solid red; */
+                height: 80px;
+                background: linear-gradient(to right, rgba(0, 0, 0, 0.05), #154733, rgba(0, 0, 0, 0.05));
+                text-align: center;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* display: none; */
+            }
+
+
+
+            .hide_on {
+                background-color: black;
+                height: 5px;
+                width: 50px;
+                position: relative;
+                /* margin: 0; */
+            }
+
+            .hide_icon {
+                margin: 0 20px 0 0;
+                height: 50px;
+                width: 50px;
+                /* border: 1px solid red; */
+                display: flex;
+                align-items: center;
+            }
+
+            .hide_on::before {
+                content: "";
+                position: absolute;
+                height: 5px;
+                width: 50px;
+
+                box-shadow: 0 10px 0 black,
+                    0 -10px 0 black;
+                top: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .hide_meau a {
+                display: block;
+                font-size: 1.2rem;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .hide_meau {
+                background-color: #154733;
+                display: none;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="out" style="width: 100%; min-width: 1200px; max-width: 1920px; margin: auto;">
-        <header>
-            <div class="logo"><a href="./index.html"></a></div>
-            <nav>
-                <a href="./news.html">最新消息</a>
-                <a href="./meau.html">菜單</a>
-                <a href="./food.html">餐點介紹</a>
-                <a href="./about.html">關於我們</a>
-                <div class="icon">
-                    <span class="user"><a href="#" onClick="show()"></a></span>
-                    <span class="menu"><a href="#"></a></span>
-                </div>
-            </nav>
-        </header>
-        <div class="top">
-            <div class="banner"><img src="./img/banner05.jpg" alt=""></div>
+    <!-- <div class="out" style="width: 100%; min-width: 1200px; max-width: 1920px; margin: auto;"> -->
+    <header>
+        <div class="logo"><a href="./index.html"></a></div>
+        <nav>
+            <a href="./news.html">最新消息</a>
+            <a href="./meau.html">菜單</a>
+            <a href="./food.html">餐點介紹</a>
+            <a href="./about.html">關於我們</a>
+            <div class="icon">
+                <span class="user"><a href="#" onClick="show()"></a></span>
+                <span class="menu"><a href="#"></a></span>
+            </div>
+        </nav>
+    </header>
+    <div class="hide_header">
+        <div class="logo">
+            <a href="./index.html"></a>
         </div>
-        <div class="container">
-            <main>
-                <h1>點餐流程</h1>
-                <div id="process"><img src="./img/order.png" alt=""> </div>
-                <h1>最新消息</h1>
-                <div id="news">
-                    <div class="event">
-                        <a href="./news/news_01.html">
-                            <p class="sale">109年9月-10月活動【金芒勁辣雞腿堡套餐】$79元起</p>
-                        </a>
-                        <a href="#">
-                            <p class="date">2020.08.31</p>
-                        </a>
-                    </div>
-                    <div class="event">
-                        <a href="#">
-                            <p class="sale">109年7月-8月活動【舒肥雞胸輕食 套餐】$79元起</p>
-                        </a>
-                        <a href="#">
-                            <p class="date">2020.06.31</p>
-                        </a>
-                    </div>
-                    <div class="event">
-                        <a href="#">
-                            <p class="sale">109年5月-6月活動【塔香皮蛋肉鬆蛋餅套餐】$69元起</p>
-                        </a>
-                        <a href="#">
-                            <p class="date">2020.04.31</p>
-                        </a>
-                    </div>
-                    <div class="event">
-                        <a href="#">
-                            <p class="sale">109年3月-4月優惠活動【日式醬豚燒餅套餐】$69元起</p>
-                        </a>
-                        <a href="#" name="qq">
-                            <p class="date">2020.02.31</p>
-                        </a>
-                    </div>
-                    <a href="./news.html" class="show_more">
-                        <div class="more">顯示更多</div>
+        <div class="hide_icon" onclick="meau_hide()">
+            <div class="hide_on"></div>
+        </div>
+
+    </div>
+    <div class="hide_meau">
+        <a href="./news.html">最新消息</a>
+        <a href="./meau.html">菜單</a>
+        <a href="./food.html">餐點介紹</a>
+        <a href="./about.html">關於我們</a>
+        <a href="">會員</a>
+        <a href="">點餐</a>
+    </div>
+    <div class="top">
+        <div class="banner"><img src="./img/banner05.jpg" alt=""></div>
+    </div>
+    <div class="container">
+        <main>
+            <h1>點餐流程</h1>
+            <div id="process"><img src="./img/order.png" alt=""> </div>
+            <h1>最新消息</h1>
+            <div id="news">
+                <div class="event">
+                    <a href="./news/news_01.html">
+                        <p class="sale">109年9月-10月活動【金芒勁辣雞腿堡套餐】$79元起</p>
+                    </a>
+                    <a href="#">
+                        <p class="date">2020.08.31</p>
                     </a>
                 </div>
-                <h1>熱門餐點</h1>
-                <div class="rank">
-                    <div class="food">
-                        <img src="./img/top/top1-big.png" alt="">
-                        <img src="./img/food/buger1.png" alt="" class="bg1">
-                        <div class="ftxt">
-                            <h2>人氣NO.1</h2>
-                            <p>超厚牛肉起司漢堡</p>
-                        </div>
+                <div class="event">
+                    <a href="#">
+                        <p class="sale">109年7月-8月活動【舒肥雞胸輕食 套餐】$79元起</p>
+                    </a>
+                    <a href="#">
+                        <p class="date">2020.06.31</p>
+                    </a>
+                </div>
+                <div class="event">
+                    <a href="#">
+                        <p class="sale">109年5月-6月活動【塔香皮蛋肉鬆蛋餅套餐】$69元起</p>
+                    </a>
+                    <a href="#">
+                        <p class="date">2020.04.31</p>
+                    </a>
+                </div>
+                <div class="event">
+                    <a href="#">
+                        <p class="sale">109年3月-4月優惠活動【日式醬豚燒餅套餐】$69元起</p>
+                    </a>
+                    <a href="#" name="qq">
+                        <p class="date">2020.02.31</p>
+                    </a>
+                </div>
+                <a href="./news.html" class="show_more">
+                    <div class="more">顯示更多</div>
+                </a>
+            </div>
+            <h1>熱門餐點</h1>
+            <div class="rank">
+                <div class="food">
+                    <img src="./img/top/top1-big.png" alt="">
+                    <img src="./img/food/buger1.png" alt="" class="bg1">
+                    <div class="ftxt">
+                        <h2>人氣NO.1</h2>
+                        <p>超厚牛肉起司漢堡</p>
                     </div>
-                    <div class="food">
-                        <img src="./img/top/top2-big.png" alt="">
-                        <img src="./img/food/sw1.png" alt="" class="sw">
-                        <div class="ftxt">
-                            <h2>人氣NO.2</h2>
-                            <p>檸檬雞湯種吐司</p>
-                        </div>
-                    </div>
-                    <div class="food">
-                        <img src="./img/top/top3-big.png" alt="">
-                        <img src="./img/food/manfu1.png" alt="">
-                        <div class="ftxt">
-                            <h2>人氣NO.3</h2>
-                            <p>超厚雞起司滿分堡</p>
-                        </div>
+                </div>
+                <div class="food">
+                    <img src="./img/top/top2-big.png" alt="">
+                    <img src="./img/food/sw1.png" alt="" class="sw">
+                    <div class="ftxt">
+                        <h2>人氣NO.2</h2>
+                        <p>檸檬雞湯種吐司</p>
                     </div>
                 </div>
-
-                <h1>營業時間</h1>
-
-                <iframe id="calendar"
-                    src="https://calendar.google.com/calendar/embed?src=1e05s183isv45k9crpbf6u1bmk%40group.calendar.google.com&ctz=Asia%2FTaipei"
-                    style="border: 0" frameborder="0" scrolling="no">
-                </iframe>
-
-            </main>
-        </div>
-
-        <footer>
-            <article>
-                <div class="name">
-                    <div class="zh">咩呷蝦</div>
-                    <span class="en">BreakFast</span>
-                </div>
-                <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
-                <p class="copyright">CopyRight(c)All Rights Reserved</p>
-                <div class="outweb">
-                    <span class="fb"><a href="#" name=""></a></span>
-                    <span class="fp"><a href="#"></a></span>
-                    <span class="ue"><a href="#"></a></span>
-                </div>
-            </article>
-        </footer>
-        <div class="hidebg"></div>
-        <div class="hidebox">
-            <div class="hgtop">
-                <div class="login">
-                    <p class="signin_text">登入</p>
-                </div>
-                <div class="signin" onClick="signin()">
-                    <p class="signin_text">註冊</p>
+                <div class="food">
+                    <img src="./img/top/top3-big.png" alt="">
+                    <img src="./img/food/manfu1.png" alt="">
+                    <div class="ftxt">
+                        <h2>人氣NO.3</h2>
+                        <p>超厚雞起司滿分堡</p>
+                    </div>
                 </div>
             </div>
-            <div class="box 1"></div>
-            <div class="box 2"><input type="text"></div>
-            <div class="box 3"></div>
-            <div class="box 4"><input type="password"></div>
-            <div class="btn">
-                <input type="button" value="返回" onClick="hide()">
-                <input type="button" value="登入">
+
+            <h1>營業時間</h1>
+
+            <iframe id="calendar"
+                src="https://calendar.google.com/calendar/embed?src=1e05s183isv45k9crpbf6u1bmk%40group.calendar.google.com&ctz=Asia%2FTaipei"
+                style="border: 0" frameborder="0" scrolling="no">
+            </iframe>
+
+        </main>
+    </div>
+
+    <footer>
+        <article>
+            <div class="name">
+                <div class="zh">咩呷蝦</div>
+                <span class="en">BreakFast</span>
             </div>
-        </div>
-        <div class="signin_page">
-            <div class="login_2" onclick="login()">
+            <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
+            <p class="copyright">CopyRight(c)All Rights Reserved</p>
+            <div class="outweb">
+                <span class="fb"><a href="#" name=""></a></span>
+                <span class="fp"><a href="#"></a></span>
+                <span class="ue"><a href="#"></a></span>
+            </div>
+        </article>
+    </footer>
+    <div class="hidebg"></div>
+    <div class="hidebox">
+        <div class="hgtop">
+            <div class="login">
                 <p class="signin_text">登入</p>
             </div>
-            <div class="signin_2">
+            <div class="signin" onClick="signin()">
                 <p class="signin_text">註冊</p>
             </div>
         </div>
+        <div class="box 1"></div>
+        <div class="box 2"><input type="text"></div>
+        <div class="box 3"></div>
+        <div class="box 4"><input type="password"></div>
+        <div class="btn">
+            <input type="button" value="返回" onClick="hide()">
+            <input type="button" value="登入">
+        </div>
     </div>
+    <div class="signin_page">
+        <div class="login_2" onclick="login()">
+            <p class="signin_text">登入</p>
+        </div>
+        <div class="signin_2">
+            <p class="signin_text">註冊</p>
+        </div>
+    </div>
+    <!-- </div> -->
     <div id="gotop">
         <img src="./img/backtop.png" alt="">
         <a href="#"></a>
@@ -187,6 +269,19 @@
             document.getElementsByClassName("signin_page")[0].style.display = "none";
 
         }
+        let hmeau = document.querySelectorAll(".hide_meau")[0];
+
+        function meau_hide() {
+
+            if (hmeau.style.display == "none") {
+                hmeau.style.display = 'block';
+            } else {
+                hmeau.style.display = 'none';
+            }
+        }
+
+
+
         window.onscroll = function () {
             myFunction()
         };
@@ -209,6 +304,11 @@
             };
         }
 
+        let qwe = document.querySelector("#calendar").scrollTop;
+        let asd = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY
+
+
+        // console.log(qwe.clientHeight);
         //顯示元素高度
 
         // var header_active = function () {
