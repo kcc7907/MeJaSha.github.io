@@ -13,126 +13,141 @@
 </head>
 
 <body>
-    <div class="out" style="width: 100%; min-width: 1200px; max-width: 1920px; margin: auto;">
-        <header>
-            <div class="logo"><a href="./index.html"></a></div>
-            <nav>
-                <a href="./news.html">最新消息</a>
-                <a href="./meau.html">菜單</a>
-                <a href="./food.html">餐點介紹</a>
-                <a href="./about.html">關於我們</a>
-                <div class="icon">
-                    <span class="user"><a href="#"></a></span>
-                    <span class="menu"><a href="#"></a></span>
-                </div>
-            </nav>
-        </header>
-        <div class="top">
-            <img src="./img/inner_top.jpg" alt="">
-            <h1>餐點介紹</h1>
+    <header>
+        <div class="logo"><a href="./index.html"></a></div>
+        <nav>
+            <a href="./news.html">最新消息</a>
+            <a href="./meau.html">菜單</a>
+            <a href="./food.html">餐點介紹</a>
+            <a href="./about.html">關於我們</a>
+            <div class="icon">
+                <span class="user"><a href="#"></a></span>
+                <span class="menu"><a href="#"></a></span>
+            </div>
+        </nav>
+    </header>
+    <div class="hide_header">
+        <div class="logo">
+            <a href="./index.html"></a>
         </div>
-        <div class="container">
-            <div class="main">
-                <div class="left">
-                    <div class="time">
-                        <div class="breakfast">
-                            <p>早餐</p>
-                        </div>
-                        <div class="brunch">
-                            <p>早午餐</p>
-                        </div>
+        <div class="hide_icon" onclick="meau_hide()">
+            <div class="hide_on"></div>
+        </div>
+
+    </div>
+    <div class="hide_meau">
+        <a href="./news.html">最新消息</a>
+        <a href="./meau.html">菜單</a>
+        <a href="./food.html">餐點介紹</a>
+        <a href="./about.html">關於我們</a>
+        <a href="">會員</a>
+        <a href="">點餐</a>
+    </div>
+    <div class="top">
+        <img src="./img/inner_top.jpg" alt="">
+        <h1>餐點介紹</h1>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="left">
+                <div class="time">
+                    <div class="breakfast">
+                        <p>早餐</p>
                     </div>
-                    <div class="kind">
-                        <div class="breakfast">
-                            <a href="./food.html">
-                                <p>漢堡</p>
-                            </a>
-                            <p>吐司</p>
-                            <p>點心類</p>
-                            <p>飲料</p>
-                        </div>
-                        <div class="brunch">
-                            <p>飯食</p>
-                            <p>麵食</p>
-                            <p>特餐</p>
-                        </div>
+                    <div class="brunch">
+                        <p>早午餐</p>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="bd">
-                        <ol>
-                            <li>
-                                <a href="">早餐</a>
-                            </li>
-                            <li>
-                                <a href="">漢堡</a>
-                            </li>
-                        </ol>
-                    </div>
-                    <h3>漢堡</h3>
-                    <main>
-                        <a href="./foods/food_buger_01.html">
-                            <div class="card">
-                                <img src="./img/food/buger/buger01.png" alt="">
-                                <h4>超厚牛肉起司漢堡</h4>
-                            </div>
+                <div class="kind">
+                    <div class="breakfast">
+                        <a href="./food.html">
+                            <p>漢堡</p>
                         </a>
+                        <p>吐司</p>
+                        <p>點心類</p>
+                        <p>飲料</p>
+                    </div>
+                    <div class="brunch">
+                        <p>飯食</p>
+                        <p>麵食</p>
+                        <p>特餐</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="bd">
+                    <ol>
+                        <li>
+                            <a href="">早餐</a>
+                        </li>
+                        <li>
+                            <a href="">漢堡</a>
+                        </li>
+                    </ol>
+                </div>
+                <h3>漢堡</h3>
+                <main>
+                    <a href="./foods/food_buger_01.html">
                         <div class="card">
-                            <img src="./img/food/buger/buger02.png" alt="">
-                            <h4>超厚豬肉起司堡</h4>
+                            <img src="./img/food/buger/buger01.png" alt="">
+                            <h4>超厚牛肉起司漢堡</h4>
                         </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger03.png" alt="">
-                            <h4>豬肉起司漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger04.png" alt="">
-                            <h4>培根漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger05.png" alt="">
-                            <h4>香雞漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger06.png" alt="">
-                            <h4>鮪魚漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger07.png" alt="">
-                            <h4>黑胡椒豬排漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger08.png" alt="">
-                            <h4>燻雞漢堡</h4>
-                        </div>
-                        <div class="card">
-                            <img src="./img/food/buger/buger09.png" alt="">
-                            <h4>卡滋雞腿漢堡</h4>
-                        </div>
-                        <!-- <div class="card">
+                    </a>
+                    <div class="card">
+                        <img src="./img/food/buger/buger02.png" alt="">
+                        <h4>超厚豬肉起司堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger03.png" alt="">
+                        <h4>豬肉起司漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger04.png" alt="">
+                        <h4>培根漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger05.png" alt="">
+                        <h4>香雞漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger06.png" alt="">
+                        <h4>鮪魚漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger07.png" alt="">
+                        <h4>黑胡椒豬排漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger08.png" alt="">
+                        <h4>燻雞漢堡</h4>
+                    </div>
+                    <div class="card">
+                        <img src="./img/food/buger/buger09.png" alt="">
+                        <h4>卡滋雞腿漢堡</h4>
+                    </div>
+                    <!-- <div class="card">
                         <img src="" alt="">
                         <h4></h4>
                         </div> -->
-                    </main>
-                </div>
+                </main>
             </div>
         </div>
-        <footer>
-            <article>
-                <div class="name">
-                    <div class="zh">咩呷蝦</div>
-                    <span class="en">BreakFast</span>
-                </div>
-                <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
-                <p class="copyright">CopyRight(c)All Rights Reserved</p>
-                <div class="outweb">
-                    <span class="fb"><a href="#" name=""></a></span>
-                    <span class="fp"><a href="#"></a></span>
-                    <span class="ue"><a href="#"></a></span>
-                </div>
-            </article>
-        </footer>
     </div>
+    <footer>
+        <article>
+            <div class="name">
+                <div class="zh">咩呷蝦</div>
+                <span class="en">BreakFast</span>
+            </div>
+            <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
+            <p class="copyright">CopyRight(c)All Rights Reserved</p>
+            <div class="outweb">
+                <span class="fb"><a href="#" name=""></a></span>
+                <span class="fp"><a href="#"></a></span>
+                <span class="ue"><a href="#"></a></span>
+            </div>
+        </article>
+    </footer>
 </body>
 
 </html>

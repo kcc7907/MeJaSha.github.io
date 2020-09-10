@@ -12,129 +12,144 @@
 </head>
 
 <body>
-    <div class="out" style="width: 100%; min-width: 1200px; max-width: 1920px; margin: auto;">
-        <header>
-            <div class="logo"><a href="../index.html"></a></div>
-            <nav>
-                <a href="../news.html">最新消息</a>
-                <a href="../meau.html">菜單</a>
-                <a href="../food.html">餐點介紹</a>
-                <a href="../about.html">關於我們</a>
-                <div class="icon">
-                    <span class="user"><a href="#"></a></span>
-                    <span class="menu"><a href="#"></a></span>
-                </div>
-            </nav>
-        </header>
-        <div class="top">
-            <img src="../img/inner_top.jpg" alt="">
-            <h1>餐點介紹</h1>
+    <header>
+        <div class="logo"><a href="../index.html"></a></div>
+        <nav>
+            <a href="../news.html">最新消息</a>
+            <a href="../meau.html">菜單</a>
+            <a href="../food.html">餐點介紹</a>
+            <a href="../about.html">關於我們</a>
+            <div class="icon">
+                <span class="user"><a href="#"></a></span>
+                <span class="menu"><a href="#"></a></span>
+            </div>
+        </nav>
+    </header>
+    <div class="hide_header">
+        <div class="logo">
+            <a href="./index.html"></a>
         </div>
-        <div class="container">
-            <div class="main">
-                <div class="left">
-                    <div class="time">
-                        <div class="breakfast">
-                            <p>早餐</p>
-                        </div>
-                        <div class="brunch">
-                            <p>早午餐</p>
-                        </div>
+        <div class="hide_icon" onclick="meau_hide()">
+            <div class="hide_on"></div>
+        </div>
+
+    </div>
+    <div class="hide_meau">
+        <a href="./news.html">最新消息</a>
+        <a href="./meau.html">菜單</a>
+        <a href="./food.html">餐點介紹</a>
+        <a href="./about.html">關於我們</a>
+        <a href="">會員</a>
+        <a href="">點餐</a>
+    </div>
+    <div class="top">
+        <img src="../img/inner_top.jpg" alt="">
+        <h1>餐點介紹</h1>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="left">
+                <div class="time">
+                    <div class="breakfast">
+                        <p>早餐</p>
                     </div>
-                    <div class="kind">
-                        <div class="breakfast">
-                            <a href="../food.html">
-                                <p>漢堡</p>
-                            </a>
-                            <p>吐司</p>
-                            <p>點心類</p>
-                            <p>飲料</p>
-                        </div>
-                        <div class="brunch">
-                            <p>飯食</p>
-                            <p>麵食</p>
-                            <p>特餐</p>
-                        </div>
+                    <div class="brunch">
+                        <p>早午餐</p>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="bd">
-                        <ol>
-                            <li>
-                                <a href="">早餐</a>
-                            </li>
-                            <li>
-                                <a href="">漢堡</a>
-                            </li>
-                            <li>
-                                <a href="">超厚牛肉起司漢堡</a>
-                            </li>
-                        </ol>
+                <div class="kind">
+                    <div class="breakfast">
+                        <a href="../food.html">
+                            <p>漢堡</p>
+                        </a>
+                        <p>吐司</p>
+                        <p>點心類</p>
+                        <p>飲料</p>
                     </div>
-                    <h3>超厚牛肉起司漢堡</h3>
-                    <main>
-                        <article>
-                            <div class="burger">
-                                <img src="../img/food/buger/buger01.png" alt="">
-                            </div>
-                        </article>
-                        <section>
-                            <h4>成分</h4>
-                            <div class="list">
-                                <table>
-                                    <tr>
-                                        <td>淨重</td>
-                                        <td>158公克</td>
-                                    </tr>
-                                    <tr>
-                                        <td>熱量</td>
-                                        <td>458大卡</td>
-                                    </tr>
-                                    <tr>
-                                        <td>蛋白質</td>
-                                        <td>11公克</td>
-                                    </tr>
-                                    <tr>
-                                        <td>總脂肪量</td>
-                                        <td>18公克</td>
-                                    </tr>
-                                    <tr>
-                                        <td>碳水化合物</td>
-                                        <td>44公克</td>
-                                    </tr>
-                                    <tr>
-                                        <td>糖</td>
-                                        <td>24公克</td>
-                                    </tr>
-                                    <tr>
-                                        <td>納</td>
-                                        <td>689毫克</td>
-                                    </tr>
-                                </table>
-                                <div class="price">$65元</div>
-                                <div class="buy">加入預約點餐</div>
-                            </div>
-                        </section>
-                    </main>
+                    <div class="brunch">
+                        <p>飯食</p>
+                        <p>麵食</p>
+                        <p>特餐</p>
+                    </div>
                 </div>
             </div>
+            <div class="right">
+                <div class="bd">
+                    <ol>
+                        <li>
+                            <a href="">早餐</a>
+                        </li>
+                        <li>
+                            <a href="">漢堡</a>
+                        </li>
+                        <li>
+                            <a href="">超厚牛肉起司漢堡</a>
+                        </li>
+                    </ol>
+                </div>
+                <h3>超厚牛肉起司漢堡</h3>
+                <main>
+                    <article>
+                        <div class="burger">
+                            <img src="../img/food/buger/buger01.png" alt="">
+                        </div>
+                    </article>
+                    <section>
+                        <h4>成分</h4>
+                        <div class="list">
+                            <table>
+                                <tr>
+                                    <td>淨重</td>
+                                    <td>158公克</td>
+                                </tr>
+                                <tr>
+                                    <td>熱量</td>
+                                    <td>458大卡</td>
+                                </tr>
+                                <tr>
+                                    <td>蛋白質</td>
+                                    <td>11公克</td>
+                                </tr>
+                                <tr>
+                                    <td>總脂肪量</td>
+                                    <td>18公克</td>
+                                </tr>
+                                <tr>
+                                    <td>碳水化合物</td>
+                                    <td>44公克</td>
+                                </tr>
+                                <tr>
+                                    <td>糖</td>
+                                    <td>24公克</td>
+                                </tr>
+                                <tr>
+                                    <td>納</td>
+                                    <td>689毫克</td>
+                                </tr>
+                            </table>
+                            <div class="price">$65元</div>
+                            <div class="buy">加入預約點餐</div>
+                        </div>
+                    </section>
+                </main>
+            </div>
         </div>
-        <footer>
-            <article>
-                <div class="name">
-                    <div class="zh">咩呷蝦</div>
-                    <span class="en">BreakFast</span>
-                </div>
-                <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
-                <p class="copyright">CopyRight(c)All Rights Reserved</p>
-                <div class="outweb">
-                    <span class="fb"><a href="#" name=""></a></span>
-                    <span class="fp"><a href="#"></a></span>
-                    <span class="ue"><a href="#"></a></span>
-                </div>
-            </article>
-        </footer>
     </div>
+    <footer>
+        <article>
+            <div class="name">
+                <div class="zh">咩呷蝦</div>
+                <span class="en">BreakFast</span>
+            </div>
+            <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
+            <p class="copyright">CopyRight(c)All Rights Reserved</p>
+            <div class="outweb">
+                <span class="fb"><a href="#" name=""></a></span>
+                <span class="fp"><a href="#"></a></span>
+                <span class="ue"><a href="#"></a></span>
+            </div>
+        </article>
+    </footer>
 </body>
 
 </html>

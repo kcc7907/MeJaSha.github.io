@@ -15,75 +15,14 @@
 
 
     <style>
-        @media screen and (max-width: 900px) {
-            header {
-                display: none;
-            }
 
-            .hide_header {
-                /* border: 5px solid red; */
-                height: 80px;
-                background: linear-gradient(to right, rgba(0, 0, 0, 0.05), #154733, rgba(0, 0, 0, 0.05));
-                text-align: center;
-                position: relative;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                /* display: none; */
-            }
-
-
-
-            .hide_on {
-                background-color: black;
-                height: 5px;
-                width: 50px;
-                position: relative;
-                /* margin: 0; */
-            }
-
-            .hide_icon {
-                margin: 0 20px 0 0;
-                height: 50px;
-                width: 50px;
-                /* border: 1px solid red; */
-                display: flex;
-                align-items: center;
-            }
-
-            .hide_on::before {
-                content: "";
-                position: absolute;
-                height: 5px;
-                width: 50px;
-
-                box-shadow: 0 10px 0 black,
-                    0 -10px 0 black;
-                top: 0;
-                bottom: 0;
-                left: 0;
-            }
-
-            .hide_meau a {
-                display: block;
-                font-size: 1.2rem;
-                padding: 10px;
-                text-align: center;
-            }
-
-            .hide_meau {
-                background-color: #154733;
-                display: none;
-            }
-        }
     </style>
 
 </head>
 
 <body>
-    <!-- <div class="out" style="width: 100%; min-width: 1200px; max-width: 1920px; margin: auto;"> -->
     <header>
-        <div class="logo"><a href="./index.html"></a></div>
+        <div class="logo"><a href="./index.html" name="qwee"></a></div>
         <nav>
             <a href="./news.html">最新消息</a>
             <a href="./meau.html">菜單</a>
@@ -237,10 +176,9 @@
             <p class="signin_text">註冊</p>
         </div>
     </div>
-    <!-- </div> -->
     <div id="gotop">
         <img src="./img/backtop.png" alt="">
-        <a href="#"></a>
+        <a href="#qwee"></a>
     </div>
     <!-- <div class="ggwp">
         <p></p>
@@ -286,17 +224,23 @@
             myFunction()
         };
 
+        let qwe = document.querySelector("#calendar").scrollTop;
+        let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY
+        let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY
+        let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY
+        let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY
+
         function myFunction() {
-            if (document.documentElement.scrollTop > 600) {
+            if (document.documentElement.scrollTop > (qaz - 300)) {
                 document.getElementById("process").className = "process";
             };
-            if (document.documentElement.scrollTop > 1000) {
+            if (document.documentElement.scrollTop > (wsx - 300)) {
                 document.getElementById("news").className = "news";
             };
-            if (document.documentElement.scrollTop > 2800) {
+            if (document.documentElement.scrollTop > (edc - 300)) {
                 document.getElementById("calendar").className = "calendar";
             };
-            if (document.documentElement.scrollTop > 1000) {
+            if (document.documentElement.scrollTop > (edc - 300)) {
                 document.getElementById("gotop").className = "gotop";
             };
             if (document.documentElement.scrollTop < 2000) {
@@ -304,8 +248,7 @@
             };
         }
 
-        let qwe = document.querySelector("#calendar").scrollTop;
-        let asd = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY
+
 
 
         // console.log(qwe.clientHeight);

@@ -213,3 +213,118 @@ div.outweb {
     align-items: center;
     padding-top: 10px;
 }
+
+/* --rwd-- */
+
+@media screen and (min-width: 1401px) {
+    html {
+        font-size: 15px;
+    }
+
+    .hide_meau {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1400px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hide_meau {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 12px;
+    }
+
+    header {
+        display: none;
+    }
+
+    /* .news {
+                padding: 5px;
+            } */
+
+    .hide_header {
+        /* border: 5px solid red; */
+        height: 80px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.05), #154733, rgba(0, 0, 0, 0.05));
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* display: none; */
+    }
+
+    .hide_on {
+        background-color: black;
+        height: 5px;
+        width: 50px;
+        position: relative;
+        /* margin: 0; */
+    }
+
+    .hide_icon {
+        margin: 0 20px 0 0;
+        height: 50px;
+        width: 50px;
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+    }
+
+    .hide_on::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 50px;
+
+        box-shadow: 0 10px 0 black,
+            0 -10px 0 black;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .hide_meau a {
+        display: block;
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+
+    .hide_meau {
+        background-color: #154733;
+        display: none;
+    }
+
+    footer {
+        background-image: none;
+        height: auto;
+        background-color: rgb(44, 42, 42);
+    }
+
+    footer article {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    html {
+        font-size: 10px;
+    }
+
+    .copyright {
+        display: none;
+    }
+
+}
