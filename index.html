@@ -35,7 +35,7 @@
         </nav>
     </header>
     <div class="hide_header">
-        <div class="logo">
+        <div class="logo" name="qwe">
             <a href="./index.html"></a>
         </div>
         <div class="hide_icon" onclick="meau_hide()">
@@ -48,11 +48,11 @@
         <a href="./meau.html">菜單</a>
         <a href="./food.html">餐點介紹</a>
         <a href="./about.html">關於我們</a>
-        <a href="">會員</a>
+        <a onClick="show()">會員</a>
         <a href="">點餐</a>
     </div>
     <div class="top">
-        <div class="banner"><img src="./img/banner05.jpg" alt=""></div>
+        <div class="banner" id="ban"><img src="./img/banner05.jpg" alt=""></div>
     </div>
     <div class="container">
         <main>
@@ -88,7 +88,7 @@
                     <a href="#">
                         <p class="sale">109年3月-4月優惠活動【日式醬豚燒餅套餐】$69元起</p>
                     </a>
-                    <a href="#" name="qq">
+                    <a href="#">
                         <p class="date">2020.02.31</p>
                     </a>
                 </div>
@@ -100,7 +100,7 @@
             <div class="rank">
                 <div class="food">
                     <img src="./img/top/top1-big.png" alt="">
-                    <img src="./img/food/buger1.png" alt="" class="bg1">
+                    <img src="./img/food/buger1.png" alt="">
                     <div class="ftxt">
                         <h2>人氣NO.1</h2>
                         <p>超厚牛肉起司漢堡</p>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="food">
                     <img src="./img/top/top2-big.png" alt="">
-                    <img src="./img/food/sw1.png" alt="" class="sw">
+                    <img src="./img/food/sw1.png" alt="">
                     <div class="ftxt">
                         <h2>人氣NO.2</h2>
                         <p>檸檬雞湯種吐司</p>
@@ -143,7 +143,7 @@
             <p class="addr">地址 &nbsp: &nbsp台北市中正區青島東路25號</p>
             <p class="copyright">CopyRight(c)All Rights Reserved</p>
             <div class="outweb">
-                <span class="fb"><a href="#" name=""></a></span>
+                <span class="fb"><a href="#"></a></span>
                 <span class="fp"><a href="#"></a></span>
                 <span class="ue"><a href="#"></a></span>
             </div>
@@ -178,7 +178,7 @@
     </div>
     <div id="gotop">
         <img src="./img/backtop.png" alt="">
-        <a href="#qwee"></a>
+        <a href="#"></a>
     </div>
     <!-- <div class="ggwp">
         <p></p>
@@ -243,7 +243,7 @@
             if (document.documentElement.scrollTop > (edc - 300)) {
                 document.getElementById("gotop").className = "gotop";
             };
-            if (document.documentElement.scrollTop < 2000) {
+            if (document.documentElement.scrollTop < (edc - 600)) {
                 document.getElementById("gotop").className = "";
             };
         }
