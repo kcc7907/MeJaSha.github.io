@@ -62,7 +62,7 @@
             <div class="img_brunch"><img src="./img/meau/menu_b.jpg" alt="" onclick=showb();></div>
         </main>
     </div>
-    <div class="hidezone" onclick="hide()"></div>
+    <div class="hidezone" onclick="hidezone()"></div>
     <div class="hidepic m">
         <input type="button" value="x">
         <img src="./img/meau/menu_m.jpg" alt="">
@@ -98,10 +98,10 @@
             document.getElementsByClassName("hidepic m")[0].style.display = "block";
         }
 
-        function hide() {
-            document.getElementsByClassName("hidebg")[0].style.display = "none";
-            document.getElementsByClassName("hidebox")[0].style.display = "none";
-        }
+        // function hide() {
+        //     document.getElementsByClassName("hidebg")[0].style.display = "none";
+        //     document.getElementsByClassName("hidebox")[0].style.display = "none";
+        // }
 
         function showb() {
             let hideobj = document.querySelectorAll(".hidezone")[0];
@@ -110,7 +110,7 @@
             document.getElementsByClassName("hidepic b")[0].style.display = "block";
         }
 
-        function hide() {
+        function hidezone() {
             document.getElementsByClassName("hidezone")[0].style.display = "none";
             document.getElementsByClassName("hidepic m")[0].style.display = "none";
             document.getElementsByClassName("hidepic b")[0].style.display = "none";
