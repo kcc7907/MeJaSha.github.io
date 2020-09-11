@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/meau.css">
 
+
 </head>
 
 <body>
@@ -46,18 +47,21 @@
         <img src="./img/inner_top.jpg" alt="">
         <h1>菜單</h1>
     </div>
-    <article>
-        <div class="breakfast">
-            <h2>早餐</h2>
-        </div>
-        <div class="brunch">
-            <h2>早午餐</h2>
-        </div>
-    </article>
-    <main>
-        <div class="img_breakfast"><img src="./img/meau/menu_m.jpg" alt="" onclick=showm();></div>
-        <div class="img_brunch"><img src="./img/meau/menu_b.jpg" alt="" onclick=showb();></div>
-    </main>
+    <div class="container">
+        <section>
+            <div class="breakfast">
+                <h2>早餐</h2>
+            </div>
+            <div class="img_breakfast"><img src="./img/meau/menu_m.jpg" alt="" onclick=showm();></div>
+
+        </section>
+        <main>
+            <div class="brunch">
+                <h2>早午餐</h2>
+            </div>
+            <div class="img_brunch"><img src="./img/meau/menu_b.jpg" alt="" onclick=showb();></div>
+        </main>
+    </div>
     <div class="hidezone" onclick="hide()"></div>
     <div class="hidepic m">
         <input type="button" value="x">
@@ -87,35 +91,32 @@
     </footer>
 
     <script>
-        function showm() //顯示隱藏層和彈出層 
-        {
-            let hideobj = document.querySelectorAll(".hidezone")[0];
-            hideobj.style.display = "block"; //顯示隱藏層 
-            hideobj.style.height = document.body.clientHeight + "px"; //設定隱藏層的高度為當前頁面高度   px是字尾
-            document.getElementsByClassName("hidepic m")[0].style.display = "block"; //顯示彈出層 
+        function showm()
+        let hideobj = document.querySelectorAll(".hidezone")[0];
+        hideobj.style.display = "block";
+        hideobj.style.height = document.body.clientHeight + "px";
+        document.getElementsByClassName("hidepic m")[0].style.display = "block";
         }
 
-        function hide() //去除隱藏層和彈出層    
-        {
+        function hide() {
             document.getElementsByClassName("hidebg")[0].style.display = "none";
             document.getElementsByClassName("hidebox")[0].style.display = "none";
         }
 
-        function showb() //顯示隱藏層和彈出層 
-        {
+        function showb() {
             let hideobj = document.querySelectorAll(".hidezone")[0];
-            hideobj.style.display = "block"; //顯示隱藏層 
-            hideobj.style.height = document.body.clientHeight + "px"; //設定隱藏層的高度為當前頁面高度   px是字尾
-            document.getElementsByClassName("hidepic b")[0].style.display = "block"; //顯示彈出層 
+            hideobj.style.display = "block";
+            hideobj.style.height = document.body.clientHeight + "px";
+            document.getElementsByClassName("hidepic b")[0].style.display = "block";
         }
 
-        function hide() //去除隱藏層和彈出層    
-        {
+        function hide() {
             document.getElementsByClassName("hidezone")[0].style.display = "none";
             document.getElementsByClassName("hidepic m")[0].style.display = "none";
             document.getElementsByClassName("hidepic b")[0].style.display = "none";
         }
     </script>
+    <script src="./js/common.js"></script>
 </body>
 
 </html>
