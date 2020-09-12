@@ -278,6 +278,7 @@ div.outweb {
         /* border: 1px solid red; */
         display: flex;
         align-items: center;
+        cursor: pointer;
     }
 
     .hide_on::before {
