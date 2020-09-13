@@ -317,6 +317,7 @@ div.outweb {
         flex-direction: column;
         height: auto;
     }
+
 }
 
 @media screen and (max-width: 575px) {

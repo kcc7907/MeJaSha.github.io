@@ -4,20 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title></title>
-
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main_type2.css">
-
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-
-
-    <style>
-
-    </style>
-
 </head>
 
 <body>
@@ -35,7 +26,7 @@
         </nav>
     </header>
     <div class="hide_header">
-        <div class="logo" name="qwe">
+        <div class="logo 2">
             <a href="./index.html"></a>
         </div>
         <div class="hide_icon" onclick="meau_hide()">
@@ -60,7 +51,7 @@
             <div id="process"><img src="./img/order.png" alt=""> </div>
             <h1>最新消息</h1>
             <div id="news">
-                <div class="event">
+                <div class="event 1">
                     <a href="./news/news_01.html">
                         <p class="sale">109年9月-10月活動【金芒勁辣雞腿堡套餐】$79元起</p>
                     </a>
@@ -68,7 +59,7 @@
                         <p class="date">2020.08.31</p>
                     </a>
                 </div>
-                <div class="event">
+                <div class="event 2">
                     <a href="#">
                         <p class="sale">109年7月-8月活動【舒肥雞胸輕食 套餐】$79元起</p>
                     </a>
@@ -76,7 +67,7 @@
                         <p class="date">2020.06.31</p>
                     </a>
                 </div>
-                <div class="event">
+                <div class="event 3">
                     <a href="#">
                         <p class="sale">109年5月-6月活動【塔香皮蛋肉鬆蛋餅套餐】$69元起</p>
                     </a>
@@ -84,7 +75,7 @@
                         <p class="date">2020.04.31</p>
                     </a>
                 </div>
-                <div class="event">
+                <div class="event 4">
                     <a href="#">
                         <p class="sale">109年3月-4月優惠活動【日式醬豚燒餅套餐】$69元起</p>
                     </a>
@@ -149,6 +140,9 @@
             </div>
         </article>
     </footer>
+
+    <!-- loginpage-->
+
     <div class="hidebg"></div>
     <div class="hidebox">
         <div class="hgtop">
@@ -168,6 +162,9 @@
             <input type="button" value="登入">
         </div>
     </div>
+
+    <!-- signin -->
+
     <div class="signin_page">
         <div class="login_2" onclick="login()">
             <p class="signin_text">登入</p>
@@ -176,10 +173,15 @@
             <p class="signin_text">註冊</p>
         </div>
     </div>
+
+    <!-- backTop -->
+
     <div id="gotop">
         <img src="./img/backtop.png" alt="">
         <a href="#"></a>
     </div>
+
+
     <!-- <div class="ggwp">
         <p></p>
     </div> -->
@@ -237,13 +239,13 @@
             if (document.documentElement.scrollTop > (wsx - 300)) {
                 document.getElementById("news").className = "news";
             };
-            if (document.documentElement.scrollTop > (edc - 300)) {
+            if (document.documentElement.scrollTop > (edc)) {
                 document.getElementById("calendar").className = "calendar";
             };
-            if (document.documentElement.scrollTop > (edc - 300)) {
+            if (document.documentElement.scrollTop > (edc)) {
                 document.getElementById("gotop").className = "gotop";
             };
-            if (document.documentElement.scrollTop < (edc - 600)) {
+            if (document.documentElement.scrollTop < (edc - 300)) {
                 document.getElementById("gotop").className = "";
             };
         }
