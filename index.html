@@ -141,66 +141,68 @@
         </article>
     </footer>
 
-    <!-- loginpage-->
+    <div class="flip">
+        <!-- loginpage-->
 
-    <div class="hidebg"></div>
-    <div class="hidebox">
-        <div class="hgtop">
-            <div class="login">
+        <div class="hidebg"></div>
+        <div class="hidebox">
+            <div class="hgtop">
+                <div class="login">
+                    <p class="signin_text">登入</p>
+                </div>
+                <div class="signin" onClick="signin()">
+                    <p class="signin_text">註冊</p>
+                </div>
+            </div>
+            <form action="" class="form">
+                <div class="group">
+                    <label for="user_id">帳號</label>
+                    <input type="text" id="user_id" autocomplete="username">
+                </div>
+                <div class="group">
+                    <label for="user_password">密碼</label>
+                    <input type="password" id="user_password" autocomplete="current-password">
+                </div>
+                <div class="outerherf">
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                </div>
+                <div class="btnbox">
+                    <button onclick="hide()"></button>
+                    <button></button>
+                </div>
+            </form>
+
+        </div>
+
+        <!-- signin -->
+
+        <div class="signin_page">
+            <div class="login_2" onclick="login()">
                 <p class="signin_text">登入</p>
             </div>
-            <div class="signin" onClick="signin()">
+            <div class="signin_2">
                 <p class="signin_text">註冊</p>
             </div>
+            <form action="" class="form">
+                <div class="group">
+                    <label for="user_id2">帳號</label>
+                    <input type="text" id="user_id2" autocomplete="username">
+                </div>
+                <div class="group">
+                    <label for="user_password2">密碼</label>
+                    <input type="password" id="user_password2" autocomplete="current-password">
+                </div>
+                <div class="group">
+                    <label for="phone">手機</label>
+                    <input type="text" id="phone">
+                </div>
+                <div class="btnbox">
+                    <button onclick="hide()"></button>
+                    <button></button>
+                </div>
         </div>
-        <form action="" class="form">
-            <div class="group">
-                <label for="user_id">帳號</label>
-                <input type="text" id="user_id">
-            </div>
-            <div class="group">
-                <label for="user_password">密碼</label>
-                <input type="password" id="user_password">
-            </div>
-            <div class="outerherf">
-                <button></button>
-                <button></button>
-                <button></button>
-            </div>
-            <div class="btnbox">
-                <button onclick="hide()"></button>
-                <button></button>
-            </div>
-        </form>
-
-    </div>
-
-    <!-- signin -->
-
-    <div class="signin_page">
-        <div class="login_2" onclick="login()">
-            <p class="signin_text">登入</p>
-        </div>
-        <div class="signin_2">
-            <p class="signin_text">註冊</p>
-        </div>
-        <form action="" class="form">
-            <div class="group">
-                <label for="user_id">帳號</label>
-                <input type="text" id="user_id">
-            </div>
-            <div class="group">
-                <label for="user_password">密碼</label>
-                <input type="password" id="user_password">
-            </div>
-            <div class="group">
-                <label for="phone">手機</label>
-                <input type="text" id="phone">
-            </div>
-            <div class="btnbox">
-                <button onclick="hide()"></button>
-                <button></button>
-            </div>
     </div>
 
     <!-- backTop -->
