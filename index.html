@@ -271,16 +271,15 @@
             hidebg.style.display = "none";
         });
         r_top_l.addEventListener('click', function () {
-            if (oderlist.style.display === "none") {
+            if (oderlist.style.display == "none" || oderlist.style.display == "") {
                 oderlist.style.display = "block";
             } else {
                 oderlist.style.display = "none";
             }
-
         });
 
         function meau_hide() {
-            if (hmeau.style.display === "none") {
+            if (hmeau.style.display == "none" || hmeau.style.display == "") {
                 hmeau.style.display = 'block';
             } else {
                 hmeau.style.display = 'none';
@@ -315,7 +314,14 @@
                 document.getElementById("gotop").className = "";
             };
         }
-
+        /* 讀屬性 */
+        // function getStyle(dom, attr) {
+        //     if (dom.currentStyle) {
+        //         return dom.currentStyle[attr]
+        //     } else {
+        //         return getComputedStyle(dom)[attr]
+        //     }
+        // };
         // console.log(qwe.clientHeight);
         //顯示元素高度
 
