@@ -2,7 +2,13 @@
     display: flex;
     width: 100%;
     background-image: url("../img/contents_bg.jpg");
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
 
+.container.container-fir {
+    animation-name: fir;
 }
 
 section {

@@ -4,7 +4,13 @@
     display: flex;
     justify-content: center;
     background-image: url("../img/contents_bg.jpg");
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
 
+.container.container-fir {
+    animation-name: fir;
 }
 
 main {

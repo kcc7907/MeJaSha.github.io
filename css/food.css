@@ -35,6 +35,13 @@ h1 {
     width: 100%;
     background-image: url("../img/contents_bg.jpg");
     font-size: 0;
+    animation-duration: 1s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+}
+
+.container.container-fir {
+    animation-name: fir;
 }
 
 .main {
@@ -48,6 +55,7 @@ h1 {
     display: flex;
     width: 20%;
     border-right: 3px solid #00000054;
+    padding-right: 1rem;
 }
 
 .right {
@@ -188,6 +196,7 @@ main {
     flex-direction: column;
     padding-top: 70px;
 }
+
 
 @keyframes shake {
     0% {

@@ -4,7 +4,10 @@ html {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
+}
 
+body {
+    background-image: url("../img/contents_bg.jpg");
 }
 
 * {
@@ -203,16 +206,25 @@ span.ue a {
 }
 
 div.outweb {
-    /* position: absolute; */
-    /* bottom: 10px; */
-    /* right: 500px; */
-    /* left: 1150px; */
-    /* border: 5px solid purple; */
     display: flex;
     height: 100%;
     align-items: center;
     padding-top: 10px;
 }
+
+@keyframes fir {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
 
 /* --rwd-- */
 
@@ -247,12 +259,7 @@ div.outweb {
         display: none;
     }
 
-    /* .news {
-                padding: 5px;
-            } */
-
     .hide_header {
-        /* border: 5px solid red; */
         height: 80px;
         background: linear-gradient(to right, rgba(0, 0, 0, 0.05), #154733, rgba(0, 0, 0, 0.05));
         text-align: center;
@@ -260,7 +267,6 @@ div.outweb {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* display: none; */
     }
 
     .hide_on {
@@ -268,14 +274,12 @@ div.outweb {
         height: 5px;
         width: 50px;
         position: relative;
-        /* margin: 0; */
     }
 
     .hide_icon {
         margin: 0 20px 0 0;
         height: 50px;
         width: 50px;
-        /* border: 1px solid red; */
         display: flex;
         align-items: center;
         cursor: pointer;
