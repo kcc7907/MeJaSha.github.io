@@ -196,22 +196,7 @@
             text-decoration: none;
         }
 
-        .hidebox {
-            position: fixed;
-            border: 1px solid #99CCFF;
-            width: 400px;
-            top: 30%;
-            left: 50%;
-            display: none;
-            z-Index: 3;
-            font-size: 0;
-            /* height: 500px; */
-            /* background-image: url("../img/toast.png"); */
-            /* background-size: 100% 100%; */
-            transform: translateX(-50%);
-            background-color: #fff;
-            border-radius: 20px 20px 0 0;
-        }
+        /* loginpage */
 
         .hidebg {
             position: absolute;
@@ -219,45 +204,39 @@
             top: 0px;
             background-color: #002;
             width: 100%;
-            /* height: 200px; */
-            /*寬度設定為100%，這樣才能使隱藏背景層覆蓋原頁面*/
             filter: alpha(opacity=30);
-            /*設定透明度為60%*/
             opacity: 0.5;
-            /*非IE瀏覽器下設定透明度為60%*/
             display: none;
             z-Index: 2;
         }
 
-        .hidebox input {
-            /* display: none; */
-            width: 200px;
-            cursor: pointer;
-            /* background-color: red; */
-            display: inline-block;
-        }
-
-        #content1 {
+        /* #content1 {
             text-align: center;
             cursor: pointer;
             z-Index: 1;
+        } */
+        .hidebox {
+            position: fixed;
+            /* border: 1px solid #99CCFF; */
+            width: 400px;
+            top: 30%;
+            left: 50%;
+            display: none;
+            z-Index: 3;
+            transform: translateX(-50%);
+            background-color: #FDFCFA;
+            border-radius: 20px;
         }
 
         .hgtop {
             width: 100%;
             height: 50px;
-            /* outline: 1px solid red; */
             font-size: 0;
+            /* margin: -1px ; */
+            background: #154733;
+            border-radius: 20px 20px 0 0;
+            margin: 0px 1px 0px 0;
 
-
-
-        }
-
-        .box {
-            width: 100%;
-            height: 50px;
-            outline: 1px solid black;
-            font-size: 0;
         }
 
         .login {
@@ -266,10 +245,10 @@
             font-size: 1.2rem;
             text-align: center;
             line-height: 50px;
-            background-color: #154733;
+            color: #154733;
             border-radius: 20px 20px 0 0;
-            cursor: pointer;
-            /* border: 2px solid #154733; */
+            font-weight: bold;
+            background: #fff;
         }
 
         .signin {
@@ -280,33 +259,76 @@
             line-height: 50px;
             border-radius: 20px 20px 0 0;
             cursor: pointer;
+            background-color: #154733;
+            color: #fff;
+            font-weight: bold;
+        }
 
+        .form {
+            font-size: 1.2rem;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form .group {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+        }
+
+        .form label {
+            line-height: 2;
+            display: block;
+            text-align: left;
+        }
+
+        .form input {
+            width: 100%;
+            border: 1px solid #aaa;
+            line-height: 3;
+            border-radius: 5px;
+        }
+
+        .outerherf {
+            width: 80%;
+            margin: 20px auto 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
 
         }
 
-        .btn {
-            /* text-align: center; */
+        .outerherf button {
+            width: 30%;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .btnbox {
+            width: 80%;
+            margin: 20px auto;
             display: flex;
             justify-content: space-around;
         }
 
+        .btnbox button {
+            width: 40%;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        /* 註冊頁 */
+
         .signin_page {
             position: fixed;
-            border: 1px solid #99CCFF;
             width: 400px;
             top: 30%;
             left: 50%;
-            background-color: #fff;
             display: none;
-            height: 500px;
-            z-Index: 4;
-            font-size: 0;
-            /* background-image: url("../img/toast.png"); */
-            /* background-size: 100% 100%; */
+            z-Index: 3;
             transform: translateX(-50%);
-            border-radius: 20px 20px 0 0;
-            cursor: pointer;
-
+            background-color: #FDFCFA;
+            border-radius: 20px;
         }
 
         .signin_2 {
@@ -315,9 +337,10 @@
             font-size: 1.2rem;
             text-align: center;
             line-height: 50px;
-            background-color: #154733;
             border-radius: 20px 20px 0 0;
-
+            background: #fff;
+            color: #154733;
+            font-weight: bold;
         }
 
         .login_2 {
@@ -326,19 +349,14 @@
             font-size: 1.2rem;
             text-align: center;
             line-height: 50px;
-            /* background-color: #154733; */
+            color: #fff;
             border-radius: 20px 20px 0 0;
             cursor: pointer;
+            font-weight: bold;
+            background: #154733;
         }
 
-        .box input {
-            width: 90%;
-            border: 1px solid black;
-            height: 30px;
-            cursor: pointer;
-            /* margin:  auto; */
-            /* border-radius: 20px; */
-        }
+
 
         @keyframes bounceInLeft {
 
