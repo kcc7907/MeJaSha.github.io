@@ -221,7 +221,7 @@
     </div>
     <!-- backTop -->
 
-    <div id="gotop">
+    <div id="gotop" class="gotop">
         <img src="./img/backtop.png" alt="">
         <a href="#"></a>
     </div>
@@ -292,31 +292,39 @@
         };
 
         let qwe = document.querySelector("#calendar").scrollTop;
-        let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY
-        let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY
-        let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY
-        let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY
+        let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY;
+        let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY;
+        let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY;
+        let edc1 = document.querySelector("#calendar").getBoundingClientRect().top;
+        let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY;
+        let iop = document.querySelector("#gotop");
 
         function myFunction() {
             if (document.documentElement.scrollTop > (qaz - 300)) {
-                // document.getElementById("process").className = "process";
                 document.getElementById("process").classList.add('-on');
             }
             if (document.documentElement.scrollTop > (wsx - 300)) {
-                // document.getElementById("news").className = "news";
                 document.getElementById("news").classList.add('-on');
             }
-            if (document.documentElement.scrollTop > (edc)) {
-                // document.getElementById("calendar").className = "calendar";
+            if (document.querySelector("#calendar").getBoundingClientRect().top < 250) {
                 document.getElementById("calendar").classList.add('-on');
             }
-            if (document.documentElement.scrollTop > (edc)) {
-                document.getElementById("gotop").className = "gotop";
-            }
-            if (document.documentElement.scrollTop < (edc - 300)) {
-                document.getElementById("gotop").className = "";
-            }
+            // if (document.documentElement.scrollTop > (edc - 100)) {
+            //     // document.getElementById("gotop").className = "gotop";
+            //     document.getElementById("gotop").classList.add('-on');
+            // }
+            // if (document.documentElement.scrollTop < (edc - 350)) {
+
+            //     document.getElementById("gotop").classList.remove('-on');
+            // }
+            iop.classList.toggle('-on', window.scrollY > (wsx - 300))
         }
+        iop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            })
+        })
         /* 讀屬性 */
         // function getStyle(dom, attr) {
         //     if (dom.currentStyle) {
