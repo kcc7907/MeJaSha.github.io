@@ -22,11 +22,20 @@
         }
 
         .process {
-            width: 100%;
+            /* width: 100%;
+            background-size: 100%;
+            background-repeat: no-repeat; */
+            opacity: 0;
+            /* bottom: REM(778);
+            animation: bounceInLeft 0.7s 0s forwards; */
+        }
+
+        .process.-on {
+            /* width: 100%;
             background-size: 100%;
             background-repeat: no-repeat;
             opacity: 0;
-            bottom: REM(778);
+            bottom: REM(778); */
             animation: bounceInLeft 0.7s 0s forwards;
         }
 
@@ -57,18 +66,28 @@
             flex-wrap: wrap;
             justify-content: space-around;
             padding: 0px 50px 0px 50px;
-            left: 50%;
-            margin-left: REM(-240);
             opacity: 0;
+            /* left: 50%; */
+            /* margin-left: REM(-240); */
+            /* opacity: 0;
             bottom: REM(314);
+            animation: bounceInRight 0.7s 0s forwards; */
+        }
+
+        .news.-on {
             animation: bounceInRight 0.7s 0s forwards;
         }
 
+
         .calendar {
-            left: 50%;
-            margin-left: REM(-240);
+            /* left: 50%;
+            margin-left: REM(-240); */
             opacity: 0;
-            bottom: REM(314);
+            /* bottom: REM(314);
+            animation: bounceInDown 1s 0s forwards; */
+        }
+
+        .calendar.-on {
             animation: bounceInDown 1s 0s forwards;
         }
 
