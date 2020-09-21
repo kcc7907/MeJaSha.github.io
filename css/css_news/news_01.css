@@ -19,17 +19,18 @@ h1 {
 
 .top {
     width: 100%;
-    /* height: 300px; */
-    /* border: 5px solid red; */
-    /* background-image: url("../img/inner_top.jpg"); */
-    /* background-size: 100% 100%; */
-    /* background-repeat: no-repeat; */
     position: relative;
+    transform-origin: 50% 0;
+    animation: d-down 500ms cubic-bezier(1, 0, 0.7, 1.3);
+    animation-fill-mode: both;
 }
 
 .top img {
-    /* display: inline; */
     vertical-align: middle;
+}
+
+nav a:first-child {
+    color: #ffa756;
 }
 
 .container {
@@ -48,33 +49,20 @@ h1 {
 main {
     width: 70%;
     margin: auto;
-    /* height: 1200px; */
-    /* border: 5px solid aliceblue; */
     padding-top: 50px;
-
-
 }
 
 main img {
     width: 100%;
     margin: 0 auto;
-    /* border: 1px solid red; */
 }
 
 h3 {
-    /* border: 5px solid #121213; */
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
     color: #154733;
-    /* border-bottom: 3px solid #000; */
-    /* padding-bottom: -1000px; */
-    /* position: relative; */
-    /* margin-bottom: 100px; */
-    /* border: 1px solid rosybrown; */
     margin: 0 0 0 0;
-
-
 }
 
 h3::after {
@@ -83,11 +71,7 @@ h3::after {
     height: 5px;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.05), #154733, rgba(0, 0, 0, 0.05));
     width: 100%;
-    /* margin-top: 100px; */
-    /* position: absolute; */
     margin: 0px 0px 0px 0px;
-
-
 }
 
 .card {
@@ -101,15 +85,13 @@ h4 {
     font-size: 1.8rem;
     color: #2990D0;
     font-weight: bold;
-    margin: 50px;
+    margin: 50px auto;
 }
 
 h5 {
     font-size: 1.6rem;
     color: #EAA861;
-    /* font-weight: bold; */
     margin: 0 0 30px 0;
-
 }
 
 main p {
@@ -117,21 +99,6 @@ main p {
     text-align: justify;
     text-justify: inter-ideograph;
     margin: 0 0 50px 0;
-
-}
-
-.back {
-    text-align: center;
-    font-size: 1.4rem;
-    color: white;
-    /* border-bottom: 5px dotted black; */
-    margin: 0 auto 0px;
-    background-color: #ee772b;
-    width: 170px;
-    /* height: 80px; */
-    border-radius: 15px;
-    padding: 5px 10px;
-    font-weight: bold;
 }
 
 main span {
@@ -145,6 +112,71 @@ main span {
 main a {
     text-decoration: none;
     color: white;
+}
+
+.goback {
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    margin: 0 auto 0px;
+    background-color: #ee772b;
+    width: 10rem;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: .25rem .2rem;
+    background: #ee772b;
+    border: 2px solid #742e02;
+    border-radius: 0.75rem;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    position: relative;
+}
+
+button.goback::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b44900;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px black,
+        0 0.625rem 0 0 #b548005d;
+    transform: translate3d(0, 0.5rem, -1rem);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+        box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+button.goback:hover {
+    background: #ee772b;
+    transform: translate(0em, 0.5rem);
+}
+
+
+button.goback:hover::before {
+    box-shadow: 0 0 0 2px #742e02,
+        0 0.5em 0 0 #b548005d;
+    transform: translate3d(0, 0.4rem, -1rem);
+}
+
+button.goback:active {
+    background: #ee772b;
+    transform: translate(0em, 0.75rem);
+}
+
+button.goback:active::before {
+    box-shadow: 0 0 0 2px #742e02,
+        0 0 #b548005d;
+    transform: translate3d(0, 0, -1rem);
 }
 
 /* --rwd-- */
@@ -162,7 +194,7 @@ main a {
     }
 }
 
-@media screen and (min-width: 576px) and (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
 
     h1 {
@@ -174,7 +206,7 @@ main a {
     }
 
     .card {
-        width: 85%;
+        width: 100%;
     }
 
 }
@@ -186,9 +218,12 @@ main a {
 
     main {
         width: 100%;
+        padding: 0 0px 15px;
     }
 
     .card {
-        width: 90%;
+        width: 100%;
+        padding: 5px;
     }
+
 }

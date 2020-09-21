@@ -13,17 +13,17 @@
 
 <body>
     <header>
-        <div class="logo"><a href="./index.html"></a></div>
+        <div class="logo"><a href=" ./index.html"> </a> </div>
         <nav>
             <a href="./news.html">最新消息</a>
             <a href="./meau.html">菜單</a>
             <a href="./food.html">餐點介紹</a>
             <a href="./about.html">關於我們</a>
-            <div class="icon">
-                <span class="user"><a href="#" onClick="show()"></a></span>
-                <span class="menu"><a href="#"></a></span>
-            </div>
         </nav>
+        <div class="icon">
+            <button class="user" onClick="show()"></button>
+            <button class="menu"></button>
+        </div>
     </header>
     <div class="hide_header">
         <div class="logo 2">
@@ -51,7 +51,7 @@
             <div id="process" class="process"><img src="./img/order.png" alt=""> </div>
             <h1>最新消息</h1>
             <div id="news" class="news">
-                <div class="event 1">
+                <div class="event event1">
                     <a href="./news/news_01.html">
                         <p class="sale">109年9月-10月活動【金芒勁辣雞腿堡套餐】$79元起</p>
                     </a>
@@ -59,7 +59,7 @@
                         <p class="date">2020.08.31</p>
                     </a>
                 </div>
-                <div class="event 2">
+                <div class="event event2">
                     <a href="#">
                         <p class="sale">109年7月-8月活動【舒肥雞胸輕食 套餐】$79元起</p>
                     </a>
@@ -67,7 +67,7 @@
                         <p class="date">2020.06.31</p>
                     </a>
                 </div>
-                <div class="event 3">
+                <div class="event event3">
                     <a href="#">
                         <p class="sale">109年5月-6月活動【塔香皮蛋肉鬆蛋餅套餐】$69元起</p>
                     </a>
@@ -75,7 +75,7 @@
                         <p class="date">2020.04.31</p>
                     </a>
                 </div>
-                <div class="event 4">
+                <div class="event event4">
                     <a href="#">
                         <p class="sale">109年3月-4月優惠活動【日式醬豚燒餅套餐】$69元起</p>
                     </a>
@@ -164,23 +164,25 @@
                         <input type="password" id="user_password" autocomplete="current-password">
                     </div>
                     <div class="outerherf">
-                        <button></button>
-                        <button></button>
-                        <button></button>
+                        <button type="button" class="google"><img src="./img/icon/g+.svg" alt=""></button>
+                        <button type="button" class="fb2"><img src="./img/icon/facebook.svg" alt=""></button>
+                        <button type="button" class="twe"><img src="./img/icon/twitter.svg" alt=""></button>
                     </div>
                     <div class="btnbox">
-                        <button onclick="hide()"></button>
-                        <button></button>
+                        <button class="back" type="button" onclick="hide()">返回</button>
+                        <button type="button" class="loginbtn">登入</button>
                     </div>
                 </form>
             </div>
             <!-- signin page -->
             <div class="signin_page">
-                <div class="login_2">
-                    <p class="signin_text">登入</p>
-                </div>
-                <div class="signin_2">
-                    <p class="signin_text">註冊</p>
+                <div class="hgtop">
+                    <div class="login_2">
+                        <p class="signin_text">登入</p>
+                    </div>
+                    <div class="signin_2">
+                        <p class="signin_text">註冊</p>
+                    </div>
                 </div>
                 <form action="" class="form">
                     <div class="group">
@@ -191,22 +193,23 @@
                         <label for="user_password2">密碼</label>
                         <input type="password" id="user_password2" autocomplete="current-password">
                     </div>
-                    <div class="group">
+                    <div class="group group3">
                         <label for="phone">手機</label>
                         <input type="text" id="phone">
                     </div>
                     <div class="btnbox">
-                        <button onclick="hide()"></button>
-                        <button></button>
+                        <button onclick="hide()" type="button" class="back">返回</button>
+                        <button type="button" class="loginbtn">完成註冊</button>
                     </div>
+                </form>
             </div>
         </div>
     </div>
     <!-- hidelist -->
     <div class="hidelist">
         <div class="receipt">
-            <div class="r-top"><button class="r-top-l"></button>
-                <p>111</p><button class="r-top-r"></button>
+            <div class="r-top"><button class="r-top-l" type="button"></button>
+                <p>111</p><button class="r-top-r" type="button"></button>
             </div>
             <h3></h3>
             <div class="r-list">
@@ -215,116 +218,161 @@
             </button>
             <span>
             </span>
-            <div class="oderlist">
-            </div>
+        </div>
+        <div class="oderlist">
+            <header></header>
+            <section>
+                <a href="">
+                    <div class="oderlist-m">早餐</div>
+                </a>
+                <a href="">
+                    <div class="oderlist-b">早午餐</div>
+                </a>
+            </section>
+            <article class="topic topic01">
+                <a href="">
+                    <div class="food-topic">漢堡</div>
+                </a>
+                <a href="">
+                    <div class="food-topic">吐司</div>
+                </a>
+                <a href="">
+                    <div class="food-topic">點心類</div>
+                </a>
+                <a href="">
+                    <div class="food-topic">飲料</div>
+                </a>
+            </article>
+            <article class="topic topic02">
+                <a href="">
+                    <div class="food-topic food-topic01">飯食</div>
+                </a>
+                <a href="">
+                    <div class="food-topic">麵食</div>
+                </a>
+                <a href="">
+                    <div class="food-topic">特餐</div>
+                </a>
+            </article>
+            <ul class="wrap">
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>超厚牛肉起司漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>超厚豬肉起司堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>豬肉起司漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>培根漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>香雞漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>鮪魚漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>黑胡椒豬排漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>燻雞漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+                <li class="food-card">
+                    <div class="food-card-l">
+                        <h4>卡滋雞腿漢堡</h4>
+                        <div class="select"></div>
+                    </div>
+                    <div class="food-card-r">
+                        <div class="add">
+                            <button type="button">+</button>
+                        </div>
+                        <div class="price"></div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <!-- backTop -->
 
     <div id="gotop" class="gotop">
         <img src="./img/backtop.png" alt="">
-        <a href="#"></a>
     </div>
 
     <script>
-        let hidebg = document.querySelectorAll('.hidebg')[0];
-        let hidebox = document.querySelectorAll('.hidebox')[0];
-        let login2 = document.querySelectorAll('.login_2')[0];
-        let signin1 = document.querySelectorAll('.signin1')[0];
-        let flip = document.querySelectorAll('.flip')[0];
-        let hmeau = document.querySelectorAll(".hide_meau")[0];
-        let flipout = document.querySelectorAll(".flipout")[0];
-        let signin_page = document.querySelectorAll(".signin_page")[0];
-        let r_top_r = document.querySelectorAll(".r-top-r")[0];
-        let r_top_l = document.querySelectorAll(".r-top-l")[0];
-        let menu = document.querySelectorAll(".menu")[0];
-        let hidelist = document.querySelectorAll(".hidelist")[0];
-        let oderlist = document.querySelectorAll(".oderlist")[0];
-
-        function show() {
-            hidebg.style.display = "block";
-            hidebg.style.height = document.body.clientHeight + "px";
-            hidebox.style.display = "block";
-        }
-
-        function hide() {
-            hidebg.style.display = "none";
-            hidebox.style.display = "none";
-            if (flip.classList.contains('-on')) {
-                flip.classList.remove('-on');
-            }
-        }
-
-        signin1.addEventListener('click', function () {
-            flip.classList.add('-on');
-        });
-        login2.addEventListener('click', function () {
-            flip.classList.remove('-on');
-        });
-        menu.addEventListener('click', function () {
-            hidelist.style.display = "block";
-            hidebg.style.height = document.body.clientHeight + "px";
-            hidebg.style.display = "block";
-        });
-        r_top_r.addEventListener('click', function () {
-            hidelist.style.display = "none";
-            hidebg.style.display = "none";
-        });
-        r_top_l.addEventListener('click', function () {
-            if (oderlist.style.display == "none" || oderlist.style.display == "") {
-                oderlist.style.display = "block";
-            } else {
-                oderlist.style.display = "none";
-            }
-        });
-
-        function meau_hide() {
-            if (hmeau.style.display == "none" || hmeau.style.display == "") {
-                hmeau.style.display = 'block';
-            } else {
-                hmeau.style.display = 'none';
-            }
-        }
-
-
-        window.onscroll = function () {
-            myFunction()
-        };
-
-        let qwe = document.querySelector("#calendar").scrollTop;
-        let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY;
-        let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY;
-        let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY;
-        let edc1 = document.querySelector("#calendar").getBoundingClientRect().top;
-        let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY;
-        let iop = document.querySelector("#gotop");
-
-        function myFunction() {
-            if (document.documentElement.scrollTop > (qaz - 300)) {
-                document.getElementById("process").classList.add('-on');
-            }
-            if (document.documentElement.scrollTop > (wsx - 300)) {
-                document.getElementById("news").classList.add('-on');
-            }
-            if (document.querySelector("#calendar").getBoundingClientRect().top < 250) {
-                document.getElementById("calendar").classList.add('-on');
-            }
-            // if (document.documentElement.scrollTop > (edc - 100)) {
-            //     // document.getElementById("gotop").className = "gotop";
-            //     document.getElementById("gotop").classList.add('-on');
-            // }
-            // if (document.documentElement.scrollTop < (edc - 350)) {
-
-            //     document.getElementById("gotop").classList.remove('-on');
-            // }
-            iop.classList.toggle('-on', window.scrollY > (wsx - 300))
-        }
-        iop.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            })
-        })
         /* 讀屬性 */
         // function getStyle(dom, attr) {
         //     if (dom.currentStyle) {
@@ -357,6 +405,7 @@
     <!-- <div class="ggwp">
         <p></p>
     </div> -->
+    <script src="./js/common.js"></script>
 </body>
 
 </html>
