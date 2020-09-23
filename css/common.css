@@ -396,6 +396,7 @@ div.outweb {
     footer article {
         flex-direction: column;
         height: auto;
+        white-space: nowrap;
     }
 
 }
@@ -412,4 +413,11 @@ div.outweb {
     .flipout {
         width: 300px;
     }
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 9px;
+    }
+
 }

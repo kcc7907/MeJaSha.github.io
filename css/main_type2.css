@@ -530,7 +530,7 @@
             margin-bottom: 20px;
         }
 
-        /* hidelist */
+        /* === hidelist === */
 
         .hidelist {
             position: fixed;
@@ -538,10 +538,11 @@
             height: 500px;
             top: 20%;
             right: 10px;
-            /* background-color: #ddd; */
+            background-color: #FEFBF6;
             display: none;
             z-index: 4;
         }
+
 
         .receipt {
             position: relative;
@@ -549,13 +550,12 @@
             height: 400px;
             overflow: hidden;
             z-index: 4;
-            /* display: none; */
         }
 
         .receipt::before {
             content: '';
             position: absolute;
-            border-top: 10px dotted #002;
+            border-top: 10px dotted rgb(50, 50, 88);
             opacity: 0.5;
             width: 100%;
             top: -5px;
@@ -580,21 +580,37 @@
             text-align: center;
         }
 
-        .r-top p {}
+        .r-top button {
+            background: none;
+        }
+
+        .r-top p {
+            font-size: 0.1rem;
+        }
 
         .r-top .r-top-l {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             cursor: pointer;
+            background-image: url('../img/top/三角.svg');
+            transform: scaleX(-1);
         }
 
         .r-top .r-top-r {
             width: 25px;
             height: 25px;
             cursor: pointer;
+            font-size: 1.5rem;
         }
 
-        h3 {}
+        h3 {
+            font-size: 1.3rem;
+            text-align: center;
+            width: 80%;
+            margin: 0 auto;
+            border-bottom: 2px solid black;
+            padding-bottom: 2px;
+        }
 
         .r-list {
             height: 200px;
@@ -610,10 +626,17 @@
             top: 20vh;
             right: 300px;
             width: 800px;
-            height: 500px;
-            background: #aaa;
+            /* height: 500px; */
+            background: #FEFBF6;
             z-index: 3;
-            overflow-y: scroll;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .oderlist header {
+            height: 50px;
+            background: #222d42;
+            /* background: #302206; */
         }
 
         .oderlist-m,
@@ -622,6 +645,8 @@
             display: inline-block;
             font-size: 1.6rem;
             text-align: center;
+            background: #154733;
+            color: white;
         }
 
         .topic {
@@ -630,23 +655,17 @@
             text-align: center;
             white-space: nowrap;
             justify-content: center;
-        }
-
-        .topic01 .food-topic {
-            width: 25%;
+            background: blanchedalmond;
+            box-sizing: content-box;
+            margin: -0.5px;
+            padding: 0;
         }
 
         .topic01 a,
         .topic02 a {
             flex: 1;
-        }
-
-        .topic01 .food-topic {
-            display: inline-block;
-        }
-
-        .topic02 {
-            /* display: none; */
+            color: #154733;
+            border: black 0.01px solid;
         }
 
         .wrap {
@@ -661,6 +680,7 @@
             background: white;
             height: 70px;
             display: flex;
+            border: black 1px solid;
         }
 
         .food-card .food-card-l {
@@ -676,15 +696,16 @@
         }
 
         .food-card-l h4 {
-            height: 70%;
+            height: 60%;
             font-size: 1.2rem;
             display: flex;
             justify-content: center;
             align-items: center;
+            color: #154733;
         }
 
         .food-card-l select {
-            height: 30%;
+            height: 40%;
         }
 
 
@@ -697,11 +718,15 @@
 
         .food-card-r .price {
             height: 50%;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .add button {
-            height: 30px;
-            width: 30px;
+            height: 25px;
+            width: 25px;
             background: #ed7727;
             color: white;
             font-size: 3rem;
@@ -709,8 +734,44 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
         }
+
+        .select {
+            display: flex;
+            justify-content: center;
+        }
+
+        .numbox {
+            width: 60%;
+            height: 20px;
+            display: flex;
+        }
+
+        .numbtn {
+            flex: 1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .numbtn-l {
+            transform: scaleX(-1);
+        }
+
+        .numbtn img {
+            height: 15px;
+            width: 15px;
+        }
+
+        .num {
+            flex: 1;
+            font-size: 1.2rem;
+            text-align: center;
+            vertical-align: top;
+        }
+
 
         /* animate */
 
