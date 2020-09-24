@@ -614,7 +614,35 @@
 
         .r-list {
             height: 200px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            font-size: 0.1rem;
         }
+
+        .r-list-box {
+            display: flex;
+        }
+
+        .r-list ul {
+            width: 100%;
+            text-align: center;
+            padding-top: 5px;
+        }
+
+        .list-name {
+            /* flex: 1; */
+            width: 60%;
+        }
+
+        .list-num {
+            flex: 1;
+        }
+
+        .list-del {
+            flex: 1;
+        }
+
 
         .hidelist span {}
 
@@ -667,6 +695,11 @@
             color: #154733;
             border: black 0.01px solid;
         }
+
+        .topic02 {
+            display: none;
+        }
+
 
         .wrap {
             display: flex;
