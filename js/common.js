@@ -44,6 +44,7 @@ menu.addEventListener('click', function () {
 r_top_r.addEventListener('click', function () {
   hidelist.style.display = "none";
   hidebg.style.display = "none";
+  localStorage.clear();
 });
 
 r_top_l.addEventListener('click', function () {
@@ -98,3 +99,87 @@ iop.addEventListener('click', () => {
     behavior: 'smooth'
   })
 })
+
+//  ==========   foodlist    ==========
+
+// `< li class = "r-list-box" >
+//   <
+//   div class = "list-name" > 超厚牛肉起司漢堡 < /div> <
+//   div class = "list-num" > 1 < /div> <
+//   div class = "list-pri" > $120 < /div> <
+//   button type = "button"
+// class = "list-del" > X < /button> <
+//   /li>`
+
+
+
+
+
+/*====== add_btn ======*/
+
+let add_btn = document.querySelectorAll('.add-btn');
+let wrap = document.querySelectorAll('ul.wrap')[0];
+
+wrap.addEventListener('click', (e) => {
+  if (e.target.classList[0] === 'add-btn') {
+    let list_name = e.target.closest('li').querySelectorAll('.food-card-l h4')[0].innerHTML;
+    let list_num = e.target.closest('li').querySelectorAll('.numbox .num')[0].innerHTML;
+    let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML;
+
+    let task = {
+      "list_name": list_name,
+      "num": list_num,
+      "price": list_pri
+    };
+
+    //存ls
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    if (tasks) {
+      tasks.unshift(task);
+    } else {
+      tasks = [task];
+    }
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+    //
+    //更新菜單
+    if (tasks) {
+      let list_html = "";
+      tasks.forEach(function (item, i) {
+
+        list_html += `
+                        <li class="r-list-box">
+                            <div class="list-name">${item.list_name}</div>
+                            <div class="list-num">${item.num}</div>
+                            <div class="list-pri">${item.price}</div>
+                            <button type="button" class="list-del">X</button>
+                        </li>
+                    `;
+      });
+      let r_list_ul = document.querySelectorAll(".r-list-ul")[0];
+      r_list_ul.innerHTML = list_html;
+    }
+  }
+  //
+});
+// parentNode                           class="numbtn numbtn-l"
+wrap.addEventListener('click', (e) => {
+  // console.log(e.target.parentNode);
+  if (e.target.parentNode.classList.contains('numbtn-l')) {
+    let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
+    if (parseInt(num.innerText) <= 9 && parseInt(num.innerText) > 0) {
+      let list_num = parseInt(num.innerText) - 1;
+      num.innerText = list_num;
+    }
+  }
+});
+
+wrap.addEventListener('click', (e) => {
+  // console.log(e.target.parentNode);
+  if (e.target.parentNode.classList.contains('numbtn-r')) {
+    let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
+    if (parseInt(num.innerText) >= 0 && parseInt(num.innerText) < 9) {
+      let list_num = parseInt(num.innerText) + 1;
+      num.innerText = list_num;
+    }
+  }
+});
