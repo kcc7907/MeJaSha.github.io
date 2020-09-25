@@ -100,26 +100,13 @@ iop.addEventListener('click', () => {
   })
 })
 
-//  ==========   foodlist    ==========
+//  ==========    foodlist    ==========
 
-// `< li class = "r-list-box" >
-//   <
-//   div class = "list-name" > 超厚牛肉起司漢堡 < /div> <
-//   div class = "list-num" > 1 < /div> <
-//   div class = "list-pri" > $120 < /div> <
-//   button type = "button"
-// class = "list-del" > X < /button> <
-//   /li>`
-
-
-
-
-
-/*====== add_btn ======*/
 
 let add_btn = document.querySelectorAll('.add-btn');
 let wrap = document.querySelectorAll('ul.wrap')[0];
 
+// == addbtn ==
 wrap.addEventListener('click', (e) => {
   if (e.target.classList[0] === 'add-btn') {
     let list_name = e.target.closest('li').querySelectorAll('.food-card-l h4')[0].innerHTML;
@@ -161,25 +148,36 @@ wrap.addEventListener('click', (e) => {
   }
   //
 });
-// parentNode                           class="numbtn numbtn-l"
+
+//  ==  numbtnl  ==
+
 wrap.addEventListener('click', (e) => {
   // console.log(e.target.parentNode);
   if (e.target.parentNode.classList.contains('numbtn-l')) {
     let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
+    let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].getAttribute('data-pri');
     if (parseInt(num.innerText) <= 9 && parseInt(num.innerText) > 0) {
       let list_num = parseInt(num.innerText) - 1;
       num.innerText = list_num;
+      let new_pri = list_pri.replace('$', '') * list_num;
+      e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML = String(new_pri).replace(/^/, '$');
     }
   }
 });
+
+//  ==  numbtnr  ==
 
 wrap.addEventListener('click', (e) => {
   // console.log(e.target.parentNode);
   if (e.target.parentNode.classList.contains('numbtn-r')) {
     let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
+    let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].getAttribute('data-pri');
+
     if (parseInt(num.innerText) >= 0 && parseInt(num.innerText) < 9) {
       let list_num = parseInt(num.innerText) + 1;
       num.innerText = list_num;
+      let new_pri = list_pri * list_num;
+      e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML = String(new_pri).replace(/^/, '$');
     }
   }
 });
