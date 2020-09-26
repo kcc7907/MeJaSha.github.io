@@ -44,7 +44,7 @@ menu.addEventListener('click', function () {
 r_top_r.addEventListener('click', function () {
   hidelist.style.display = "none";
   hidebg.style.display = "none";
-  localStorage.clear();
+  // localStorage.clear();
 });
 
 r_top_l.addEventListener('click', function () {
@@ -102,9 +102,10 @@ iop.addEventListener('click', () => {
 
 //  ==========    foodlist    ==========
 
-
 let add_btn = document.querySelectorAll('.add-btn');
 let wrap = document.querySelectorAll('ul.wrap')[0];
+let r_list_ul = document.querySelectorAll(".r-list-ul")[0];
+let total_num = document.querySelectorAll(".total-num")[0];
 
 // == addbtn ==
 wrap.addEventListener('click', (e) => {
@@ -112,28 +113,31 @@ wrap.addEventListener('click', (e) => {
     let list_name = e.target.closest('li').querySelectorAll('.food-card-l h4')[0].innerHTML;
     let list_num = e.target.closest('li').querySelectorAll('.numbox .num')[0].innerHTML;
     let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML;
-
-    let task = {
-      "list_name": list_name,
-      "num": list_num,
-      "price": list_pri
-    };
-
-    //存ls
-    let tasks = JSON.parse(localStorage.getItem("tasks"));
-    if (tasks) {
-      tasks.unshift(task);
+    // if (parseInt(list_num) === 0) {
+    if (list_num === '0') {
+      return;
     } else {
-      tasks = [task];
-    }
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-    //
-    //更新菜單
-    if (tasks) {
-      let list_html = "";
-      tasks.forEach(function (item, i) {
+      let task = {
+        "list_name": list_name,
+        "num": list_num,
+        "price": list_pri
+      };
 
-        list_html += `
+      //存ls
+      let tasks = JSON.parse(localStorage.getItem("tasks"));
+      if (tasks) {
+        tasks.unshift(task);
+      } else {
+        tasks = [task];
+      }
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+      //
+      //更新菜單
+      if (tasks) {
+        let list_html = "";
+        tasks.forEach(function (item, i) {
+
+          list_html += `
                         <li class="r-list-box">
                             <div class="list-name">${item.list_name}</div>
                             <div class="list-num">${item.num}</div>
@@ -141,9 +145,17 @@ wrap.addEventListener('click', (e) => {
                             <button type="button" class="list-del">X</button>
                         </li>
                     `;
-      });
-      let r_list_ul = document.querySelectorAll(".r-list-ul")[0];
-      r_list_ul.innerHTML = list_html;
+        });
+        // 更新total
+        let ls = JSON.parse(localStorage.getItem("tasks"));
+        var vans = 0;
+        for (let i = 0; i < ls.length; i++) {
+          vans = vans + parseInt(ls[i].price.replace('$', ''));
+        }
+        total_num.innerHTML = String(vans).replace(/^/, '$');
+        //
+        r_list_ul.innerHTML = list_html;
+      }
     }
   }
   //
@@ -181,3 +193,25 @@ wrap.addEventListener('click', (e) => {
     }
   }
 });
+
+// ==  clearAll ==  
+
+let total_box = document.querySelectorAll('.total-box')[0];
+
+total_box.addEventListener('click', (e) => {
+  if (e.target.classList.contains('clear-all')) {
+    r_list_ul.innerHTML = '';
+    localStorage.clear();
+    total_num.innerHTML = '$0';
+  }
+});
+
+//  ==  clearList  ==
+
+r_list_ul.addEventListener('click', (e) => {
+  if (e.target.classList.contains('list-del')) {
+    e.target.closest('li').remove();
+  }
+});
+
+//

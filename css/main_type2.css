@@ -547,22 +547,23 @@
             background: #fafafa;
             overflow: hidden;
             z-index: 4;
-            padding-bottom: 10px;
+            padding: 10px 0 10px 0;
             border-radius: 0 0 60px 0;
             filter: drop-shadow(0 0 3px #bbb);
         }
 
         .hidelist span {
             position: absolute;
-            right: -5px;
+            right: -15px;
             bottom: -5px;
             width: 50px;
             height: 50px;
             content: '';
             display: block;
-            background: linear-gradient(100deg, rgb(201, 197, 197) 50%, rgb(0, 0, 0, 0)75%);
-            box-shadow: -3px -3px rgba(0, 0, 0, 0.075);
-            filter: drop-shadow(-3px -3px 3px rgba(0, 0, 0, 0.075));
+            background: linear-gradient(120deg, rgb(201, 197, 197) 50%, rgb(0, 0, 0, 0)85%);
+            box-shadow: -1px -1px rgba(100, 89, 89, 0.185);
+            filter: drop-shadow(-3px -px 5px rgba(0, 0, 0, 0.075));
+            transform: rotatez(-20deg);
         }
 
         .receipt::before {
@@ -592,6 +593,7 @@
             font-size: 1px;
             padding-top: 8px;
             text-align: center;
+            align-items: center;
         }
 
         .r-top button {
@@ -602,7 +604,7 @@
         .r-top p {
             font-size: 0.1rem;
             position: absolute;
-            top: 10px;
+            top: 20px;
             left: 22px;
         }
 
@@ -610,16 +612,12 @@
             width: 25px;
             height: 25px;
             cursor: pointer;
-            /* background-image: url('../img/top/三角DG.svg'); */
             transform: scaleX(-1);
-            /* display: flex;
-            align-items: baseline; */
         }
 
         .r-top .r-top-r {
             width: 25px;
             height: 25px;
-
             font-size: 1.5rem;
         }
 
@@ -633,11 +631,14 @@
         }
 
         .r-list {
-            height: 200px;
+            min-height: 200px;
+            max-height: 45vh;
+            overflow: auto;
             width: 90%;
             margin: 0 auto;
             display: flex;
             font-size: 0.1rem;
+            margin-bottom: 1.2rem;
         }
 
         .r-list-box {
@@ -671,16 +672,37 @@
 
         .list-pri {
             flex: 1;
-
         }
 
+        .total-box {
+            width: 80%;
+            margin: 0 auto;
+            font-size: 1rem;
+            display: flex;
+            border-top: 2px solid black;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .total-box button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateY(-101%);
+            background: none;
+            z-index: 6;
+        }
+
+        .total {}
+
+        .total-num {}
 
 
         .order-done {
             width: 80px;
             height: 30px;
             display: block;
-            margin: 10px auto 10px;
+            margin: 0px auto 10px;
             text-align: center;
             font-size: 0.9rem;
             font-weight: 600;
@@ -880,6 +902,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            background: none;
         }
 
         .numbtn-l {
