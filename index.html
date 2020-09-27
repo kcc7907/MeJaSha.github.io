@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main_type2.css">
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 </head>
 
 <body>
@@ -141,6 +140,7 @@
         </article>
     </footer>
 
+    <!-- hbg -->
     <div class="hidebg"></div>
     <div class="flipout">
         <div class="flip">
@@ -156,12 +156,13 @@
                 </div>
                 <form action="" class="form">
                     <div class="group">
-                        <label for="user_id">帳號</label>
-                        <input type="text" id="user_id" autocomplete="username">
+                        <label for="user_id" maxlength="30">帳號</label>
+                        <input type="email" id="user_id" autocomplete="username">
                     </div>
-                    <div class="group">
+                    <div class="group group2">
                         <label for="user_password">密碼</label>
-                        <input type="password" id="user_password" autocomplete="current-password">
+                        <input type="password" id="user_password" autocomplete="current-password" maxlength="12">
+                        <button class="eye" type="button"><img src="./img/icon/visibility.svg"></button>
                     </div>
                     <div class="outerherf">
                         <button type="button" class="google"><img src="./img/icon/g+.svg" alt=""></button>
@@ -169,8 +170,8 @@
                         <button type="button" class="twe"><img src="./img/icon/twitter.svg" alt=""></button>
                     </div>
                     <div class="btnbox">
-                        <button class="back" type="button" onclick="hide()">返回</button>
-                        <button type="button" class="loginbtn">登入</button>
+                        <button class="back" type="reset" onclick="hide()">返回</button>
+                        <button type="submit" class="loginbtn">登入</button>
                     </div>
                 </form>
             </div>
@@ -186,20 +187,22 @@
                 </div>
                 <form action="" class="form">
                     <div class="group">
-                        <label for="user_id2">帳號</label>
-                        <input type="text" id="user_id2" autocomplete="username">
+                        <label for="user_id2" maxlength="30">帳號</label>
+                        <input type="email" id="user_id2" autocomplete="username"
+                            placeholder="請輸入Email 範例:abc@mail.com">
                     </div>
                     <div class="group">
                         <label for="user_password2">密碼</label>
-                        <input type="password" id="user_password2" autocomplete="current-password">
+                        <input type="password" id="user_password2" autocomplete="current-password" maxlength="12"
+                            placeholder="請輸入英文或數字6~12碼">
                     </div>
                     <div class="group group3">
                         <label for="phone">手機</label>
-                        <input type="text" id="phone">
+                        <input type="text" id="phone" maxlength="10" placeholder="請輸入手機號碼 範例:0912345678">
                     </div>
                     <div class="btnbox">
-                        <button onclick="hide()" type="button" class="back">返回</button>
-                        <button type="button" class="loginbtn">完成註冊</button>
+                        <button onclick="hide()" type="reset" class="back">返回</button>
+                        <button type="submit" class="loginbtn">完成註冊</button>
                     </div>
                 </form>
             </div>
@@ -236,7 +239,7 @@
             </span>
         </div>
         <div class="oderlist">
-            <header></header>
+            <div class="header"></div>
             <section>
                 <a href="">
                     <div class="oderlist-m">早餐</div>
@@ -438,46 +441,12 @@
         </div>
     </div>
 
-
     <!-- backTop -->
-
     <div id="gotop" class="gotop">
         <img src="./img/backtop.png" alt="">
     </div>
 
-    <script>
-        /* 讀屬性 */
-        // function getStyle(dom, attr) {
-        //     if (dom.currentStyle) {
-        //         return dom.currentStyle[attr]
-        //     } else {
-        //         return getComputedStyle(dom)[attr]
-        //     }
-        // };
-        // console.log(qwe.clientHeight);
-        //顯示元素高度
-
-        // var header_active = function () {
-        //     // 取得使用者滑了多少 px
-        //     var scroll_top = $(window).scrollTop();
-        //     // 將 scroll_top 數值放到 p.-pos 內容
-        //     $(".ggwp p").html(scroll_top);
-        //     if (scroll_top >= 100) {
-        //         $("div.fixed_top").addClass("-on");
-        //     } else {
-        //         $("div.fixed_top").removeClass("-on");
-        //     }
-        // };
-        // $(function () {
-        //     // 第三步：偵測頁面滑動時會觸發
-        //     $(window).scroll(function () {
-        //         header_active();
-        //     });
-        // });
-    </script>
-    <!-- <div class="ggwp">
-        <p></p>
-    </div> -->
+    <!-- js -->
     <script src="./js/common.js"></script>
 </body>
 

@@ -175,7 +175,7 @@
             text-decoration: none;
         }
 
-
+        /* loginpage */
 
         .hidebg {
             position: absolute;
@@ -210,16 +210,11 @@
             transform: rotateY(180deg);
         }
 
-        label {}
-
-        /* loginpage */
+        /* label {} */
 
         .hidebox {
             width: 100%;
-            /* top: 30%;
-            left: 50%; */
             z-Index: 4;
-            /* transform: translateX(-50%); */
             background-color: #FDFCFA;
             border-radius: 20px;
             backface-visibility: hidden;
@@ -244,7 +239,7 @@
         .login {
             display: inline-block;
             width: 50%;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             text-align: center;
             line-height: 50px;
             color: #154733;
@@ -260,7 +255,7 @@
         .signin1 {
             display: inline-block;
             width: 50%;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             text-align: center;
             line-height: 50px;
             border-radius: 20px 20px 0 0;
@@ -291,17 +286,44 @@
             margin: auto;
         }
 
+        .form .group2 {
+            position: relative;
+        }
+
+        .group2 .eye {
+            background: none;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            bottom: 8px;
+            right: 5px;
+            padding: 0;
+        }
+
         .form label {
-            line-height: 2;
+            /* margin: 3px 0; */
             display: block;
             text-align: left;
+            font-size: 1.6rem;
         }
 
         .form input {
             width: 100%;
             border: 1px solid #aaa;
-            line-height: 3;
             border-radius: 5px;
+            font-size: 1.2rem;
+            padding: 6px 0 6px 8px;
+            margin: 2px 0;
+            transition: all;
+        }
+
+        .form input.-erro {
+            animation: erro 0.1s;
+            border: 1.2px solid red;
+        }
+
+        .form input:focus {
+            border: 1px solid #154733;
         }
 
         .outerherf {
@@ -493,7 +515,7 @@
         .signin_2 {
             display: inline-block;
             width: 50%;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             text-align: center;
             line-height: 50px;
             border-radius: 20px 20px 0 0;
@@ -514,7 +536,7 @@
         .login_2 {
             display: inline-block;
             width: 50%;
-            font-size: 1.2rem;
+            font-size: 1.8rem;
             text-align: center;
             line-height: 50px;
             color: #fff;
@@ -693,10 +715,9 @@
             z-index: 6;
         }
 
-        .total {}
+        /* .total {}
 
-        .total-num {}
-
+        .total-num {} */
 
         .order-done {
             width: 80px;
@@ -744,7 +765,7 @@
         .order-done:hover::before {
             box-shadow: 0 0 0 2px #742e02,
                 0 0.5em 0 0 #b548005d;
-            transform: translate3d(0, 0.4em, -1em);
+            transform: translate3d(0, 0.3em, -1em);
         }
 
         .order-done:active {
@@ -775,7 +796,7 @@
             overflow-x: hidden;
         }
 
-        .oderlist header {
+        .oderlist .header {
             height: 50px;
             /* background: #222d42; */
             /* background: #302206; */
@@ -823,10 +844,10 @@
         }
 
         .food-card {
-            margin: 20px;
-            width: 200px;
+            margin: 1.25rem;
+            width: 12.5rem;
             background: white;
-            height: 70px;
+            height: 4.375rem;
             display: flex;
             border: black 1px solid;
         }
@@ -873,8 +894,8 @@
         }
 
         .add button {
-            height: 25px;
-            width: 25px;
+            height: 1.56rem;
+            width: 1.56rem;
             background: #ed7727;
             color: white;
             font-size: 3rem;
@@ -901,7 +922,7 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: center;
             background: none;
         }
 
@@ -910,15 +931,15 @@
         }
 
         .numbtn img {
-            height: 15px;
-            width: 15px;
+            height: 1rem;
+            width: 1rem;
         }
 
         .num {
             flex: 1;
-            font-size: 1.2rem;
+            font-size: 1rem;
             text-align: center;
-            vertical-align: top;
+            vertical-align: middle;
         }
 
 
@@ -1030,19 +1051,6 @@
             }
         }
 
-        /* .ggwp,
-        .ggwp p {
-            font-size: 1.5rem;
-            position: fixed;
-            left: 0;
-            top: 50%;
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background-color: green;
-            color: #fff;
-        } */
-
         .gotop {
             width: 50px;
             height: 50px;
@@ -1062,6 +1070,7 @@
         }
 
         /* --rwd-- */
+
         @media screen and (min-width: 1401px) {
             h1 {
                 margin: 6.25rem auto 3.75rem;

@@ -11,6 +11,8 @@ let r_top_l = document.querySelectorAll(".r-top-l")[0];
 let menu = document.querySelectorAll(".menu")[0];
 let hidelist = document.querySelectorAll(".hidelist")[0];
 let oderlist = document.querySelectorAll(".oderlist")[0];
+let list_pri = document.querySelectorAll('.food-card-r .price');
+let select = document.querySelectorAll('.num');
 
 function show() {
   hidebg.style.display = "block";
@@ -44,7 +46,11 @@ menu.addEventListener('click', function () {
 r_top_r.addEventListener('click', function () {
   hidelist.style.display = "none";
   hidebg.style.display = "none";
-  // localStorage.clear();
+  for (let i = 0; i < list_pri.length; i++) {
+    list_pri[i].innerHTML = String(list_pri[i].getAttribute('data-pri')).replace(/^/, '$');
+    select[i].innerHTML = '0';
+  }
+  // localStorage.clear();String(vans).replace(/^/, '$')
 });
 
 r_top_l.addEventListener('click', function () {
@@ -100,24 +106,27 @@ iop.addEventListener('click', () => {
   })
 })
 
-//  ==========    foodlist    ==========
+//  <==========    foodlist    ==========>
 
 let add_btn = document.querySelectorAll('.add-btn');
 let wrap = document.querySelectorAll('ul.wrap')[0];
 let r_list_ul = document.querySelectorAll(".r-list-ul")[0];
 let total_num = document.querySelectorAll(".total-num")[0];
 
-// == addbtn ==
+// <== addbtn ==>
+
 wrap.addEventListener('click', (e) => {
   if (e.target.classList[0] === 'add-btn') {
     let list_name = e.target.closest('li').querySelectorAll('.food-card-l h4')[0].innerHTML;
     let list_num = e.target.closest('li').querySelectorAll('.numbox .num')[0].innerHTML;
     let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML;
+    let item_id = Date.now();
     // if (parseInt(list_num) === 0) {
     if (list_num === '0') {
       return;
     } else {
       let task = {
+        "item_id": item_id,
         "list_name": list_name,
         "num": list_num,
         "price": list_pri
@@ -138,7 +147,7 @@ wrap.addEventListener('click', (e) => {
         tasks.forEach(function (item, i) {
 
           list_html += `
-                        <li class="r-list-box">
+                        <li class="r-list-box" data-id="${item.item_id}">
                             <div class="list-name">${item.list_name}</div>
                             <div class="list-num">${item.num}</div>
                             <div class="list-pri">${item.price}</div>
@@ -161,7 +170,7 @@ wrap.addEventListener('click', (e) => {
   //
 });
 
-//  ==  numbtnl  ==
+//  <==  numbtnl  ==>
 
 wrap.addEventListener('click', (e) => {
   // console.log(e.target.parentNode);
@@ -177,7 +186,7 @@ wrap.addEventListener('click', (e) => {
   }
 });
 
-//  ==  numbtnr  ==
+//  <==  numbtnr  ==>
 
 wrap.addEventListener('click', (e) => {
   // console.log(e.target.parentNode);
@@ -194,7 +203,7 @@ wrap.addEventListener('click', (e) => {
   }
 });
 
-// ==  clearAll ==  
+// <==  clearAll ==>
 
 let total_box = document.querySelectorAll('.total-box')[0];
 
@@ -206,12 +215,106 @@ total_box.addEventListener('click', (e) => {
   }
 });
 
-//  ==  clearList  ==
+//  <==  clearList  ==>
 
 r_list_ul.addEventListener('click', (e) => {
   if (e.target.classList.contains('list-del')) {
     e.target.closest('li').remove();
+    let item_id = e.target.closest("li").getAttribute("data-id");
+    let tasks = JSON.parse(localStorage.getItem("tasks"));
+    // console.log(item_id);
+    let updated_tasks = [];
+    tasks.forEach(function (task, i) {
+      if (item_id != task.item_id) {
+        updated_tasks.push(task);
+      }
+    });
+    localStorage.setItem("tasks", JSON.stringify(updated_tasks));
+    // 更新total
+    let ls = JSON.parse(localStorage.getItem("tasks"));
+    var vans = 0;
+    for (let i = 0; i < ls.length; i++) {
+      vans = vans + parseInt(ls[i].price.replace('$', ''));
+    }
+    total_num.innerHTML = String(vans).replace(/^/, '$');
+    //
   }
 });
 
-//
+//  <==========    loginpage    ==========>
+
+//  <==  password-eye  ==>
+
+let eye = document.querySelectorAll('.eye')[0];
+let eye_img = document.querySelectorAll('.eye img')[0];
+let user_password = document.querySelectorAll('#user_password')[0];
+
+eye.addEventListener('click', () => {
+  if (user_password.type === 'password' || user_password.type === '') {
+    user_password.type = 'text';
+    let new_src = eye_img.src.replace(/visibility/, 'invisible');
+    eye_img.src = new_src;
+  } else {
+    user_password.type = 'password';
+    let new_src = eye_img.src.replace(/invisible/, 'visibility');
+    eye_img.src = new_src;
+  }
+});
+
+//  <==  id_blur  ==> saymyname@mail.com
+
+let user_id = document.querySelectorAll('#user_id')[0];
+
+user_id.addEventListener('blur', () => {
+  let mail = getCookie('id');
+  if (user_id.value !== mail && user_id.value !== '') {
+    // console.log('erro');
+    user_id.classList.add('-erro');
+  } else {
+    user_id.classList.remove('-erro');
+  }
+
+});
+//  <==========    cookie    ==========>
+
+// <==  設定 cookie  ==>
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//  <==  取得 cookie 的值  ==>
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+//  <==  檢查某 cookie 是否存在  ==>
+
+function checkCookie(cname) {
+  var cookie_value = getCookie(cname);
+  if (cookie_value != "") {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//  <==  暫存登入資料  ==>
+
+setCookie("id", "saymyname@mail.com ", 0.1);
+setCookie("pas", "heisenberg", 0.1);
