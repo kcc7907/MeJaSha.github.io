@@ -894,6 +894,7 @@ h3 {
     display: flex;
     flex-direction: column;
     width: 20%;
+    padding-right: 7px;
 }
 
 .food-card-l h4 {
@@ -1183,9 +1184,10 @@ h3 {
 
     .hide_meau {
         background-color: #154733;
-        display: none;
+        display: block !important;
         transition: max-height 1s ease-out;
         max-height: 0;
+
     }
 
     footer {

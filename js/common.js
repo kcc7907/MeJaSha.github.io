@@ -73,7 +73,6 @@ function meau_hide() {
   }
 };
 
-
 window.onscroll = function () {
   myFunction()
 };
