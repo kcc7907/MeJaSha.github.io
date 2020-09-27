@@ -218,7 +218,7 @@ button.goback:active::before {
 
     main {
         width: 100%;
-        padding: 0 0px 15px;
+        padding: 0 8px 15px;
     }
 
     .card {
@@ -226,4 +226,10 @@ button.goback:active::before {
         padding: 5px;
     }
 
+}
+
+@media screen and (max-width: 330px) {
+    h1 {
+        width: 70px;
+    }
 }

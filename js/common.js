@@ -37,73 +37,59 @@ login2.addEventListener('click', function () {
   flip.classList.remove('-on');
 });
 
-menu.addEventListener('click', function () {
+function listShow() {
   hidelist.style.display = "block";
   hidebg.style.height = document.body.clientHeight + "px";
   hidebg.style.display = "block";
-});
-
-r_top_r.addEventListener('click', function () {
-  hidelist.style.display = "none";
-  hidebg.style.display = "none";
-  for (let i = 0; i < list_pri.length; i++) {
-    list_pri[i].innerHTML = String(list_pri[i].getAttribute('data-pri')).replace(/^/, '$');
-    select[i].innerHTML = '0';
-  }
-  // localStorage.clear();String(vans).replace(/^/, '$')
-});
-
-r_top_l.addEventListener('click', function () {
-  if (oderlist.style.display === "none" || oderlist.style.display === "") {
-    oderlist.style.display = "block";
-  } else {
-    oderlist.style.display = "none";
-  }
-});
+};
 
 function meau_hide() {
   if (hmeau.style.display == "none" || hmeau.style.display == "") {
     hmeau.style.display = 'block';
     hmeau.style.maxHeight = hmeau.scrollHeight + "px";
+    setTimeout(function () {
+      hmeau.style.zIndex = '1';
+    }, 800);
   } else {
     hmeau.style.maxHeight = '0';
+    hmeau.style.zIndex = '-1';
     setTimeout(function () {
-      hmeau.style.display = 'none';;
+      hmeau.style.display = 'none';
     }, 1000);
   }
 };
 
-window.onscroll = function () {
-  myFunction()
-};
+// window.onscroll = function () {
+//   myFunction()
+// };
 
-let qwe = document.querySelector("#calendar").scrollTop;
-let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY;
-let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY;
-let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY;
-let edc1 = document.querySelector("#calendar").getBoundingClientRect().top;
-let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY;
-let iop = document.querySelector("#gotop");
+// let qwe = document.querySelector("#calendar").scrollTop;
+// let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY;
+// let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY;
+// let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY;
+// let edc1 = document.querySelector("#calendar").getBoundingClientRect().top;
+// let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY;
+// let iop = document.querySelector("#gotop");
 
-function myFunction() {
-  if (document.documentElement.scrollTop > (qaz - 300)) {
-    document.getElementById("process").classList.add('-on');
-  }
-  if (document.documentElement.scrollTop > (wsx - 300)) {
-    document.getElementById("news").classList.add('-on');
-  }
-  if (document.querySelector("#calendar").getBoundingClientRect().top < 300) {
-    document.getElementById("calendar").classList.add('-on');
-  }
-  iop.classList.toggle('-on', window.scrollY > (wsx - 300));
-}
+// function myFunction() {
+//   if (document.documentElement.scrollTop > (qaz - 300)) {
+//     document.getElementById("process").classList.add('-on');
+//   }
+//   if (document.documentElement.scrollTop > (wsx - 300)) {
+//     document.getElementById("news").classList.add('-on');
+//   }
+//   if (document.querySelector("#calendar").getBoundingClientRect().top < 300) {
+//     document.getElementById("calendar").classList.add('-on');
+//   }
+//   iop.classList.toggle('-on', window.scrollY > (wsx - 300));
+// }
 
-iop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })
-})
+// iop.addEventListener('click', () => {
+//   window.scrollTo({
+//     top: 0,
+//     behavior: 'smooth'
+//   })
+// })
 
 //  <==========    foodlist    ==========>
 
@@ -237,6 +223,54 @@ r_list_ul.addEventListener('click', (e) => {
     }
     total_num.innerHTML = String(vans).replace(/^/, '$');
     //
+  }
+});
+
+//  <==  r_top_r.btn  ==>
+
+r_top_r.addEventListener('click', function () {
+  hidelist.style.display = "none";
+  hidebg.style.display = "none";
+  oderlist.style.display = "none";
+  for (let i = 0; i < list_pri.length; i++) {
+    list_pri[i].innerHTML = String(list_pri[i].getAttribute('data-pri')).replace(/^/, '$');
+    select[i].innerHTML = '0';
+  }
+  // localStorage.clear();String(vans).replace(/^/, '$')
+});
+
+//  <==  r_top_l.btn  ==>
+
+let receipt = document.querySelectorAll('.receipt')[0];
+
+r_top_l.addEventListener('click', () => {
+  let width = window.innerWidth
+  // console.log(width);
+  if (width > 900) {
+    if (oderlist.style.display === "none" || oderlist.style.display === "") {
+      oderlist.style.display = "block";
+    } else {
+      oderlist.style.display = "none";
+    }
+  } else {
+    if (oderlist.style.display === "none" || oderlist.style.display === "") {
+      oderlist.style.display = "block";
+      receipt.style.display = "none";
+    } else {
+      oderlist.style.display = "none";
+      receipt.style.display = "block";
+    }
+  }
+});
+
+//  <==  .header.button  ==>
+
+let header_btn = document.querySelectorAll('.header button')[0];
+
+header_btn.addEventListener('click', () => {
+  if (receipt.style.display === "none" || receipt.style.display === "") {
+    receipt.style.display = "block";
+    oderlist.style.display = "none";
   }
 });
 

@@ -607,13 +607,13 @@ div.outweb {
     overflow: hidden;
     z-index: 4;
     padding: 10px 0 10px 0;
-    border-radius: 0 0 60px 0;
-    filter: drop-shadow(0 0 3px #bbb);
+    border-radius: 0 0 48px 0;
+    /* filter: drop-shadow(0 0 3px #bbb); */
 }
 
 .hidelist span {
     position: absolute;
-    right: -15px;
+    right: -20px;
     bottom: -5px;
     width: 50px;
     height: 50px;
@@ -680,7 +680,7 @@ div.outweb {
     font-size: 1.5rem;
 }
 
-h3 {
+.receipt h3 {
     font-size: 1.3rem;
     text-align: center;
     width: 90%;
@@ -794,7 +794,6 @@ h3 {
     transform: translate(0em, 0.5em);
 }
 
-
 .order-done:hover::before {
     box-shadow: 0 0 0 2px #742e02,
         0 0.5em 0 0 #b548005d;
@@ -812,9 +811,6 @@ h3 {
     transform: translate3d(0, 0, -1em);
 }
 
-
-
-
 /* oderlist */
 
 .oderlist {
@@ -829,14 +825,34 @@ h3 {
 }
 
 .oderlist .header {
-    height: 50px;
+    height: 3.125rem;
     /* background: #222d42; */
     /* background: #302206; */
     background: #212121ea;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.oderlist-m,
-.oderlist-b {
+.oderlist .header p {
+    font-size: 1.6rem;
+    color: white;
+}
+
+.oderlist .header button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 0;
+    background: none;
+    color: white;
+    display: none;
+}
+
+.oderlist .oderlist-m,
+.oderlist .oderlist-b {
     width: 50%;
     display: inline-block;
     font-size: 1.6rem;
@@ -845,7 +861,11 @@ h3 {
     color: white;
 }
 
-.topic {
+.oderlist section {
+    font-size: 0;
+}
+
+.oderlist .topic {
     display: flex;
     font-size: 1.6rem;
     text-align: center;
@@ -1101,7 +1121,7 @@ h3 {
 
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (min-width:1251px) and (max-width: 1400px) {
     html {
         font-size: 14px;
     }
@@ -1112,11 +1132,15 @@ h3 {
 
 }
 
-@media screen and (max-width:1250px) {
+@media screen and (min-width:901px) and (max-width:1250px) {
     .oderlist {
         width: 500px;
         max-height: 400px;
         overflow-y: auto;
+    }
+
+    .hide_meau {
+        display: none !important;
     }
 }
 
@@ -1184,10 +1208,11 @@ h3 {
 
     .hide_meau {
         background-color: #154733;
-        display: block !important;
+        display: none;
         transition: max-height 1s ease-out;
         max-height: 0;
-
+        position: relative;
+        z-index: -1;
     }
 
     footer {
@@ -1202,6 +1227,28 @@ h3 {
         white-space: nowrap;
     }
 
+    .oderlist {
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translatey(-50%);
+    }
+
+    .hidelist {
+        top: 50%;
+        right: 50%;
+        transform: translateX(50%) translatey(-50%);
+    }
+
+    .header button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .oderlist {
+        width: 500px;
+        max-height: 400px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -1220,6 +1267,14 @@ h3 {
     .loginbtn {
         white-space: nowrap;
     }
+
+    .oderlist {
+        width: 300px;
+    }
+
+    .oderlist .food-card {
+        width: 125px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -1227,4 +1282,9 @@ h3 {
         font-size: 9px;
     }
 
+    .logo a {
+        width: 60px;
+        height: 60px;
+        top: 10px;
+    }
 }

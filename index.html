@@ -20,15 +20,15 @@
             <a href="./about.html">關於我們</a>
         </nav>
         <div class="icon">
-            <button class="user" onClick="show()"></button>
-            <button class="menu"></button>
+            <button class="user" onclick="show()"></button>
+            <button class="menu" onclick="listShow()"></button>
         </div>
     </header>
-    <div class="hide_header">
+    <div class=" hide_header">
         <div class="logo 2">
             <a href="./index.html"></a>
         </div>
-        <div class="hide_icon">
+        <div class="hide_icon" onclick="meau_hide()">
             <div class="hide_on"></div>
         </div>
 
@@ -38,8 +38,8 @@
         <a href="./meau.html">菜單</a>
         <a href="./food.html">餐點介紹</a>
         <a href="./about.html">關於我們</a>
-        <a onClick="show()">會員</a>
-        <a href="">點餐</a>
+        <a onclick="show()">會員</a>
+        <a onclick="listShow()">點餐</a>
     </div>
     <div class="top">
         <div class="banner" id="ban"><img src="./img/banner05.jpg" alt=""></div>
@@ -117,9 +117,7 @@
             <h1>營業時間</h1>
 
             <iframe id="calendar" class="calendar"
-                src="https://calendar.google.com/calendar/embed?src=1e05s183isv45k9crpbf6u1bmk%40group.calendar.google.com&ctz=Asia%2FTaipei"
-                style="border: 0" frameborder="0" scrolling="no">
-            </iframe>
+                src="https://calendar.google.com/calendar/embed?src=1e05s183isv45k9crpbf6u1bmk%40group.calendar.google.com&ctz=Asia%2FTaipei"></iframe>
 
         </main>
     </div>
@@ -239,7 +237,10 @@
             </span>
         </div>
         <div class="oderlist">
-            <div class="header"></div>
+            <div class="header">
+                <p>快速點餐</p>
+                <button>x</button>
+            </div>
             <section>
                 <a href="">
                     <div class="oderlist-m">早餐</div>

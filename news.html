@@ -13,35 +13,36 @@
 
 <body>
   <header>
-    <div class="logo"><a href="./index.html"></a></div>
+    <div class="logo"><a href=" ./index.html"> </a> </div>
     <nav>
       <a href="./news.html">最新消息</a>
       <a href="./meau.html">菜單</a>
       <a href="./food.html">餐點介紹</a>
       <a href="./about.html">關於我們</a>
-      <div class="icon">
-        <span class="user"><a href="#"></a></span>
-        <span class="menu"><a href="#"></a></span>
-
-      </div>
     </nav>
+    <div class="icon">
+      <button class="user" onclick="show()"></button>
+      <button class="menu" onclick="listShow()"></button>
+    </div>
   </header>
-  <div class="hide_header">
-    <div class="logo">
+  <div class=" hide_header">
+    <div class="logo 2">
       <a href="./index.html"></a>
     </div>
     <div class="hide_icon" onclick="meau_hide()">
       <div class="hide_on"></div>
     </div>
+
   </div>
   <div class="hide_meau">
     <a href="./news.html">最新消息</a>
     <a href="./meau.html">菜單</a>
     <a href="./food.html">餐點介紹</a>
     <a href="./about.html">關於我們</a>
-    <a href="">會員</a>
-    <a href="">點餐</a>
+    <a onclick="show()">會員</a>
+    <a onclick="listShow()">點餐</a>
   </div>
+  <!-- top -->
   <div class="top top-down">
     <img src="./img/inner_top.jpg" alt="">
     <h1>最新消息</h1>
@@ -119,7 +120,291 @@
       </div>
     </article>
   </footer>
+  <!-- new -->
+  <!-- hbg -->
+  <div class="hidebg"></div>
+  <div class="flipout">
+    <div class="flip">
+      <!-- login page -->
+      <div class="hidebox">
+        <div class="hgtop">
+          <div class="login">
+            <p class="signin_text">登入</p>
+          </div>
+          <div class="signin1">
+            <p class="signin_text">註冊</p>
+          </div>
+        </div>
+        <form action="" class="form">
+          <div class="group">
+            <label for="user_id" maxlength="30">帳號</label>
+            <input type="email" id="user_id" autocomplete="username">
+          </div>
+          <div class="group group2">
+            <label for="user_password">密碼</label>
+            <input type="password" id="user_password" autocomplete="current-password" maxlength="12">
+            <button class="eye" type="button"><img src="./img/icon/visibility.svg"></button>
+          </div>
+          <div class="outerherf">
+            <button type="button" class="google"><img src="./img/icon/g+.svg" alt=""></button>
+            <button type="button" class="fb2"><img src="./img/icon/facebook.svg" alt=""></button>
+            <button type="button" class="twe"><img src="./img/icon/twitter.svg" alt=""></button>
+          </div>
+          <div class="btnbox">
+            <button class="back" type="reset" onclick="hide()">返回</button>
+            <button type="submit" class="loginbtn">登入</button>
+          </div>
+        </form>
+      </div>
+      <!-- signin page -->
+      <div class="signin_page">
+        <div class="hgtop">
+          <div class="login_2">
+            <p class="signin_text">登入</p>
+          </div>
+          <div class="signin_2">
+            <p class="signin_text">註冊</p>
+          </div>
+        </div>
+        <form action="" class="form">
+          <div class="group">
+            <label for="user_id2" maxlength="30">帳號</label>
+            <input type="email" id="user_id2" autocomplete="username" placeholder="請輸入Email 範例:abc@mail.com">
+          </div>
+          <div class="group">
+            <label for="user_password2">密碼</label>
+            <input type="password" id="user_password2" autocomplete="current-password" maxlength="12"
+              placeholder="請輸入英文或數字6~12碼">
+          </div>
+          <div class="group group3">
+            <label for="phone">手機</label>
+            <input type="text" id="phone" maxlength="10" placeholder="請輸入手機號碼 範例:0912345678">
+          </div>
+          <div class="btnbox">
+            <button onclick="hide()" type="reset" class="back">返回</button>
+            <button type="submit" class="loginbtn">完成註冊</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- hidelist -->
+  <div class="hidelist">
+    <div class="receipt">
+      <div class="r-top"><button class="r-top-l" type="button">
+          <img src="./img/top/三角DG.svg" alt="">
+        </button>
+        <p>快速點餐</p><button class="r-top-r" type="button">x</button>
+      </div>
+      <h3>點餐清單</h3>
+      <div class="r-list">
+        <ul class="r-list-ul">
+          <!-- <li class="r-list-box">
+                        <div class="list-name">超厚牛肉起司漢堡</div>
+                        <div class="list-num">1</div>
+                        <div class="list-pri">$120</div>
+                        <button type="button" class="list-del">X</button>
+                    </li> -->
+        </ul>
 
+      </div>
+      <div class="total-box">
+        <div class="total">toatal</div>
+        <div class="total-num">$0</div>
+        <button class="clear-all">全部清除</button>
+      </div>
+      <button class="order-done">完成點餐
+      </button>
+      <span>
+      </span>
+    </div>
+    <div class="oderlist">
+      <div class="header">
+        <p>快速點餐</p>
+        <button>x</button>
+      </div>
+      <section>
+        <a href="">
+          <div class="oderlist-m">早餐</div>
+        </a>
+        <a href="">
+          <div class="oderlist-b">早午餐</div>
+        </a>
+      </section>
+      <article class="topic topic01">
+        <a href="">
+          <div class="food-topic">漢堡</div>
+        </a>
+        <a href="">
+          <div class="food-topic">吐司</div>
+        </a>
+        <a href="">
+          <div class="food-topic">點心類</div>
+        </a>
+        <a href="">
+          <div class="food-topic">飲料</div>
+        </a>
+      </article>
+      <article class="topic topic02">
+        <a href="">
+          <div class="food-topic food-topic01">飯食</div>
+        </a>
+        <a href="">
+          <div class="food-topic">麵食</div>
+        </a>
+        <a href="">
+          <div class="food-topic">特餐</div>
+        </a>
+      </article>
+      <ul class="wrap">
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>超厚牛肉起司漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="120">$120</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>超厚豬肉起司堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="90">$90</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>豬肉起司漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="80">$80</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>培根漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="110">$110</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>香雞漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="100">$100</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>鮪魚漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="70">$70</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>黑胡椒豬排漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="85">$85</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>燻雞漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="90">$90</div>
+          </div>
+        </li>
+        <li class="food-card">
+          <div class="food-card-l">
+            <h4>卡滋雞腿漢堡</h4>
+            <div class="select">
+              <div class="numbox"><button class="numbtn numbtn-l"><img src="./img/top/三角DG.svg" alt=""></button>
+                <div class="num">0</div><button class="numbtn numbtn-r"><img src="./img/top/三角DG.svg" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <div class="food-card-r">
+            <div class="add">
+              <button type="button" class="add-btn">+</button>
+            </div>
+            <div class="price" data-pri="85">$85</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
   <script src="./js/common.js"></script>
 </body>
 
