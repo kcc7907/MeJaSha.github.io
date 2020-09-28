@@ -153,14 +153,16 @@
                     </div>
                 </div>
                 <form action="" class="form">
-                    <div class="group">
+                    <div class="group group1">
                         <label for="user_id" maxlength="30">帳號</label>
                         <input type="email" id="user_id" autocomplete="username">
+                        <p>請輸入Email</p>
                     </div>
                     <div class="group group2">
                         <label for="user_password">密碼</label>
                         <input type="password" id="user_password" autocomplete="current-password" maxlength="12">
                         <button class="eye" type="button"><img src="./img/icon/visibility.svg"></button>
+                        <p>請輸入英文及數字</p>
                     </div>
                     <div class="outerherf">
                         <button type="button" class="google"><img src="./img/icon/g+.svg" alt=""></button>
@@ -169,7 +171,7 @@
                     </div>
                     <div class="btnbox">
                         <button class="back" type="reset" onclick="hide()">返回</button>
-                        <button type="submit" class="loginbtn">登入</button>
+                        <button type="button" class="loginbtn">登入</button>
                     </div>
                 </form>
             </div>
@@ -448,6 +450,7 @@
     </div>
 
     <!-- js -->
+    <script src="./js/index.js"></script>
     <script src="./js/common.js"></script>
 </body>
 

@@ -264,6 +264,10 @@ div.outweb {
     animation: zoom 1s;
 }
 
+.hidebox.-erro {
+    animation: erroRotate 0.1s;
+}
+
 .hgtop {
     width: 100%;
     height: 50px;
@@ -327,6 +331,28 @@ div.outweb {
     position: relative;
 }
 
+.group1 {
+    position: relative;
+}
+
+.group1 p {
+    position: absolute;
+    right: 3px;
+    bottom: 3rem;
+    font-size: 0.1rem;
+    color: red;
+    display: none;
+}
+
+.group2 p {
+    position: absolute;
+    right: 3px;
+    bottom: 3rem;
+    font-size: 0.1rem;
+    color: red;
+    display: none;
+}
+
 .group2 .eye {
     background: none;
     position: absolute;
@@ -355,7 +381,7 @@ div.outweb {
 }
 
 .form input.-erro {
-    animation: erro 0.1s;
+    animation: erroShake 0.1s;
     border: 1.2px solid red;
 }
 
@@ -884,7 +910,7 @@ div.outweb {
     border: black 0.01px solid;
 }
 
-.topic02 {
+.oderlist .topic02 {
     display: none;
 }
 
@@ -1076,7 +1102,7 @@ div.outweb {
     }
 }
 
-@keyframes erro {
+@keyframes erroShake {
     0% {
         transform: translateX(0px);
     }
@@ -1098,13 +1124,26 @@ div.outweb {
     }
 }
 
-@keyframes erro2 {
+
+@keyframes erroRotate {
     0% {
-        transform: translateX(-5px);
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg)
+    }
+
+    50% {
+        transform: rotate(0deg)
+    }
+
+    75% {
+        transform: rotate(-5deg)
     }
 
     100% {
-        transform: translateX(5px);
+        transform: rotate(0deg)
     }
 }
 
@@ -1249,6 +1288,10 @@ div.outweb {
         width: 500px;
         max-height: 400px;
     }
+
+    .header button {
+        display: block !important;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -1275,6 +1318,10 @@ div.outweb {
     .oderlist .food-card {
         width: 125px;
     }
+
+    .header button {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -1286,5 +1333,13 @@ div.outweb {
         width: 60px;
         height: 60px;
         top: 10px;
+    }
+
+    .header button {
+        display: block !important;
+    }
+
+    .oderlist {
+        width: 290px;
     }
 }

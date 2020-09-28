@@ -19,6 +19,9 @@ function show() {
   hidebg.style.height = document.body.clientHeight + "px";
   flipout.style.display = "block";
   hidebox.classList.add('-on');
+  setTimeout(() => {
+    hidebox.classList.remove('-on');
+  }, 1500);
 }
 
 function hide() {
@@ -59,37 +62,7 @@ function meau_hide() {
   }
 };
 
-// window.onscroll = function () {
-//   myFunction()
-// };
 
-// let qwe = document.querySelector("#calendar").scrollTop;
-// let qaz = document.querySelector("#process").getBoundingClientRect().top + window.scrollY;
-// let wsx = document.querySelector("#news").getBoundingClientRect().top + window.scrollY;
-// let edc = document.querySelector("#calendar").getBoundingClientRect().top + window.scrollY;
-// let edc1 = document.querySelector("#calendar").getBoundingClientRect().top;
-// let rfv = document.querySelector("#gotop").getBoundingClientRect().top + window.scrollY;
-// let iop = document.querySelector("#gotop");
-
-// function myFunction() {
-//   if (document.documentElement.scrollTop > (qaz - 300)) {
-//     document.getElementById("process").classList.add('-on');
-//   }
-//   if (document.documentElement.scrollTop > (wsx - 300)) {
-//     document.getElementById("news").classList.add('-on');
-//   }
-//   if (document.querySelector("#calendar").getBoundingClientRect().top < 300) {
-//     document.getElementById("calendar").classList.add('-on');
-//   }
-//   iop.classList.toggle('-on', window.scrollY > (wsx - 300));
-// }
-
-// iop.addEventListener('click', () => {
-//   window.scrollTo({
-//     top: 0,
-//     behavior: 'smooth'
-//   })
-// })
 
 //  <==========    foodlist    ==========>
 
@@ -297,17 +270,58 @@ eye.addEventListener('click', () => {
 //  <==  id_blur  ==> saymyname@mail.com
 
 let user_id = document.querySelectorAll('#user_id')[0];
+let loginbtn = document.querySelectorAll('.loginbtn')[0];
+let group2p = document.querySelectorAll('.group2 p')[0];
+let group1p = document.querySelectorAll('.group1 p')[0];
+
 
 user_id.addEventListener('blur', () => {
   let mail = getCookie('id');
   if (user_id.value !== mail && user_id.value !== '') {
-    // console.log('erro');
     user_id.classList.add('-erro');
+    group1p.style.display = 'block';
+
+    setTimeout(() => {
+      user_id.classList.remove('-erro');
+    }, 800);
   } else {
     user_id.classList.remove('-erro');
+    group2p.style.display = 'none';
+
   }
 
 });
+
+//  <==  id_summit  ==> saymyname@mail.com
+
+loginbtn.addEventListener('click', () => {
+  let mail = getCookie('id');
+  if (user_id.value !== mail && user_id.value !== '') {
+    hidebox.classList.add('-erro');
+    setTimeout(() => {
+      hidebox.classList.remove('-erro');
+    }, 500);
+  } else {
+    hidebox.classList.remove('-erro');
+  }
+
+});
+
+//  <==  password_blur  ==>
+
+user_password.addEventListener('blur', () => {
+  // user_password.value = user_password.value.replace(/[^\w_]/g, '');
+  let reg = /[^\w_]/;
+  if (reg.test(user_password.value) === true) {
+    user_password.classList.add('-erro');
+    group2p.style.display = 'block';
+  } else {
+    user_password.classList.remove('-erro');
+    group2p.style.display = 'none';
+
+  }
+});
+
 //  <==========    cookie    ==========>
 
 // <==  設定 cookie  ==>
