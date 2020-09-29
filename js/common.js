@@ -51,7 +51,7 @@ function meau_hide() {
     hmeau.style.display = 'block';
     hmeau.style.maxHeight = hmeau.scrollHeight + "px";
     setTimeout(function () {
-      hmeau.style.zIndex = '1';
+      hmeau.style.zIndex = '0';
     }, 800);
   } else {
     hmeau.style.maxHeight = '0';
@@ -62,9 +62,7 @@ function meau_hide() {
   }
 };
 
-
-
-//  <==========    foodlist    ==========>
+//    <==========    foodlist    ==========>
 
 let add_btn = document.querySelectorAll('.add-btn');
 let wrap = document.querySelectorAll('ul.wrap')[0];
@@ -78,9 +76,13 @@ wrap.addEventListener('click', (e) => {
     let list_name = e.target.closest('li').querySelectorAll('.food-card-l h4')[0].innerHTML;
     let list_num = e.target.closest('li').querySelectorAll('.numbox .num')[0].innerHTML;
     let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML;
+    let food_card = e.target.closest('li');
     let item_id = Date.now();
-    // if (parseInt(list_num) === 0) {
     if (list_num === '0') {
+      food_card.classList.add('-erro');
+      setTimeout(() => {
+        food_card.classList.remove('-erro');
+      }, 150);
       return;
     } else {
       let task = {
@@ -89,7 +91,6 @@ wrap.addEventListener('click', (e) => {
         "num": list_num,
         "price": list_pri
       };
-
       //存ls
       let tasks = JSON.parse(localStorage.getItem("tasks"));
       if (tasks) {
@@ -103,7 +104,6 @@ wrap.addEventListener('click', (e) => {
       if (tasks) {
         let list_html = "";
         tasks.forEach(function (item, i) {
-
           list_html += `
                         <li class="r-list-box" data-id="${item.item_id}">
                             <div class="list-name">${item.list_name}</div>
@@ -125,17 +125,21 @@ wrap.addEventListener('click', (e) => {
       }
     }
   }
-  //
 });
 
 //  <==  numbtnl  ==>
 
 wrap.addEventListener('click', (e) => {
-  // console.log(e.target.parentNode);
   if (e.target.parentNode.classList.contains('numbtn-l')) {
     let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
     let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].getAttribute('data-pri');
-    if (parseInt(num.innerText) <= 9 && parseInt(num.innerText) > 0) {
+    let food_card = e.target.closest('li');
+    if (parseInt(num.innerText) == 0) {
+      food_card.classList.add('-erro');
+      setTimeout(() => {
+        food_card.classList.remove('-erro');
+      }, 150);
+    } else if (parseInt(num.innerText) <= 9 && parseInt(num.innerText) > 0) {
       let list_num = parseInt(num.innerText) - 1;
       num.innerText = list_num;
       let new_pri = list_pri.replace('$', '') * list_num;
@@ -147,17 +151,25 @@ wrap.addEventListener('click', (e) => {
 //  <==  numbtnr  ==>
 
 wrap.addEventListener('click', (e) => {
-  // console.log(e.target.parentNode);
   if (e.target.parentNode.classList.contains('numbtn-r')) {
     let num = e.target.parentNode.parentNode.querySelectorAll('.num')[0];
     let list_pri = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].getAttribute('data-pri');
-
-    if (parseInt(num.innerText) >= 0 && parseInt(num.innerText) < 9) {
+    let food_card = e.target.closest('li');
+    let total = e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML;
+    if (parseInt(num.innerText) == 9) {
+      food_card.classList.add('-erro');
+      setTimeout(() => {
+        food_card.classList.remove('-erro');
+      }, 150);
+    } else if (parseInt(num.innerText) >= 0 && parseInt(num.innerText) < 9) {
       let list_num = parseInt(num.innerText) + 1;
       num.innerText = list_num;
       let new_pri = list_pri * list_num;
       e.target.closest('li').querySelectorAll('.food-card-r .price')[0].innerHTML = String(new_pri).replace(/^/, '$');
     }
+  } else if (parseInt(e.target.closest('li').querySelectorAll('.num')[0].innerText) == 0) {
+    e.target.closest('li').querySelector('.num').innerText = 0;
+    e.target.closest('li').querySelector('.food-card-r .price').innerHTML = `$${e.target.closest('li').querySelectorAll('.food-card-r .price')[0].getAttribute('data-pri')}`;
   }
 });
 
@@ -180,7 +192,6 @@ r_list_ul.addEventListener('click', (e) => {
     e.target.closest('li').remove();
     let item_id = e.target.closest("li").getAttribute("data-id");
     let tasks = JSON.parse(localStorage.getItem("tasks"));
-    // console.log(item_id);
     let updated_tasks = [];
     tasks.forEach(function (task, i) {
       if (item_id != task.item_id) {
@@ -209,7 +220,6 @@ r_top_r.addEventListener('click', function () {
     list_pri[i].innerHTML = String(list_pri[i].getAttribute('data-pri')).replace(/^/, '$');
     select[i].innerHTML = '0';
   }
-  // localStorage.clear();String(vans).replace(/^/, '$')
 });
 
 //  <==  r_top_l.btn  ==>
@@ -218,7 +228,6 @@ let receipt = document.querySelectorAll('.receipt')[0];
 
 r_top_l.addEventListener('click', () => {
   let width = window.innerWidth
-  // console.log(width);
   if (width > 900) {
     if (oderlist.style.display === "none" || oderlist.style.display === "") {
       oderlist.style.display = "block";
@@ -247,13 +256,26 @@ header_btn.addEventListener('click', () => {
   }
 });
 
-//  <==========    loginpage    ==========>
 
-//  <==  password-eye  ==>
+//    <==========    loginPage    ==========>
+
+
+//  <==  passwordEye  ==>
 
 let eye = document.querySelectorAll('.eye')[0];
 let eye_img = document.querySelectorAll('.eye img')[0];
+let user_id = document.querySelectorAll('#user_id')[0];
+let user_id2 = document.querySelectorAll('#user_id2')[0];
 let user_password = document.querySelectorAll('#user_password')[0];
+let user_password2 = document.querySelectorAll('#user_password2')[0];
+let loginbtn = document.querySelectorAll('.loginbtn')[0];
+let signinbtn = document.querySelectorAll('.signinbtn')[0];
+let phone = document.querySelectorAll('#phone')[0];
+let group2p = document.querySelectorAll('.group2 p')[0];
+let group1p = document.querySelectorAll('.group1 p')[0];
+let group3p = document.querySelectorAll('.group3 p')[0];
+let group4p = document.querySelectorAll('.group4 p')[0];
+let group5p = document.querySelectorAll('.group5 p')[0];
 
 eye.addEventListener('click', () => {
   if (user_password.type === 'password' || user_password.type === '') {
@@ -267,32 +289,23 @@ eye.addEventListener('click', () => {
   }
 });
 
-//  <==  id_blur  ==> saymyname@mail.com
-
-let user_id = document.querySelectorAll('#user_id')[0];
-let loginbtn = document.querySelectorAll('.loginbtn')[0];
-let group2p = document.querySelectorAll('.group2 p')[0];
-let group1p = document.querySelectorAll('.group1 p')[0];
-
+//  <==  id_blur  ==>
 
 user_id.addEventListener('blur', () => {
   let mail = getCookie('id');
-  if (user_id.value !== mail && user_id.value !== '') {
+  if (/.+@.+\..+/.test(`${user_id.value}`) != true && user_id.value != '') {
     user_id.classList.add('-erro');
     group1p.style.display = 'block';
-
-    setTimeout(() => {
-      user_id.classList.remove('-erro');
-    }, 800);
+    // setTimeout(() => {
+    //   user_id.classList.remove('-erro');
+    // }, 800);
   } else {
     user_id.classList.remove('-erro');
-    group2p.style.display = 'none';
-
+    group1p.style.display = 'none';
   }
-
 });
 
-//  <==  id_summit  ==> saymyname@mail.com
+//  <==  id_summit  ==>
 
 loginbtn.addEventListener('click', () => {
   let mail = getCookie('id');
@@ -315,14 +328,72 @@ user_password.addEventListener('blur', () => {
   if (reg.test(user_password.value) === true) {
     user_password.classList.add('-erro');
     group2p.style.display = 'block';
+    // setTimeout(() => {
+    //   user_password.classList.remove('-erro');
+    // }, 800);
   } else {
     user_password.classList.remove('-erro');
     group2p.style.display = 'none';
-
   }
 });
 
-//  <==========    cookie    ==========>
+//  <==  forInputTest  ==>
+
+let testP = document.querySelectorAll('.flip span');
+
+testP[0].addEventListener('click', () => {
+  user_id.value = '大帥哥';
+  user_password.value = '就是我';
+})
+testP[1].addEventListener('click', () => {
+  user_id.value = 'saymyname@mail.com';
+  user_password.value = 'heisenberg';
+})
+testP[2].addEventListener('click', () => {
+  user_id2.value = 'helloWord';
+  user_password2.value = '@@@';
+  phone.value = '54088';
+})
+//    <==========    signinpage    ==========>
+
+//  <==  id2_blur  ==>
+
+user_id2.addEventListener('blur', () => {
+  if (/.+@.+\..+/.test(`${user_id2.value}`) != true && user_id2.value != '') {
+    user_id2.classList.add('-erro');
+    group5p.style.display = 'block';
+  } else {
+    user_id2.classList.remove('-erro');
+    group5p.style.display = 'none';
+  }
+});
+
+//  <==  password_blur  ==>
+
+user_password2.addEventListener('blur', () => {
+  let reg = /[^\w_]/;
+  if (reg.test(user_password2.value) === true) {
+    user_password2.classList.add('-erro');
+    group4p.style.display = 'block';
+  } else {
+    user_password2.classList.remove('-erro');
+    group4p.style.display = 'none';
+  }
+});
+
+//  <==  phone_blur  ==>
+
+phone.addEventListener('blur', () => {
+  if (/^09\d{8}/.test(`${phone.value}`) != true && phone.value != '') {
+    phone.classList.add('-erro');
+    group3p.style.display = 'block';
+  } else {
+    phone.classList.remove('-erro');
+    group3p.style.display = 'none';
+  }
+});
+
+//    <==========    cookie    ==========>
 
 // <==  設定 cookie  ==>
 

@@ -249,6 +249,38 @@ div.outweb {
     transform: rotateY(180deg);
 }
 
+.flip span {
+    font-size: 1rem;
+    position: absolute;
+    color: #000;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.flip span.-on {
+    transform: translateX(100%);
+}
+
+.hidebox span:nth-child(3) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-100%);
+}
+
+.hidebox span:nth-child(4) {
+    top: 50%;
+    right: 0;
+    transform: translateY(50%);
+}
+
+.signin_page span:nth-child(3) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+
 .hidebox {
     width: 100%;
     z-Index: 4;
@@ -325,6 +357,7 @@ div.outweb {
     text-align: center;
     width: 80%;
     margin: auto;
+    position: relative;
 }
 
 .form .group2 {
@@ -382,7 +415,7 @@ div.outweb {
 
 .form input.-erro {
     animation: erroShake 0.1s;
-    border: 1.2px solid red;
+    border: 1px solid red;
 }
 
 .form input:focus {
@@ -560,7 +593,7 @@ div.outweb {
     transform: translate3d(0, 0, -1em);
 }
 
-/* 註冊頁 */
+/*      註冊頁      */
 
 .signin_page {
     width: 100%;
@@ -613,6 +646,77 @@ div.outweb {
     margin-bottom: 20px;
 }
 
+.group3 p,
+.group4 p,
+.group5 p {
+    position: absolute;
+    right: 3px;
+    bottom: 3rem;
+    font-size: 0.1rem;
+    color: red;
+    display: none;
+}
+
+/* loginbtn */
+
+.btnbox button.signinbtn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #ee772b;
+    border: 2px solid #742e02;
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    white-space: nowrap;
+}
+
+.btnbox button.signinbtn::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #b44900;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px black,
+        0 0.625em 0 0 #b548005d;
+    transform: translate3d(0, 0.5em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+        box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.btnbox button.signinbtn:hover {
+    background: #ee772b;
+    transform: translate(0em, 0.5em);
+}
+
+
+.btnbox button.signinbtn:hover::before {
+    box-shadow: 0 0 0 2px #742e02,
+        0 0.5em 0 0 #b548005d;
+    transform: translate3d(0, 0.4em, -1em);
+}
+
+.btnbox button.signinbtn:active {
+    background: #ee772b;
+    transform: translate(0em, 0.75em);
+}
+
+.btnbox button.signinbtn:active::before {
+    box-shadow: 0 0 0 2px #742e02,
+        0 0 #b548005d;
+    transform: translate3d(0, 0, -1em);
+}
+
 /* === hidelist === */
 
 .hidelist {
@@ -623,6 +727,8 @@ div.outweb {
     display: none;
     z-index: 4;
 }
+
+
 
 
 .receipt {
@@ -778,7 +884,31 @@ div.outweb {
     z-index: 6;
 }
 
+.oderwarn {
+    position: absolute;
+    font-size: 0.1rem;
+    color: red;
+    bottom: 20px;
+    left: 20px;
+
+}
+
 .order-done {
+    width: 80px;
+    height: 30px;
+    display: block;
+    margin: 0px auto 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: .25rem .2rem;
+    background: #999;
+    border-radius: 0.75rem;
+}
+
+.order-done.-active {
     width: 80px;
     height: 30px;
     display: block;
@@ -797,7 +927,7 @@ div.outweb {
     position: relative;
 }
 
-.order-done::before {
+.order-done.-active::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -815,23 +945,23 @@ div.outweb {
         box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 
-.order-done:hover {
+.order-done.-active:hover {
     background: #ee772b;
     transform: translate(0em, 0.5em);
 }
 
-.order-done:hover::before {
+.order-done.-active:hover::before {
     box-shadow: 0 0 0 2px #742e02,
         0 0.5em 0 0 #b548005d;
     transform: translate3d(0, 0.3em, -1em);
 }
 
-.order-done:active {
+.order-done.-active:active {
     background: #ee772b;
     transform: translate(0em, 0.75em);
 }
 
-.order-done:active::before {
+.order-done.-active:active::before {
     box-shadow: 0 0 0 2px #742e02,
         0 0 #b548005d;
     transform: translate3d(0, 0, -1em);
@@ -928,6 +1058,10 @@ div.outweb {
     height: 4.375rem;
     display: flex;
     border: black 1px solid;
+}
+
+.food-card.-erro {
+    animation: erroShake 0.1s;
 }
 
 .food-card .food-card-l {

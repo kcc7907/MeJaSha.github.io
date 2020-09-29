@@ -174,6 +174,8 @@
                         <button type="button" class="loginbtn">登入</button>
                     </div>
                 </form>
+                <span>測<br>試<br>用</span>
+                <span>登<br>入<br>用</span>
             </div>
             <!-- signin page -->
             <div class="signin_page">
@@ -186,25 +188,29 @@
                     </div>
                 </div>
                 <form action="" class="form">
-                    <div class="group">
+                    <div class="group group5">
                         <label for="user_id2" maxlength="30">帳號</label>
                         <input type="email" id="user_id2" autocomplete="username"
                             placeholder="請輸入Email 範例:abc@mail.com">
+                        <p>請輸入Email</p>
                     </div>
-                    <div class="group">
+                    <div class="group group4">
                         <label for="user_password2">密碼</label>
                         <input type="password" id="user_password2" autocomplete="current-password" maxlength="12"
                             placeholder="請輸入英文或數字6~12碼">
+                        <p>請輸入英文及數字</p>
                     </div>
                     <div class="group group3">
                         <label for="phone">手機</label>
                         <input type="text" id="phone" maxlength="10" placeholder="請輸入手機號碼 範例:0912345678">
+                        <p>請輸入手機號碼</p>
                     </div>
                     <div class="btnbox">
                         <button onclick="hide()" type="reset" class="back">返回</button>
-                        <button type="submit" class="loginbtn">完成註冊</button>
+                        <button type="submit" class="signinbtn">完成註冊</button>
                     </div>
                 </form>
+                <span>測<br>試<br>用</span>
             </div>
         </div>
     </div>
@@ -226,47 +232,48 @@
                         <button type="button" class="list-del">X</button>
                     </li> -->
                 </ul>
-
             </div>
             <div class="total-box">
                 <div class="total">toatal</div>
                 <div class="total-num">$0</div>
                 <button class="clear-all">全部清除</button>
             </div>
-            <button class="order-done">完成點餐
+            <button class="order-done " type="button" disabled>完成點餐
             </button>
             <span>
             </span>
+            <p class="oderwarn">請先登入</p>
         </div>
+        <!-- oderlist -->
         <div class="oderlist">
             <div class="header">
                 <p>快速點餐</p>
                 <button>x</button>
             </div>
             <section>
-                <a href="">
-                    <div class="oderlist-m">早餐</div>
+                <a></a>
+                <div class="oderlist-m">早餐</div>
                 </a>
-                <a href="">
+                <a>
                     <div class="oderlist-b">早午餐</div>
                 </a>
             </section>
             <article class="topic topic01">
-                <a href="">
+                <a>
                     <div class="food-topic">漢堡</div>
                 </a>
-                <a href="">
+                <a>
                     <div class="food-topic">吐司</div>
                 </a>
-                <a href="">
+                <a>
                     <div class="food-topic">點心類</div>
                 </a>
-                <a href="">
+                <a>
                     <div class="food-topic">飲料</div>
                 </a>
             </article>
             <article class="topic topic02">
-                <a href="">
+                <a>
                     <div class="food-topic food-topic01">飯食</div>
                 </a>
                 <a href="">
