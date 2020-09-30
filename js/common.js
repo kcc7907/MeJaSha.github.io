@@ -21,12 +21,16 @@ function show() {
   hidebox.classList.add('-on');
   setTimeout(() => {
     hidebox.classList.remove('-on');
-  }, 1500);
+    testP[0].classList.add('-on');
+    testP[1].classList.add('-on');
+  }, 1700);
 }
 
 function hide() {
   hidebg.style.display = "none";
   flipout.style.display = "none";
+  testP[0].classList.remove('-on');
+  testP[1].classList.remove('-on');
   if (flip.classList.contains('-on')) {
     flip.classList.remove('-on');
   }
@@ -34,10 +38,21 @@ function hide() {
 
 signin1.addEventListener('click', function () {
   flip.classList.add('-on');
+  testP[0].classList.remove('-on');
+  testP[1].classList.remove('-on');
+  setTimeout(() => {
+    testP[2].classList.add('-on');
+  }, 1700);
 });
 
 login2.addEventListener('click', function () {
   flip.classList.remove('-on');
+
+  testP[2].classList.remove('-on');
+  setTimeout(() => {
+    testP[0].classList.add('-on');
+    testP[1].classList.add('-on');
+  }, 1700);
 });
 
 function listShow() {
@@ -305,7 +320,7 @@ user_id.addEventListener('blur', () => {
   }
 });
 
-//  <==  id_summit  ==>
+//  <==  login_summit  ==>
 
 loginbtn.addEventListener('click', () => {
   let mail = getCookie('id');
@@ -315,9 +330,8 @@ loginbtn.addEventListener('click', () => {
       hidebox.classList.remove('-erro');
     }, 500);
   } else {
-    hidebox.classList.remove('-erro');
-  }
 
+  }
 });
 
 //  <==  password_blur  ==>
