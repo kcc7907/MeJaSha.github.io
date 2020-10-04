@@ -46,21 +46,21 @@ nav a:nth-child(3) {
     animation-name: fir;
 }
 
-.main {
+.container .main {
     margin: auto;
     width: 80%;
     font-size: 0;
     display: flex;
 }
 
-.left {
+.container .left {
     display: flex;
     width: 20%;
     border-right: 3px solid #00000054;
     padding-right: 1rem;
 }
 
-.right {
+.container .right {
     display: inline-block;
     width: 80%;
     padding: 20px;
@@ -147,7 +147,7 @@ nav a:nth-child(3) {
     color: #154733;
 }
 
-h3::after {
+.container h3::after {
     content: "";
     display: inline-block;
     height: 5px;
@@ -156,20 +156,20 @@ h3::after {
 
 }
 
-h4 {
+.container h4 {
     text-align: center;
     font-size: 1rem;
     color: #154733;
 }
 
-main {
+.container main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: space-evenly;
 }
 
-.card {
+.container .card {
     width: 220px;
     /* height: 200px; */
     /* border: 5px solid #d89a15; */
@@ -178,12 +178,12 @@ main {
     margin: 20px;
 }
 
-.card:hover {
+.container .card:hover {
     animation: shake 1.5s;
     animation-iteration-count: infinite;
 }
 
-.card img {
+.container .card img {
     width: 165px;
     margin: auto;
     display: block;
@@ -255,9 +255,12 @@ main {
 
 
 /* --rwd-- */
-@media screen and (min-width: 1401px) {}
 
 @media screen and (min-width: 901px) and (max-width: 1400px) {
+    h1 {
+        width: 110px;
+    }
+
     .time p {
         font-size: 1.3rem;
         white-space: nowrap;
@@ -272,16 +275,15 @@ main {
 @media screen and (min-width: 576px) and (max-width: 900px) {
     h1 {
         width: 100px;
-        font-size: 1.4rem;
     }
 
-    .main {
+    .container .main {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .left {
+    .container .left {
         margin-top: 50px;
         width: 100%;
         border-right: none;
@@ -324,7 +326,7 @@ main {
         margin: 50px 0;
     }
 
-    .right {
+    .container .right {
         width: 100%;
     }
 }
@@ -334,13 +336,13 @@ main {
         width: 80px;
     }
 
-    .main {
+    .container .main {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .left {
+    .container .left {
         margin-top: 50px;
         width: 100%;
         border-right: none;
@@ -383,7 +385,7 @@ main {
         margin: 50px 0;
     }
 
-    .right {
+    .container .right {
         width: 100%;
     }
 }

@@ -1619,7 +1619,7 @@ div.outweb {
         transform: translateX(50%) translatey(-50%);
     }
 
-    .header button {
+    .oderlist .header button {
         display: block;
     }
 }
@@ -1630,7 +1630,7 @@ div.outweb {
         max-height: 400px;
     }
 
-    .header button {
+    .oderlist .header button {
         display: block;
     }
 }
@@ -1660,7 +1660,7 @@ div.outweb {
         width: 125px;
     }
 
-    .header button {
+    .oderlist .header button {
         display: block;
     }
 }
@@ -1676,7 +1676,7 @@ div.outweb {
         top: 10px;
     }
 
-    .header button {
+    .oderlist .header button {
         display: block;
     }
 
