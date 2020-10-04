@@ -13,6 +13,18 @@ let hidelist = document.querySelectorAll(".hidelist")[0];
 let oderlist = document.querySelectorAll(".oderlist")[0];
 let list_pri = document.querySelectorAll('.food-card-r .price');
 let select = document.querySelectorAll('.num');
+let user = document.querySelectorAll('.user')[0];
+let user2 = document.querySelectorAll('.user2')[0];
+let a_user = document.querySelectorAll('.a_user')[0];
+let a_user2 = document.querySelectorAll('.a_user2')[0];
+let loginErroText = document.querySelectorAll('.loginErroText')[0];
+let mcDel = document.querySelectorAll('.mcDel')[0];
+let cout_btn = document.querySelectorAll('.cout_btn')[0];
+let mcOuter = document.querySelectorAll('.mcOuter')[0];
+let mcenter = document.querySelectorAll('.mcenter')[0];
+let order_done = document.querySelectorAll('.order-done')[0];
+
+//  <======   longin_show & hide   ======>
 
 function show() {
   hidebg.style.display = "block";
@@ -31,18 +43,38 @@ function hide() {
   flipout.style.display = "none";
   testP[0].classList.remove('-on');
   testP[1].classList.remove('-on');
+  user_password.type = 'password';
+  let new_src = eye_img.src.replace(/invisible/, 'visibility');
+  eye_img.src = new_src;
   if (flip.classList.contains('-on')) {
     flip.classList.remove('-on');
   }
 }
+//  <======   memberCenter_show & hide   ======>
 
+function mcShow() {
+  hidebg.style.display = "block";
+  hidebg.style.height = document.body.clientHeight + "px";
+  mcOuter.style.display = "block";
+  mcenter.classList.add('-on');
+  setTimeout(() => {
+    mcenter.classList.remove('-on');
+  }, 1400);
+}
+
+function mcHide() {
+  hidebg.style.display = "none";
+  mcOuter.style.display = "none";
+}
+
+//
 signin1.addEventListener('click', function () {
   flip.classList.add('-on');
   testP[0].classList.remove('-on');
   testP[1].classList.remove('-on');
   setTimeout(() => {
     testP[2].classList.add('-on');
-  }, 1700);
+  }, 900);
 });
 
 login2.addEventListener('click', function () {
@@ -52,8 +84,9 @@ login2.addEventListener('click', function () {
   setTimeout(() => {
     testP[0].classList.add('-on');
     testP[1].classList.add('-on');
-  }, 1700);
+  }, 900);
 });
+//
 
 function listShow() {
   hidelist.style.display = "block";
@@ -246,8 +279,10 @@ r_top_l.addEventListener('click', () => {
   if (width > 900) {
     if (oderlist.style.display === "none" || oderlist.style.display === "") {
       oderlist.style.display = "block";
+      r_top_l.style.transform = 'scaleX(1)';
     } else {
       oderlist.style.display = "none";
+      r_top_l.style.transform = 'scaleX(-1)';
     }
   } else {
     if (oderlist.style.display === "none" || oderlist.style.display === "") {
@@ -271,6 +306,14 @@ header_btn.addEventListener('click', () => {
   }
 });
 
+//  <==  order_done  ==>
+
+// order_done.addEventListener('click', () => {
+//   if (receipt.style.display === "none" || receipt.style.display === "") {
+//     receipt.style.display = "block";
+//     oderlist.style.display = "none";
+//   }
+// });
 
 //    <==========    loginPage    ==========>
 
@@ -291,6 +334,7 @@ let group1p = document.querySelectorAll('.group1 p')[0];
 let group3p = document.querySelectorAll('.group3 p')[0];
 let group4p = document.querySelectorAll('.group4 p')[0];
 let group5p = document.querySelectorAll('.group5 p')[0];
+let oderwarn = document.querySelectorAll('.oderwarn ')[0];
 
 eye.addEventListener('click', () => {
   if (user_password.type === 'password' || user_password.type === '') {
@@ -307,7 +351,6 @@ eye.addEventListener('click', () => {
 //  <==  id_blur  ==>
 
 user_id.addEventListener('blur', () => {
-  let mail = getCookie('id');
   if (/.+@.+\..+/.test(`${user_id.value}`) != true && user_id.value != '') {
     user_id.classList.add('-erro');
     group1p.style.display = 'block';
@@ -324,20 +367,36 @@ user_id.addEventListener('blur', () => {
 
 loginbtn.addEventListener('click', () => {
   let mail = getCookie('id');
-  if (user_id.value !== mail && user_id.value !== '') {
+  let pas = getCookie('pas');
+  if (user_id.value === mail && user_password.value === pas && user_id.value !== '' && user_password.value !== '') {
+    user.style.display = 'none';
+    user2.style.display = 'inline-block';
+    loginErroText.innerText = '';
+    a_user.style.display = 'none';
+    a_user2.style.display = 'block';
+    order_done.disabled = false;
+    order_done.classList.add('-active');
+    oderwarn.innerText = '';
+  } else if (user_id.value !== mail && user_id.value !== '') {
+    hidebox.classList.add('-erro');
+    loginErroText.innerText = '查無此帳號';
+    setTimeout(() => {
+      hidebox.classList.remove('-erro');
+    }, 500);
+  } else if (user_password.value !== pas && user_password.value !== '') {
+    loginErroText.innerText = '帳號密碼錯誤';
     hidebox.classList.add('-erro');
     setTimeout(() => {
       hidebox.classList.remove('-erro');
     }, 500);
-  } else {
-
+  } else if (user_id.value === '' && user_password.value === '') {
+    loginErroText.innerText = '';
   }
 });
 
 //  <==  password_blur  ==>
 
 user_password.addEventListener('blur', () => {
-  // user_password.value = user_password.value.replace(/[^\w_]/g, '');
   let reg = /[^\w_]/;
   if (reg.test(user_password.value) === true) {
     user_password.classList.add('-erro');
@@ -368,6 +427,7 @@ testP[2].addEventListener('click', () => {
   user_password2.value = '@@@';
   phone.value = '54088';
 })
+
 //    <==========    signinpage    ==========>
 
 //  <==  id2_blur  ==>
@@ -406,6 +466,27 @@ phone.addEventListener('blur', () => {
     group3p.style.display = 'none';
   }
 });
+
+//    <==========    menberCenter    ==========>
+
+// <==  logOut  ==>
+
+cout_btn.addEventListener('click', () => {
+  let x = confirm('是否確認要登出');
+  if (x == false) {
+    return
+  } else {
+    a_user.style.display = 'block';
+    a_user2.style.display = 'none';
+    user.style.display = 'inline-block';
+    user2.style.display = 'none';
+    hidebg.style.display = "none";
+    mcOuter.style.display = "none";
+    order_done.disabled = true;
+    order_done.classList.remove('-active');
+    oderwarn.innerText = '請先登入';
+  }
+})
 
 //    <==========    cookie    ==========>
 

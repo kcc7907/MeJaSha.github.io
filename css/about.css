@@ -20,7 +20,7 @@ main {
 }
 
 .img1 {
-    background-image: url("../img/in1.jpg");
+    background-image: url("../img/about1.png");
     border: 5px solid white;
     width: 450px;
     height: 450px;
@@ -31,7 +31,7 @@ main {
 }
 
 .img2 {
-    background-image: url("../img/banner4.jpg");
+    background-image: url("../img/about2.png");
     border: 5px solid white;
     width: 450px;
     height: 450px;
@@ -216,5 +216,31 @@ nav a:nth-child(4) {
 
     main {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    h1 {
+        width: 70px;
+    }
+
+    div.img1 {
+        width: 290px;
+        height: 290px;
+    }
+
+    div.img2 {
+        width: 290px;
+        height: 290px;
+    }
+
+    div.part1 {
+        width: 290px;
+        height: 290px;
+    }
+
+    div.part2 {
+        width: 290px;
+        height: 290px;
     }
 }

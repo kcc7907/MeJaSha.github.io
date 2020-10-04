@@ -140,7 +140,7 @@ nav a:nth-child(3) {
     margin-right: 10px;
 }
 
-h3 {
+.container h3 {
     font-size: 2rem;
     text-align: center;
     font-weight: bold;
@@ -385,5 +385,19 @@ main {
 
     .right {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    h1 {
+        width: 70px;
+    }
+
+    .time p {
+        max-height: 55px;
+    }
+
+    .kind p {
+        max-height: 55px;
     }
 }

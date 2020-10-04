@@ -11,7 +11,7 @@
     animation-name: fir;
 }
 
-section {
+.container section {
     width: 50%;
     font-size: 0;
     display: flex;
@@ -33,7 +33,7 @@ div.brunch {
     background-image: url("../img/contents_bg.jpg");
 }
 
-main {
+.container main {
     width: 50%;
     font-size: 0;
     display: flex;
@@ -132,6 +132,15 @@ h2 {
 }
 
 /* --rwd-- */
+@media (max-width: 1350px) {
+    .hidepic.b {
+        width: 55%;
+    }
+
+    .hidepic.m {
+        width: 55%;
+    }
+}
 
 @media (max-width: 1140px) {
     .container {
@@ -139,14 +148,31 @@ h2 {
         align-items: center;
     }
 
-    section {
+    .container section {
         width: 80%;
     }
 
-    main {
+    .container main {
         width: 80%;
     }
 
+    .hidepic.b {
+        width: 90%;
+    }
+
+    .hidepic.m {
+        width: 90%;
+    }
+}
+
+@media (max-width: 901px) {
+    .hidepic.b {
+        width: 80%;
+    }
+
+    .hidepic.m {
+        width: 80%;
+    }
 }
 
 @media (max-width: 575px) {
@@ -155,16 +181,16 @@ h2 {
         align-items: center;
     }
 
-    section {
+    .container section {
         width: 100%;
     }
 
-    main {
+    .container main {
         width: 100%;
         padding-bottom: 15px;
     }
 
-    h2 {
+    .container h2 {
         width: 90px;
     }
 
@@ -180,4 +206,21 @@ h2 {
         padding: 0px;
     }
 
+    .hidepic.b {
+        width: 90%;
+    }
+
+    .hidepic.m {
+        width: 90%;
+    }
+}
+
+@media (max-width: 330px) {
+    .hidepic.b {
+        width: 90%;
+    }
+
+    .hidepic.m {
+        width: 90%;
+    }
 }

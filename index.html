@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <script src="./js/load.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main_type2.css">
@@ -21,7 +22,7 @@
         </nav>
         <div class="icon">
             <button class="user" onclick="show()"></button>
-            <button class="user2"></button>
+            <button class="user2" onclick="mcShow()"></button>
             <button class="menu" onclick="listShow()"></button>
         </div>
     </header>
@@ -39,9 +40,11 @@
         <a href="./meau.html">菜單</a>
         <a href="./food.html">餐點介紹</a>
         <a href="./about.html">關於我們</a>
-        <a onclick="show()">會員</a>
+        <a onclick="show()" class="a_user">會員</a>
+        <a onclick="mcShow()" class="a_user2">會員</a>
         <a onclick="listShow()">點餐</a>
     </div>
+    <!-- start -->
     <div class="top">
         <div class="banner" id="ban"><img src="./img/banner05.jpg" alt=""></div>
     </div>
@@ -177,9 +180,11 @@
                 </form>
                 <span>測<br>試<br>用</span>
                 <span>登<br>入<br>用</span>
+                <div class="loginErroText"></div>
             </div>
             <!-- signin page -->
             <div class="signin_page">
+
                 <div class="hgtop">
                     <div class="login_2">
                         <p class="signin_text">登入</p>
@@ -451,6 +456,32 @@
             </ul>
         </div>
     </div>
+    <!-- memberCenter -->
+    <div class="mcOuter">
+        <div class="mcenter">
+            <button class="mcDel" onclick="mcHide()">x</button>
+            <div class="center_header">會員中心</div>
+            <div class="iconBox">
+                <div class="icb ic1"><img src="./img/icon/out/clock.svg" alt=""></div>
+                <div class="icb ic2"><img src="./img/icon/out/user.svg" alt=""></div>
+                <div class="icb ic3"><img src="./img/icon/out/scroll.svg" alt=""></div>
+            </div>
+            <ul>
+                <li>
+                    <div class="mcNum_title">取餐編號</div>
+                    <div class="mcNum">001</div>
+                </li>
+                <li>
+                    <div class="mcTime_title">預計取餐時間</div>
+                    <div class="mcTime">20分鐘</div>
+                </li>
+            </ul>
+            <div class="centerOut">
+                <button class="cout_btn" type="button">登出</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- backTop -->
     <div id="gotop" class="gotop">
