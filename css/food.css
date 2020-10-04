@@ -84,6 +84,10 @@ nav a:nth-child(3) {
     text-align: center;
 }
 
+.breakfast a p {
+    background: #ffa756;
+}
+
 .bf,
 .bh {
     height: 350px;

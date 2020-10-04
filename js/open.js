@@ -23,7 +23,7 @@ function checkCookie(cname) {
 }
 
 if (checkCookie('open') == true) {
-    location.href = "../index.html";
+    location.href = "index.html";
 }
 
 let layer_1 = document.querySelector("#layer_1");
@@ -70,7 +70,7 @@ ename.addEventListener("animationend", () => {
 sname.addEventListener("click", () => {
     if (sname.style.cursor == 'pointer') {
         setCookie("open", "opening", 0.1);
-        location.href = "../index.html";
+        location.href = "index.html";
     }
 });
 

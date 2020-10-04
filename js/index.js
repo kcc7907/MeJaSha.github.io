@@ -33,7 +33,8 @@ iop.addEventListener('click', () => {
 
 backOpen.addEventListener('click', () => {
     setCookie("open", "opening", -1);
-    location.href = "../opening.html";
+    location.href = "animate.html";
+    // window.location.href = "../animate.html";
 })
 
 // <==  設定 cookie  ==>

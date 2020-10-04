@@ -170,7 +170,10 @@ nav a:nth-child(3) {
     display: flex;
     flex-direction: column;
     padding-top: 70px;
+}
 
+.breakfast a p {
+    background: #ffa756;
 }
 
 .kind .brunch {

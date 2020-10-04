@@ -37,5 +37,5 @@ function checkCookie(cname) {
 // })();
 
 if (checkCookie('open') == false) {
-    location.href = "../opening.html";
+    location.href = "animate.html";
 }
