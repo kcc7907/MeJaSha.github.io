@@ -36,6 +36,6 @@ function checkCookie(cname) {
 //     }
 // })();
 
-if (checkCookie('open') == true) {
-    location.href = "../open.html";
+if (checkCookie('open') == false) {
+    location.href = "../opening.html";
 }

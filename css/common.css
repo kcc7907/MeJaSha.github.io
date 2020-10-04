@@ -170,6 +170,15 @@ footer {
     overflow: hidden;
 }
 
+.backOpen {
+    position: absolute;
+    font-size: 0.1rem;
+    color: white;
+    cursor: pointer;
+    left: 15px;
+    top: 15px;
+}
+
 footer article {
     margin: auto;
     display: flex;
@@ -1334,6 +1343,16 @@ div.outweb {
     box-shadow: 0 0 0 2px #742e02,
         0 0 #b548005d;
     transform: translate3d(0, 0, -1em);
+}
+
+.mcenter ul {
+    /* display: none; */
+    opacity: 0;
+    transition: 1s;
+}
+
+.-erro {
+    animation: erroRotate 0.1s;
 }
 
 /*      animation     */

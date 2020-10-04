@@ -23,6 +23,7 @@ let cout_btn = document.querySelectorAll('.cout_btn')[0];
 let mcOuter = document.querySelectorAll('.mcOuter')[0];
 let mcenter = document.querySelectorAll('.mcenter')[0];
 let order_done = document.querySelectorAll('.order-done')[0];
+let mcenter_ul = document.querySelectorAll('.mcenter ul')[0];
 
 //  <======   longin_show & hide   ======>
 
@@ -308,12 +309,29 @@ header_btn.addEventListener('click', () => {
 
 //  <==  order_done  ==>
 
-// order_done.addEventListener('click', () => {
-//   if (receipt.style.display === "none" || receipt.style.display === "") {
-//     receipt.style.display = "block";
-//     oderlist.style.display = "none";
-//   }
-// });
+order_done.addEventListener('click', () => {
+  if (mcenter_ul.style.opacity == '1') {
+    oderwarn.innerText = '餐點準備中';
+    receipt.classList.add('-erro');
+    setTimeout(() => {
+      receipt.classList.remove('-erro');
+    }, 500);
+  } else if (total_num.innerHTML !== '$0') {
+    let x = confirm('是否確認完成點餐?')
+    if (x) {
+      r_list_ul.innerHTML = '';
+      localStorage.clear();
+      total_num.innerHTML = '$0';
+      oderwarn.innerText = '';
+      oderlist.style.display = "none";
+      hidelist.style.display = "none";
+      mcenter_ul.style.opacity = '1';
+      mcShow();
+    } else {
+      return;
+    }
+  }
+});
 
 //    <==========    loginPage    ==========>
 
@@ -377,6 +395,8 @@ loginbtn.addEventListener('click', () => {
     order_done.disabled = false;
     order_done.classList.add('-active');
     oderwarn.innerText = '';
+    hide();
+    // mcShow();
   } else if (user_id.value !== mail && user_id.value !== '') {
     hidebox.classList.add('-erro');
     loginErroText.innerText = '查無此帳號';
@@ -485,8 +505,11 @@ cout_btn.addEventListener('click', () => {
     order_done.disabled = true;
     order_done.classList.remove('-active');
     oderwarn.innerText = '請先登入';
+    mcenter_ul.style.opacity = '0';
   }
 })
+
+
 
 //    <==========    cookie    ==========>
 

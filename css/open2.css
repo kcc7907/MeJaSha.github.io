@@ -15,21 +15,22 @@ html {
 
 
 section {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     height: 20vh;
     overflow: hidden;
     bottom: 0;
 }
 
-section .wave {
-    position: absolute;
+section .waves {
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100px;
     background: url("../img/open/wave.svg");
     background-repeat: repeat-x;
+    /* z-index: 1001; */
 }
 
 section .wave1 {
@@ -76,14 +77,20 @@ section .wave3 {
     }
 }
 
-/*        */
+/* text */
+
+.text {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*    welcome    */
+
 .welcome {
     width: 50vw;
     margin: 0 auto;
-}
-
-#layer_1 {
-    /* display: none; */
 }
 
 @keyframes curse {
@@ -148,18 +155,94 @@ section .wave3 {
     animation: curse .5s forwards linear 1.5s;
 }
 
-/*  sname */
+/*      sname       */
+
 .sname {
     display: flex;
     justify-content: center;
     font-size: 12vw;
     font-weight: 800;
+    align-items: center;
+}
+
+.sname span {
+    font-size: 5vw;
+    display: none;
+}
+
+.sname span:nth-child(1) {
+    animation: enterl 1s infinite linear;
+    color: #ffa756;
+    ;
+}
+
+.sname span:nth-child(5) {
+    animation: enterr 1s infinite linear;
+    color: #ffa756;
+}
+
+.sname p {
+    color: #154733;
+    transform: translateX(-100vw);
+}
+
+.sname p.-on:nth-child(2) {
+    animation: textIn 2s forwards;
+}
+
+.sname p.-on:nth-child(3) {
+    animation: textIn 2s forwards .3s;
+}
+
+.sname p.-on:nth-child(4) {
+    animation: textIn 2s forwards .6s;
+}
+
+.sname p.-test {
     color: transparent;
     text-transform: uppercase;
     background-image: linear-gradient(to right, #f00, #ff0, #0ff, #0f0, #00f);
     -webkit-background-clip: text;
-    animation: animate 10s linear infinite;
+    animation: animate 15s linear infinite !important;
     background-size: 1000%;
+}
+
+@keyframes textIn {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes enterl {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(-10px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+@keyframes enterr {
+    0% {
+        transform: translate(0px);
+    }
+
+    50% {
+        transform: translate(10px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
 }
 
 @keyframes animate {
@@ -176,11 +259,12 @@ section .wave3 {
     }
 }
 
-/*   ename   */
+/*      ename         */
 
 .ename {
     width: 30vw;
     margin: 0 auto;
+    display: none;
 }
 
 #layer2 {
@@ -263,13 +347,16 @@ section .wave3 {
     }
 }
 
-/* sun */
+/*       sun     */
+
 div.sunholder {
     position: absolute;
     display: inline-block;
     animation: spin 8s linear 0s infinite;
     top: 5%;
     left: 5%;
+    transition: 3s;
+    opacity: 0;
 }
 
 div.sun {
@@ -351,18 +438,19 @@ div.ray8 {
     }
 }
 
+/*     boat      */
+
 .boat {
-    position: absolute;
+    position: fixed;
     left: 10px;
     bottom: 70px;
     width: 300px;
-    animation: headRoll 2s linear infinite;
+    opacity: 0;
 }
 
-#head {
-    /* animation: headRoll 1s infinite; */
-    /* animation: headRoll 2s linear infinite; */
-
+.boat.-on {
+    animation: headRoll 2s linear infinite,
+        leftIn 2s linear;
 }
 
 #mouth path:nth-child(1) {
@@ -370,28 +458,44 @@ div.ray8 {
 }
 
 #mouth circle {
-    /* r: 1px; */
     animation: mouth 2s;
+}
+
+@keyframes leftIn {
+    0% {
+        opacity: 1;
+        transform: translateX(-500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 @keyframes headRoll {
     0% {
+        opacity: 1;
         transform: rotate(0deg);
     }
 
     25% {
+        opacity: 1;
         transform: rotate(3deg);
     }
 
     50% {
+        opacity: 1;
         transform: rotate(0deg);
     }
 
     75% {
+        opacity: 1;
         transform: rotate(-3deg);
     }
 
     100% {
+        opacity: 1;
         transform: rotate(0deg);
     }
 }
@@ -411,11 +515,19 @@ div.ray8 {
     }
 }
 
+/*    shrimp   */
+
 .shrimp {
     position: absolute;
     width: 220px;
     right: 5%;
     bottom: 10px;
+    transform: translateY(120%);
+
+}
+
+.shrimp.-on {
+    animation: shrimpUp 4s forwards;
 }
 
 #arrow {
@@ -435,6 +547,15 @@ div.ray8 {
     animation: eyebrowup 1s infinite .2s;
 }
 
+@keyframes shrimpUp {
+    0% {
+        transform: translateY(120%);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
 
 @keyframes arrowup {
     0% {
@@ -461,5 +582,45 @@ div.ray8 {
 
     100% {
         transform: translate(-500.31px, -238.5px);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    html {
+        background: rgba(0, 255, 255, 0.13);
+    }
+
+    section {
+        display: none;
+    }
+
+    .boat {
+        display: none !important;
+    }
+
+    .shrimp {
+        display: none !important;
+    }
+
+    .text {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%)translateY(-50%);
+    }
+
+    .welcome {
+        width: 90vw;
+    }
+
+    .sname {
+        font-size: 20vw;
+    }
+
+    .sname span {
+        font-size: 8vw;
+    }
+
+    .ename {
+        width: 50vw;
     }
 }
