@@ -24,7 +24,7 @@ function hidezone() {
 }
 //
 
-let bo = "img/meau/menu_b.jpg"
+let bo = "./img/meau/menu_b.jpg"
 let b760 = "./img/meau/b/760.jpg"
 let b300 = "./img/meau/b/300.png"
 let hidepicb_img = document.querySelectorAll(".hidepic.b img")[0];
@@ -48,7 +48,7 @@ img_brunch.addEventListener('click', () => {
     }
 });
 
-let mo = "img/meau/menu_m.jpg"
+let mo = "./img/meau/menu_m.jpg"
 let m760 = "./img/meau/m/760.png"
 let m300 = "./img/meau/m/300.png"
 let hidepicm_img = document.querySelectorAll(".hidepic.m img")[0];
