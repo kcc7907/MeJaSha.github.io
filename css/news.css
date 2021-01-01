@@ -1,8 +1,11 @@
 .top {
   width: 100%;
   position: relative;
+  -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
+  -webkit-animation: d-down 500ms cubic-bezier(1, 0, 0.7, 1.3);
   animation: d-down 500ms cubic-bezier(1, 0, 0.7, 1.3);
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
@@ -13,20 +16,28 @@ nav a:first-child {
 .container {
   width: 100%;
   background-image: url("../img/contents_bg.jpg");
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
 .container.container-fir {
+  -webkit-animation-name: fir;
   animation-name: fir;
 }
 
 main {
   width: 80%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
@@ -35,15 +46,20 @@ main {
   margin: 50px 10px 50px;
   background-color: #fff;
   text-align: center;
+  -ms-flex-line-pack: center;
   align-content: center;
   position: relative;
+  -webkit-box-shadow: 3px 3px 5px 6px #cccccc;
   box-shadow: 3px 3px 5px 6px #cccccc;
+  -webkit-transform: translateY(0px);
   transform: translateY(0px);
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 
 }
 
 .card:hover {
+  -webkit-transform: translateY(-20px);
   transform: translateY(-20px);
 }
 

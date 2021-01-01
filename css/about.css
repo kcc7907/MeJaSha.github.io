@@ -1,14 +1,22 @@
 .container {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-image: url("../img/contents_bg.jpg");
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-transition-timing-function: ease-in;
     transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
 .container.container-fir {
+    -webkit-animation-name: fir;
     animation-name: fir;
 }
 
@@ -24,9 +32,12 @@ main {
     border: 5px solid white;
     width: 450px;
     height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-size: 100% 110%;
     background-repeat: no-repeat;
+    -webkit-box-shadow: 3px 3px 5px 6px #cccccc;
     box-shadow: 3px 3px 5px 6px #cccccc;
 }
 
@@ -35,13 +46,18 @@ main {
     border: 5px solid white;
     width: 450px;
     height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     vertical-align: top;
     background-size: 100% 110%;
+    -webkit-box-shadow: 3px 3px 5px 6px #cccccc;
     box-shadow: 3px 3px 5px 6px #cccccc;
 }
 
 div.part1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 450px;
     font-size: 1.5rem;
@@ -51,10 +67,14 @@ div.part1 {
     text-align: justify;
     text-justify: inter-ideograph;
     letter-spacing: 3px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 div.part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 450px;
     font-size: 1.5rem;
@@ -63,20 +83,34 @@ div.part2 {
     text-align: justify;
     text-justify: inter-ideograph;
     letter-spacing: 3px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
 }
 
 .middle {
     margin-top: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100%;
 }
@@ -86,6 +120,7 @@ div.part2 {
     width: 85%;
     height: 28rem;
     margin: 6.25rem auto 3.125rem;
+    -webkit-box-shadow: 3px 3px 5px 6px #cccccc;
     box-shadow: 3px 3px 5px 6px #cccccc;
 }
 
@@ -114,8 +149,11 @@ h1 {
 .top1 {
     width: 100%;
     position: relative;
+    -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
+    -webkit-animation: d-down 500ms cubic-bezier(1, 0, 0.7, 1.3);
     animation: d-down 500ms cubic-bezier(1, 0, 0.7, 1.3);
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
@@ -130,12 +168,22 @@ nav a:nth-child(4) {
 
 @media screen and (max-width: 900px) {
     .top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
     .middle {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -158,6 +206,8 @@ nav a:nth-child(4) {
     div.img2 {
         width: 380px;
         height: 380px;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
         order: -1;
 
     }
@@ -170,13 +220,23 @@ nav a:nth-child(4) {
 
 @media screen and (max-width: 575px) {
     .top {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         width: 100%;
     }
 
     .middle {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -198,6 +258,8 @@ nav a:nth-child(4) {
     div.img2 {
         width: 330px;
         height: 330px;
+        -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
         order: -1;
     }
 
