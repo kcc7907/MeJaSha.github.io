@@ -18,7 +18,7 @@ function myFunction() {
     if (document.documentElement.scrollTop > (wsx - 300)) {
         document.getElementById("news").classList.add('-on');
     }
-    if (document.querySelector("#calendar").getBoundingClientRect().top < 300) {
+    if (document.querySelector("#calendar").getBoundingClientRect().top < 400) {
         document.getElementById("calendar").classList.add('-on');
     }
     iop.classList.toggle('-on', window.scrollY > (wsx - 300));
