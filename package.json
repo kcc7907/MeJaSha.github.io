@@ -19,7 +19,9 @@
   "homepage": "https://github.com/kcc7907/MeJaSha.github.io#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-clean-css": "^4.3.0"
+    "gulp-clean-css": "^4.3.0",
+    "gulp-image": "^6.2.1",
+    "gulp-imagemin": "^7.1.0"
   },
   "browserslist": [
     "last 2 version",

@@ -6,8 +6,9 @@ const {
     watch
 } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
+// const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const image = require('gulp-image');
 
 // exports.mincss = cb => {
 //     .src('css/*.css') //來源
@@ -38,4 +39,18 @@ exports.default = cb => {
         .pipe(imagemin())
         .pipe(dest('dist'));
         cb();
+};
+
+exports.minpic = cb => {
+    src('img/**')
+        .pipe(imagemin())
+        .pipe(dest('dist'));
+    cb();
+};
+
+exports.min = cb => {
+    src(['img/**/*.jpg', 'img/**/*.jpeg', 'img/**/*.png'])
+    .pipe(image())
+    .pipe(dest('./dest'));
+    cb();
 };
