@@ -7,6 +7,7 @@ const {
 } = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 
 // exports.mincss = cb => {
 //     .src('css/*.css') //來源
@@ -31,3 +32,10 @@ exports.prefix = cb => {
         .pipe(dest('dist/'));
     cb();
 }
+
+exports.default = cb => {
+    src(['img/**/*.jpg', 'img/**/*.jpeg', 'img/**/*.png'])
+        .pipe(imagemin())
+        .pipe(dest('dist'));
+        cb();
+};
